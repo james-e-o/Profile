@@ -3,7 +3,7 @@ import Nav from '@components/header.jsx'
 
 export default function Home() {
   return (
-    <>
+    <div>
         <Nav />
         <main>
             <div class="icons">
@@ -21,6 +21,6 @@ export default function Home() {
         <div class="blogo">
             <div class="bdesign"></div>
         </div> 
-    </>
+    </div>
   )
 }
