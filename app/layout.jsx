@@ -1,5 +1,5 @@
 import './globals.css'
-import Nav from '@components/nav.jsx'
+
 
 
 export const metadata = {
@@ -11,9 +11,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className='bg-darkNavy'>
-        <header>
-          <Nav ></Nav> 
-        </header>
         {children}</body>
     </html>
   )
