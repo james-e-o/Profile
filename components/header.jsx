@@ -2,12 +2,14 @@ import React from 'react'
 import Link from 'next/link'
 
 
-export const Nav = () => {
+export const Nav = ({logo,color}) => {
+
+  
   return (
 
     <header className="p-8 bg-blue-800 ">
       {/* <Link href="#"> */}
-        <h1> j</h1>
+        <h1>{logo}</h1>
       {/* </Link> */}
       <nav>
             
