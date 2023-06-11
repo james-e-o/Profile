@@ -6,13 +6,11 @@ export const Nav = ({logo,color}) => {
 
   
   return (
-
     <header className="p-8 bg-blue-800 ">
       {/* <Link href="#"> */}
         <h1>{logo}</h1>
       {/* </Link> */}
       <nav>
-            
           <div>
             {/* Mobile Navigation */}
             menu
@@ -28,7 +26,6 @@ export const Nav = ({logo,color}) => {
           </div>                
         </nav>
     </header>
-    
   )
 }
 export default Nav
