@@ -2,16 +2,16 @@ import React from 'react'
 import Link from 'next/link'
 
 
-export const Nav = () => {
-  return (
+export const Nav = ({logo,color}) => {
 
+  
+  return (
     <header className="p-8 bg-blue-800 ">
       <h1></h1>
       {/* <Link href="#"> */}
-        <h1 className="text-xl"> j</h1>
+        <h1>{logo}</h1>
       {/* </Link> */}
       <nav>
-            
           <div>
             {/* Mobile Navigation */}
             menu
@@ -27,7 +27,6 @@ export const Nav = () => {
           </div>                
         </nav>
     </header>
-    
   )
 }
 export default Nav
