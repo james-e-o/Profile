@@ -6,8 +6,9 @@ export const Nav = () => {
   return (
 
     <header className="p-8 bg-blue-800 ">
+      <h1></h1>
       {/* <Link href="#"> */}
-        <h1> j</h1>
+        <h1 className="text-xl"> j</h1>
       {/* </Link> */}
       <nav>
             
