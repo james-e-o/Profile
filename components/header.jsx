@@ -1,20 +1,31 @@
 import React from 'react'
 import Link from 'next/link'
 
-export const Header = () => {
+
+export const Nav = ({logo,color}) => {
+
+  
   return (
-    <header>
-      <h1 className='bg-red'>J</h1> 
-      
-      <i class="fa-solid fa-bars"></i>
-      <nav class=''>
-        <Link rel="stylesheet" href="/" >Home</Link>
-        <Link rel="stylesheet" href="/About" >About</Link>
-        <Link rel="stylesheet" href="/Projects" >Projects</Link>
-        <Link rel="stylesheet" href="/Blogs" >Blogs</Link>
-        <Link rel="stylesheet" href="/Email" >Mail</Link>
-      </nav>
-  </header>
+    <header className="p-8 bg-blue-800 ">
+      {/* <Link href="#"> */}
+        <h1>{logo}</h1>
+      {/* </Link> */}
+      <nav>
+          <div>
+            {/* Mobile Navigation */}
+            menu
+          </div>
+
+          <div className="hidden md:flex">
+          {/*desktop Navigation */}
+              <Link href="#">Home</Link>
+              <Link href="#">About</Link>
+              <Link href="#">Projects</Link>
+              <Link href="#">Blog</Link>
+              <Link href="#">mail</Link>
+          </div>                
+        </nav>
+    </header>
   )
 }
-export default Header
+export default Nav
