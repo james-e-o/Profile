@@ -7,6 +7,7 @@ export const Nav = ({logo,color}) => {
   
   return (
     <header className="p-8 bg-blue-800 ">
+      <h1></h1>
       {/* <Link href="#"> */}
         <h1>{logo}</h1>
       {/* </Link> */}
