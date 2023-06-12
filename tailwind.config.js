@@ -12,7 +12,9 @@ module.exports = {
   
       colors :{
         darkNavy: '#333550'
-      }
+      },
+      
+      
     },
   },
   plugins: [],
