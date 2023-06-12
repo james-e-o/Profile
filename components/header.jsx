@@ -8,7 +8,7 @@ export const Nav = ({logo,color}) => {
   return (
     <header className="p-5 flex justify-between">
         <div>
-          <Link href="/About">
+          <Link href="/About" className="no-underline appearance-none">
             <h1 className={color}>{logo}</h1>
           </Link>
         </div>
