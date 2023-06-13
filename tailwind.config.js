@@ -11,7 +11,7 @@ module.exports = {
     extend: {
   
       colors :{
-        darkNavy: '#333550'
+        darkNavy: '#1f1724f5'
       },
       
       
