@@ -2,21 +2,22 @@
 import Nav from '@components/header.jsx'
 
 export default function Home() {
-    const logo = "J"
-    const className = "text-yellow-400 font-sans text-5xl m-0 pl-4 pb-5"
+    const logo = 
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" id="letter-j"><path fill-rule="evenodd" d="M30 10C31.1046 10 32 10.8954 32 12V30C32 34.4183 28.4183 38 24 38C19.5817 38 16 34.4183 16 30C16 28.8954 16.8954 28 18 28C19.1046 28 20 28.8954 20 30C20 32.2092 21.7909 34 24 34C26.2091 34 28 32.2092 28 30V12C28 10.8954 28.8954 10 30 10Z" clip-rule="evenodd"></path></svg>
+    const className = "text-yellow-400 fill-yellow-400 font-sans text-5xl m-0 "
   return (
     <div className="flex flex-col justify-between min-h-screen"> 
         <Nav logo={logo} color={className}/>
         <main className="m-0 p-5"> 
             <div >
                 <h4 className="m-0 pb-1">
-                    <span className="w-3 h-3">&#x1F590;</span>
-                    <span className="text-yellow-400">Hey There, I'm James</span>
+                    <span className="w-3 h-3">&#128075;</span>
+                    <span className="text-orange-400">Hey There, I'm James</span>
                 </h4>
                 <h2 className="m-0 p-0">I am a frontend web developer</h2>
                 <p id="info" className="text-gray-400 text-sm m-0 p-0">I bring web designs to life by creating impressive user experiences and reactive websites, using HTML, JavaScript, React js, CSS, Tailwind, Node js, and other Javascript based tools, packages and libraries. </p>
                 <p id="CTA" 
-                className="px-2 py-1 bg-blue-300 inline-block text-black text-sm font-thin">
+                className="px-2 py-1 bg-blue-400 inline-block text-black text-sm font-thin">
                 {/* <span className="text-2xl m-0 p-0 border-spacing-0 border-0 text-pink-400"> →</span>  */}
                 View my Resume</p>
             </div> 
