@@ -9,7 +9,7 @@
     @apply mt-0
 }
 
-svg {
+#page-footer svg {
     @apply mx-2 mb-3 fill-yellow-400
     w-5
 }
