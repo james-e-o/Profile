@@ -11,11 +11,8 @@ export default function RootLayout({ children }) {
 // const item= children
   return (
     <html lang="en" className="m-0 p-0">
-      <body className="bg-darkNavy m-0 text-white font-sans" >
+      <body className="bg-darkNavy m-0 text-white font-sans h-vh90" >
         {children}
-        {/* <Preloader data= {children}>
-          
-        </Preloader> */}
       </body>
     </html>
   )
