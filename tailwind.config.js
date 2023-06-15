@@ -14,6 +14,10 @@ module.exports = {
         darkNavy: '#1f1724f5'
       },
       
+      height : {
+        vh90 : '90vh',
+        vh95 : '95vh'
+      }
       
     },
   },
