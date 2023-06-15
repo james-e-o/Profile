@@ -1,14 +1,21 @@
+'use client'
+import { useEffect, useState } from 'react'
+import preload from './preload';
 
-const Preloader = ()=>{
+
+const Preloader = ({data})=>{
+    const [render, setRender]= useState(preload);
+    useEffect(()=>{
+    const prloaderTimeout = setTimeout(() => {
+      setRender(data);
+    }, 2000);
+    return () => {
+      clearTimeout(prloaderTimeout);
+    };
+  },[]) 
     return(
         <div className="preloader h-full">
-            <div id="anime-box">
-                Preload my shit
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
+            {render}
         </div>
     )
 }
