@@ -1,8 +1,6 @@
-'use client'
-
+import { data } from 'autoprefixer'
 import './globals.css'
 import Preloader from '@components/preloader'
-import { useEffect, useState } from 'react'
 
 export const metadata = {
   title: 'My profile',
@@ -10,19 +8,14 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
-  const [render, setRender]= useState(Preloader);
-  useEffect(()=>{
-    const prloaderTimeout = setTimeout(() => {
-      setRender(children);
-    }, 2000);
-    return () => {
-      clearTimeout(prloaderTimeout);
-    };
-  },[]) 
+// const item= children
   return (
     <html lang="en" className="m-0 p-0">
       <body className="bg-darkNavy m-0 text-white font-sans" >
-            {render}
+        {children}
+        {/* <Preloader data= {children}>
+          
+        </Preloader> */}
       </body>
     </html>
   )
