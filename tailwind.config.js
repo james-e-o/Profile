@@ -16,8 +16,14 @@ module.exports = {
       
       height : {
         vh90 : '90vh',
-        vh95 : '95vh'
-      }
+        vh94 : '94vh'
+      },
+
+      animation: {
+        'bounce-slow2': 'bounce 1s linear 0.2s infinite',
+        'bounce-slow3': 'bounce 1s linear 0.4s infinite',
+        'bounce-slow4': 'bounce 1s linear 0.6s infinite',
+      },
       
     },
   },
