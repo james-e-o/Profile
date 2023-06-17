@@ -1,6 +1,4 @@
-import { data } from 'autoprefixer'
 import './globals.css'
-import Preloader from '@components/preloader'
 
 export const metadata = {
   title: 'My profile',
@@ -8,10 +6,9 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
-// const item= children
   return (
     <html lang="en" className="m-0 p-0">
-      <body className="bg-darkNavy m-0 text-white font-sans h-vh90" >
+      <body className="bg-darkNavy m-0 text-white font-sans h-vh94" >
         {children}
       </body>
     </html>
