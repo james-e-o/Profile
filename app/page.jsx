@@ -1,12 +1,19 @@
 // import Image from 'next/image'
 import Nav from '@components/header.jsx'
+import { useState,useEffect } from 'react'
 import Preloader from '@components/preloader'
 
 export default function Home() {
+    function stopScreen (e){
+        e.preventDefault()
+    }
     const logo = 
     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="50" viewBox="10 10 30 30" id="letter-j"><path fill-rule="evenodd" d="M30 10C31.1046 10 32 10.8954 32 12V30C32 34.4183 28.4183 38 24 38C19.5817 38 16 34.4183 16 30C16 28.8954 16.8954 28 18 28C19.1046 28 20 28.8954 20 30C20 32.2092 21.7909 34 24 34C26.2091 34 28 32.2092 28 30V12C28 10.8954 28.8954 10 30 10Z" clip-rule="evenodd"></path></svg>
+
     const className = "text-yellow-400 fill-yellow-500 font-sans text-5xl m-0 pt-2 pl-1"
-    const data = <div className="flex flex-col justify-between h-full"> 
+
+    const data = <div onPointerMove={stopScreen()} className="flex flex-col justify-between h-screen overflow-hidden bg-gradient-to-b from-blue-200 to- bg-darkNavy"> 
+    
         <Nav logo={logo} color={className}/>
         <main className="m-0 py-2 px-7"> 
             <div >
