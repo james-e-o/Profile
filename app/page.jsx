@@ -1,6 +1,6 @@
 // import Image from 'next/image'
 import Nav from '@components/header.jsx'
-import { useState,useEffect } from 'react'
+
 import Preloader from '@components/preloader'
 
 export default function Home() {
