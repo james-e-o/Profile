@@ -5,8 +5,8 @@ import Preloader from '@components/preloader'
 
 export default function Home() {
     useEffect(()=>{
-        const page = document.querySelector('#container')
-       
+        const page = document.getElementById('container')
+        page.style.height = `${window.innerHeight}`
         
         console.log(page.clientHeight)
     },[])
