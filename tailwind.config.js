@@ -15,7 +15,7 @@ module.exports = {
       },
       
       height : {
-        vh90 : '90vh',
+        vh92 : '92vh',
         vh94 : '94vh'
       },
 
