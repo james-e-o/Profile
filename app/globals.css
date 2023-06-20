@@ -8,3 +8,12 @@
 .menu_logo {
     @apply mt-0
 }
+
+#page-footer svg {
+    @apply mx-2 mb-3 fill-yellow-400
+    w-5
+}
+
+.hitt {
+    @apply h-variable
+}

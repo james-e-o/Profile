@@ -11,9 +11,20 @@ module.exports = {
     extend: {
   
       colors :{
-        darkNavy: '#333550'
+        darkNavy: '#1f1724f5'
       },
       
+      height : {
+        vh92 : '92vh',
+        vh94 : '94vh',
+        variable:'var(--heit)'
+      },
+
+      animation: {
+        'bounce-slow2': 'bounce 1s linear 0.2s infinite',
+        'bounce-slow3': 'bounce 1s linear 0.4s infinite',
+        'bounce-slow4': 'bounce 1s linear 0.6s infinite',
+      },
       
     },
   },
