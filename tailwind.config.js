@@ -17,7 +17,9 @@ module.exports = {
       height : {
         vh92 : '92vh',
         vh94 : '94vh',
-        variable:'var(--heit)'
+        variable:'var(--heit)',
+        fill: 'fill-available',
+        fill2: '-webkit-fill-available'
       },
 
       animation: {
