@@ -16,7 +16,7 @@ module.exports = {
       
       height : {
         vh92 : '92vh',
-        vh94 : '94vh',
+        vh95 : '95vh',
         variable:'calc(var(--hiet,1vh)*100)',
         over:'650px',
         fill: 'fill-available',
