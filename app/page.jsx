@@ -25,7 +25,7 @@ export default function Home() {
                 <h2 className="m-0 p-0">I am a frontend web developer</h2>
                 <p id="info" className="text-gray-400 text-sm m-0 p-0">I bring web designs to life by creating impressive user experiences and reactive websites, using HTML, JavaScript, React js, CSS, Tailwind, Node js, and other Javascript based tools, packages and libraries. </p>
                 <p id="CTA" 
-                className="px-2 py-1 bg-cyan-500 inline-block text-black text-sm font-thin">
+                className="px-2 py-1 bg-blue-300 inline-block text-black text-sm font-thin">
                 {/* <span className="text-2xl m-0 p-0 border-spacing-0 border-0 text-pink-400"> →</span>  */}
                 View my Resume</p>
             </div> 
