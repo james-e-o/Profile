@@ -16,7 +16,7 @@ export default function Home() {
 
     const className = "text-yellow-400 fill-yellow-500 font-sans text-5xl m-0 pt-2 pl-1"
 
-    const data = <div id="container" className="flex flex-col justify-between overflow-clip h-fill bg-gradient-to-b from-blue-900 to- bg-darkNavy"> 
+    const data = <div id="container" className="flex flex-col justify-between overflow-clip h-full bg-gradient-to-b from-blue-900 to- bg-darkNavy"> 
     
         <Nav logo={logo} color={className}/>
         <main className="m-0 py-2 px-7"> 

@@ -19,7 +19,7 @@ module.exports = {
         vh94 : '94vh',
         variable:'var(--heit)',
         fill: 'fill-available',
-        fill2: '-webkit-fill-available'
+        svh: 'svh'
       },
 
       animation: {
