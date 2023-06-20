@@ -6,7 +6,7 @@ import Preloader from '@components/preloader'
 export default function Home() {
     useEffect(()=>{
         const page = document.getElementById('container')
-        page.style.height = `${window.innerHeight}`
+        page.style.height = `${window.innerHeight}px`
         
         console.log(page.clientHeight)
     },[])
