@@ -18,7 +18,7 @@ module.exports = {
         vh92 : '92vh',
         vh94 : '94vh',
         variable:'calc(var(--hiet,1vh)*100)',
-        over:'500px',
+        over:'650px',
         fill: 'fill-available',
         svh: '100svh'
       },
