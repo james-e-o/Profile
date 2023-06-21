@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 
 
-export const Nav = ({logo,color}) => {
+export const Nav = ({logo,color,prop}) => {
 
   
   return (
@@ -12,12 +12,12 @@ export const Nav = ({logo,color}) => {
             <h1 className={color}>{logo}</h1>
           </Link>
         </div>
-      <nav>
+        <nav>
           <div className="md:hidden">
             {/* Mobile Navigation */}
-            <p className="font-bold text-5xl m-0 pr-4 cursor-pointer">              
-              <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" className="fill-gray-200 pt-1" width="30px" height="30px"><path d="M2 11H22V13H2zM2 5H22V7H2zM2 17H22V19H2z"/></svg>
-            </p>
+            <div id='svg' onClick={prop}>              
+              <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" className="cursor-pointer fill-gray-200 pt-1" width="30px" height="30px"><path d="M2 11H22V13H2zM2 5H22V7H2zM2 17H22V19H2z"/></svg>
+            </div>
           </div>
 
           <div className="hidden md:flex">
