@@ -13,3 +13,12 @@
     @apply mx-2 mb-3 fill-yellow-400
     w-5
 }
+
+.mobile_menu {
+    @apply font-normal text-sm absolute h-full left-0 right-0 filter backdrop-blur-sm
+     bg-transparent hidden justify-center items-center
+}
+
+.show {
+    display: flex;
+}
