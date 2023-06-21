@@ -1,21 +1,34 @@
 'use client'
 import Nav from '@components/header.jsx'
+import Link from 'next/link'
 import { useState,useEffect } from 'react'
 import Preloader from '@components/preloader'
 
 export default function Home() {
     useEffect(()=>{
-        // const page = document.getElementById('container')
-        // let wh = window.innerHeight * 0.01
-        // page.style.setProperty('--hiet',`${wh}px`)
+        
     },[])
+    function Pop (e){
+        const popdiv = document.querySelector('#mobile-menu')
+        popdiv.classList.toggle('show')
+        console.log('push it again')
+    }
         const logo = <svg xmlns="http://www.w3.org/2000/svg" width="36" height="50" viewBox="10 10 30 30" id="letter-j"><path d="M30 10C31.1046 10 32 10.8954 32 12V30C32 34.4183 28.4183 38 24 38C19.5817 38 16 34.4183 16 30C16 28.8954 16.8954 28 18 28C19.1046 28 20 28.8954 20 30C20 32.2092 21.7909 34 24 34C26.2091 34 28 32.2092 28 30V12C28 10.8954 28.8954 10 30 10Z"></path></svg>
 
     const className = "text-yellow-400 fill-yellow-400 font-sans text-5xl m-0 pt-2 pl-1"
 
-    const data = <div id="container" className="flex flex-col justify-between h-vh92 lg:h-screen bg-gradient-to-b from-blue-900 to- bg-slate-950"> 
+    const data = <div id="container" className="relative flex flex-col justify-between h-vh92 lg:h-screen bg-gradient-to-b from-blue-900 to- bg-slate-950"> 
     
-        <Nav logo={logo} color={className}/>
+        <Nav logo={logo} color={className} prop={Pop}/>
+        <div id="mobile-menu" className="mobile_menu" >
+            <div id='link-container' className="">
+                <Link href="#" className="no-underline"><div className="p-2 font-semibold text-white text-xl">Home</div></Link>
+                <Link href="#" className="no-underline"><div className="p-2 font-semibold text-white text-xl">About</div></Link>
+                <Link href="#" className="no-underline"><div className="p-2 font-semibold text-white text-xl">Projects</div></Link>
+                <Link href="#" className="no-underline"><div className="p-2 font-semibold text-white text-xl">Blog</div></Link>
+                <Link href="#" className="no-underline"><div className="p-2 font-semibold text-white text-xl">Mail</div></Link>
+            </div>             
+        </div>
         <main className="m-0 py-2 px-7"> 
             <div >
                 <h4 className="m-0 pb-1">
