@@ -22,3 +22,7 @@
 .show {
     display: flex;
 }
+.brder {
+    border: 1px solid white;
+    @apply px-12 py-4 flex flex-col items-center
+}
