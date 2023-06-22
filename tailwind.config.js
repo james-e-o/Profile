@@ -28,6 +28,10 @@ module.exports = {
         'bounce-slow3': 'bounce 1s linear 0.4s infinite',
         'bounce-slow4': 'bounce 1s linear 0.6s infinite',
       },
+
+      backgroundImage:{
+        conicGradient : "conic-gradient(white, transparent)"
+      }
       
     },
   },
