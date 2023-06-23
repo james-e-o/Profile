@@ -21,8 +21,8 @@ export default function Home() {
     
         <Nav logo={logo} color={className} prop={Pop}/>
         <div id="mobile-menu" className="mobile_menu" >
-            <div id='link-container' className="">
-                <Link href="#" className="no-underline"><div className="p-2 font-semibold text-white text-xl">Home</div></Link>
+            <div id="link-container" className="brder">
+                <Link href="#" className="no-underline"><div className="p-2 font-semibold text-yellow-400 text-xl">Home</div></Link>
                 <Link href="#" className="no-underline"><div className="p-2 font-semibold text-white text-xl">About</div></Link>
                 <Link href="#" className="no-underline"><div className="p-2 font-semibold text-white text-xl">Projects</div></Link>
                 <Link href="#" className="no-underline"><div className="p-2 font-semibold text-white text-xl">Blog</div></Link>
