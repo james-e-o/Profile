@@ -24,6 +24,5 @@
 }
 .brder {
     border: 1px solid white;
-    @apply relative before:content-['gif'] before:absolute before:bg-blue-500 before:h-full before:w-full px-12 py-4 flex flex-col items-center
-
+    @apply relative px-12 py-4 flex flex-col items-center justify-center 
 }
