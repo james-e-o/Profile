@@ -14,6 +14,15 @@
     w-5
 }
 
-.hitt {
-    @apply h-variable
+.mobile_menu {
+    @apply font-normal text-sm absolute h-full left-0 right-0 filter backdrop-blur-sm
+     bg-transparent hidden justify-center items-center
+}
+
+.show {
+    display: flex;
+}
+.brder {
+    /* border: 1px solid white; */
+    
 }

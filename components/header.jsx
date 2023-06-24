@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 
 
-export const Nav = ({logo,color}) => {
+export const Nav = ({logo,color,prop}) => {
 
   
   return (
@@ -12,12 +12,12 @@ export const Nav = ({logo,color}) => {
             <h1 className={color}>{logo}</h1>
           </Link>
         </div>
-      <nav>
+        <nav>
           <div className="md:hidden">
             {/* Mobile Navigation */}
-            <p className="font-bold text-5xl m-0 pr-4 cursor-pointer">              
-              <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" className="fill-gray-200 pt-1" width="30px" height="30px"><path d="M2 11H22V13H2zM2 5H22V7H2zM2 17H22V19H2z"/></svg>
-            </p>
+            <div id='svg' onClick={prop}>              
+               <svg data-name="Layer 1" id="Layer_1" viewBox="0 0 64 64" width="30px" height="30px" className="cursor-pointer fill-gray-200 pt-1" xmlns="http://www.w3.org/2000/svg"><path d="M21.86,18.73H9.18a2,2,0,0,1,0-4H21.86a2,2,0,0,1,0,4Z"/><path d="M54.82,18.73H34.88a2,2,0,0,1,0-4H54.82a2,2,0,0,1,0,4Z"/><path d="M54.82,34H9.18a2,2,0,0,1,0-4H54.82a2,2,0,0,1,0,4Z"/><path d="M54.82,49.27H30.07a2,2,0,0,1,0-4H54.82a2,2,0,0,1,0,4Z"/></svg>
+            </div>
           </div>
 
           <div className="hidden md:flex">
