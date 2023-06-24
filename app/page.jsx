@@ -11,7 +11,7 @@ export default function Home() {
     function Pop (e){
         const popdiv = document.querySelector('#mobile-menu')
         popdiv.classList.toggle('show')
-        console.log('push it again')
+        
     }
         const logo = <svg xmlns="http://www.w3.org/2000/svg" width="36" height="50" viewBox="10 10 30 30" id="letter-j"><path d="M30 10C31.1046 10 32 10.8954 32 12V30C32 34.4183 28.4183 38 24 38C19.5817 38 16 34.4183 16 30C16 28.8954 16.8954 28 18 28C19.1046 28 20 28.8954 20 30C20 32.2092 21.7909 34 24 34C26.2091 34 28 32.2092 28 30V12C28 10.8954 28.8954 10 30 10Z"></path></svg>
 
@@ -20,19 +20,29 @@ export default function Home() {
     const data = <div id="container" className="relative flex flex-col justify-between h-vh92 lg:h-screen bg-gradient-to-b from-blue-900 to- bg-slate-950"> 
     
         <Nav logo={logo} color={className} prop={Pop}/>
-        <div id="mobile-menu" className="mobile_menu" >
-            <div id="link-container" className="brder">
-                <Link href="#" className="no-underline"><div className="p-2 font-semibold text-yellow-400 text-xl">Home</div></Link>
-                <Link href="#" className="no-underline"><div className="p-2 font-semibold text-white text-xl">About</div></Link>
-                <Link href="#" className="no-underline"><div className="p-2 font-semibold text-white text-xl">Projects</div></Link>
-                <Link href="#" className="no-underline"><div className="p-2 font-semibold text-white text-xl">Blog</div></Link>
-                <Link href="#" className="no-underline"><div className="p-2 font-semibold text-white text-xl">Mail</div></Link>
+        <div id="mobile-menu" className="mobile_menu">
+            <div id="link-container" className="relative before:content-[''] before:absolute before:h-[1px] before:top-[-1px] before:w-[calc(100%+1px)] before:bg-white before:left-[-1px] after:content-[''] after:absolute after:h-[calc(100%+1px)] after:top-[-1px] after:w-[1px] after:bg-white after:right-[-1px]">
+                <div id="inner-link-container" className="w-full h-full relative flex flex-col items-center justify-center
+                before:content-[''] before:absolute before:h-[1px] 
+                before:bottom-[-1px] before:w-[calc(100%+1px)] before:bg-white before:left-[-1px]
+                after:content-[''] after:absolute after:h-[calc(100%+1px)] 
+                after:top-[-1px] after:w-[1px] after:bg-white after:left-[-1px]">
+                    <div className="mx-20 mt-5 "><Link href="#" className="text-yellow-300 font-semibold text-xl no-underline">Home</Link></div>
+                    <div className="mx-20 mt-5"><Link href="#" className="font-semibold text-white text-xl no-underline">About</Link></div>
+                    <div className="mx-20 mt-5"><Link href="#" className="font-semibold text-white text-xl no-underline">Projects</Link></div>
+                    <div className="mx-20 mt-5"><Link href="#" className="font-semibold text-white text-xl no-underline">Blog</Link></div>
+                    <div className="mx-2 mt-5 mb-5 flex flex-col"><Link href="#" className="text-white no-underline">
+                        <span className="text-xs font-thin"><span className="text-sm m-0 p-0 border-spacing-0 border-0 text-gray-400"> →</span>onwuasoanyajames@gmail.com</span>
+                        </Link>
+                        <span className="text-gray-400 text-xs italic font-thin">All rights reserved &#169;2023 by james onwuasoanya</span>
+                    </div>
+                </div>
             </div>             
         </div>
         <main className="m-0 py-2 px-7"> 
             <div >
                 <h4 className="m-0 pb-1">
-                    <span className="w-3 h-3 fill-amber-800">&#128075;&#127998;</span>
+                    <span className="w-3 h-3 p- fill-amber-800">&#128075;&#127998;</span>
                     <span className="text-gray-300 bg-clip-text text-transparent bg-gradient-to-r from-blue-200 to-yellow-400 ">Hey There, I'm James</span>
                 </h4>
                 <h2 className="m-0 p-0">I am a frontend web developer</h2>

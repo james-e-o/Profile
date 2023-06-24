@@ -14,7 +14,10 @@ module.exports = {
         darkNavy: '#1f1724f5'
       },
 
+      
+
       width : {
+        w2px: '2px',
         w95 : '95%',
         w90 : '90%',
         w85 : '85%',
@@ -22,6 +25,7 @@ module.exports = {
       },
       
       height : {
+        h2px: '2px',
         h95 : '95%',
         h90 : '90%',
         h85 : '85%',
@@ -38,7 +42,16 @@ module.exports = {
         'bounce-slow2': 'bounce 1s linear 0.2s infinite',
         'bounce-slow3': 'bounce 1s linear 0.4s infinite',
         'bounce-slow4': 'bounce 1s linear 0.6s infinite',
+        'grow':''
       },
+
+      // keyframes : {
+      //   popdiv: {
+      //     0% {
+
+      //     }
+      //   }
+      // }
 
       backgroundImage:{
         conicGradient : "conic-gradient(from 0deg at 50% 50%, white, 45deg, green, 350deg, red)"

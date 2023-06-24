@@ -23,6 +23,6 @@
     display: flex;
 }
 .brder {
-    border: 1px solid white;
-    @apply relative px-12 py-4 flex flex-col items-center justify-center 
+    /* border: 1px solid white; */
+    
 }
