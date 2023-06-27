@@ -42,16 +42,43 @@ module.exports = {
         'bounce-slow2': 'bounce 1s linear 0.2s infinite',
         'bounce-slow3': 'bounce 1s linear 0.4s infinite',
         'bounce-slow4': 'bounce 1s linear 0.6s infinite',
-        'grow':''
+        'slow_blur':    "slow_blur 450ms ease-out -50ms",
+        'border_anime_w': "border_anime_w 200ms ease-out",
+        'border_anime_h': "border_anime_h 200ms ease-out",
+        'link_anime':  "link_anime 950ms ease-in -150ms"
       },
 
-      // keyframes : {
-      //   popdiv: {
-      //     0% {
+      keyframes : {
+        slow_blur : {
+          'from' :{
+              "backdropFilter": "blur(0) brightness(100%)"
+          },
+          'to': {
+              "backdropFilter": 'blur(8) brightness(20%)'
+          }
+        },
+        
+        border_anime_w : {
+          'from' :{
+              "width": "0px"
+          },
+          'to': {
+            "width": "calc(100%+1px)"
+          }
+        },
 
-      //     }
-      //   }
-      // }
+        border_anime_h : {
+          'from' :{"height": "0px"},
+          'to': {"height": "calc(100%+1px)"}
+        },
+        link_anime : {
+          '0%' :{"opacity": "0", "tranform" : "translateY(30px)"},
+          '40%': {"opacity": "0"},
+          '70%': {"opacity": "1"},
+          'to': {"tranform" : "translateY(0px)","opacity": "1"}
+        }
+
+      },
 
       backgroundImage:{
         conicGradient : "conic-gradient(from 0deg at 50% 50%, white, 45deg, green, 350deg, red)"
