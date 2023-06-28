@@ -42,10 +42,10 @@ module.exports = {
         'bounce-slow2': 'bounce 1s linear 0.2s infinite',
         'bounce-slow3': 'bounce 1s linear 0.4s infinite',
         'bounce-slow4': 'bounce 1s linear 0.6s infinite',
-        'slow_blur':    "slow_blur 450ms ease-out -50ms",
-        'border_anime_w': "border_anime_w 200ms ease-out",
-        'border_anime_h': "border_anime_h 200ms ease-out",
-        'link_anime':  "link_anime 950ms ease-in -150ms"
+        'slow_blur':    "slow_blur 300ms ease-out -80ms",
+        'border_anime_w': "border_anime_w 500ms ease-out -50ms",
+        'border_anime_h': "border_anime_h 500ms ease-out -50ms",
+        'link_anime':  "link_anime 650ms ease-in-out -350ms"
       },
 
       keyframes : {
@@ -62,6 +62,7 @@ module.exports = {
           'from' :{
               "width": "0px"
           },
+          '60%': {"width": "0px"},
           'to': {
             "width": "calc(100%+1px)"
           }
@@ -69,13 +70,14 @@ module.exports = {
 
         border_anime_h : {
           'from' :{"height": "0px"},
+          '60%': {"height": "0px"},
           'to': {"height": "calc(100%+1px)"}
         },
         link_anime : {
-          '0%' :{"opacity": "0", "tranform" : "translateY(30px)"},
+          '0%' :{"opacity": "0", transform :"translateY(22px)"},
           '40%': {"opacity": "0"},
-          '70%': {"opacity": "1"},
-          'to': {"tranform" : "translateY(0px)","opacity": "1"}
+          '80%': {"opacity": "1"},
+          'to': {"opacity": "1", transform : "translateY(0px)"}
         }
 
       },

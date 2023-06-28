@@ -35,8 +35,12 @@
 }
 
 .links {
-    @apply opacity-[1] translate-y-[0] animate-link_anime
+    @apply  animate-link_anime translate-y-[0]
 }
+
+/* #inner-link-container div {
+    @apply translate-y-[30px]
+} */
 /* @keyframes slow-blur {
     from {
         backdrop-filter: blur(0);

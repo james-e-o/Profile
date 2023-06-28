@@ -17,8 +17,6 @@ export default function Home() {
         popbox.classList.add("popbox")
         inner_div.classList.add("inner_div")
         links.forEach(link=>{link.classList.add('links')})
-        document.querySelectorAll
-        
         
         // popbox.classList.toggle('mm_transition')
     }
@@ -30,20 +28,19 @@ export default function Home() {
     
         <Nav logo={logo} color={className} prop={Pop}/>
         <div id="mobile-menu" className="mobile_menu">
-            <div className="mb-4">out</div>
-            <div id="link-container" className=" relative before:content-[''] before:absolute before:h-[1px] before:top-[-1px] before:bg-white before:left-[-1px] after:content-[''] after:absolute after:top-[-1px] after:w-[1px] after:bg-white after:right-[-1px] ">
-                <div id="inner-link-container" className="w-full h-full relative flex flex-col items-center justify-center before:content-[''] before:absolute before:h-[1px]   before:bottom-[-1px]  before:bg-white before:right-[-1px] after:content-[''] after:absolute after:bottom-[-1px] after:w-[1px]  after:bg-white after:left-[-1px]">
-                    <div className=" mx-20 mt-5 "><Link href="#" className="text-yellow-300 font-semibold text-xl no-underline">Home</Link></div>
+            <div id="link-container" className="relative before:content-[''] before:absolute before:h-[1px] before:top-[-1px] before:bg-white before:left-[-1px] after:content-[''] after:absolute after:top-[-1px] after:w-[1px] after:bg-white after:right-[-1px] ">
+                <div id="inner-link-container" className="translate-y-5 w-full h-full relative flex flex-col items-center justify-center before:content-[''] before:absolute before:h-[1px]   before:bottom-[-1px]  before:bg-white before:right-[-1px] after:content-[''] after:absolute after:bottom-[-1px] after:w-[1px]  after:bg-white after:left-[-1px]">
+                    <div className=" mx-20"><Link href="#" className="text-yellow-300 font-semibold text-xl no-underline">Home</Link></div>
                     <div className=" mx-20 mt-5"><Link href="#" className="font-semibold text-white text-xl no-underline">About</Link></div>
                     <div className=" mx-20 mt-5"><Link href="#" className="font-semibold text-white text-xl no-underline">Projects</Link></div>
-                    <div className=" mx-20 mt-5"><Link href="#" className="font-semibold text-white text-xl no-underline">Blog</Link></div>
-                    <div className=" mx-2 mt-5 mb-5 flex flex-col"><Link href="#" className="text-white no-underline">
-                        <span className="text-xs font-thin"><span className="text-sm m-0 p-0 border-spacing-0 border-0 text-gray-400"> →</span>onwuasoanyajames@gmail.com</span>
-                        </Link>
-                        <span className="text-gray-400 text-xs italic font-thin">All rights reserved &#169;2023 by james onwuasoanya</span>
-                    </div>
+                    <div className=" mx-20 mt-5 mb-5"><Link href="#" className="font-semibold text-white text-xl no-underline">Blog</Link></div>
                 </div>
-            </div>             
+            </div> 
+            <div className=" mx-2 mt-14 flex flex-col items-center"><Link href="#" className="text-white no-underline">
+                 <span className="text-xs font-thin"><span className="text-sm m-0 p-0 border-spacing-0 border-0 text-gray-400"> →</span>onwuasoanyajames@gmail.com</span>
+                </Link>
+                <span className="text-gray-400 text-xs italic font-thin">All rights reserved &#169;2023 by james onwuasoanya</span>
+            </div>           
         </div>
         <main className="m-0 py-2 px-7"> 
             <div >
@@ -54,7 +51,7 @@ export default function Home() {
                 <h2 className="m-0 p-0">I am a frontend web developer</h2>
                 <p id="info" className="text-gray-400 text-sm m-0 p-0">I bring web designs to life by creating impressive user experiences and reactive websites, using HTML, JavaScript, React js, CSS, Tailwind, Node js, and other Javascript based tools, packages and libraries. </p>
                 <p id="CTA" 
-                className="px-2 py-1 bg-blue-300 inline-block text-black text-sm font-thin">
+                className="px-2 py-1 bg-blue-400 inline-block text-black text-sm font-thin">
                 {/* <span className="text-2xl m-0 p-0 border-spacing-0 border-0 text-pink-400"> →</span>  */}
                 View my Resume</p>
             </div> 
