@@ -6,17 +6,17 @@ import Preloader from '@components/preloader'
 
 export default function Home() {
     useEffect(()=>{
-       
-    },[])
-    document.onclick=(e)=>{
-        const popdiv = document.querySelector('#mobile-menu')
-        const popbox = document.querySelector('#link-container')
-        if (popdiv.classList.contains('popdiv')){
-            if(e.target == popdiv && e.target != popbox){
-                popdiv.classList.remove('popdiv')
+        document.onclick=(e)=>{
+            const popdiv = document.querySelector('#mobile-menu')
+            const popbox = document.querySelector('#link-container')
+            if (popdiv.classList.contains('popdiv')){
+                if(e.target == popdiv && e.target != popbox){
+                    popdiv.classList.remove('popdiv')
+                }
             }
         }
-    }
+    },[])
+    
     // const [opaqe, setOpaque]=useState(0)
     function Pop (e){
         const popdiv = document.querySelector('#mobile-menu')
