@@ -6,7 +6,7 @@ export const Nav = ({logo,color,prop}) => {
 
   
   return (
-    <header className="py-4 px-6 flex justify-between">
+    <header className="py-4 px-6 flex justify-between animate-land_anime1">
         <div>
           <Link href="/About" className="no-underline appearance-none">
             <h1 className={color}>{logo}</h1>

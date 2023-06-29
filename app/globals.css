@@ -15,13 +15,12 @@
 }
 
 .mobile_menu {
-    /* transition: backdrop-filter 150ms ease-in-out; */
     @apply font-normal text-sm absolute h-full left-0 right-0 filter backdrop-blur-0
      bg-transparent hidden justify-center flex-col items-center
 }
 
 .popdiv {
-   @apply flex backdrop-blur animate-slow_blur
+   @apply flex backdrop-blur animate-slow_blur z-[1]
 }
 
 .popbox {
