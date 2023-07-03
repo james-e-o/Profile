@@ -75,7 +75,7 @@ module.exports = {
           'to': {"height": "calc(100%+1px)"}
         },
         link_anime : {
-          '0%' :{"opacity": "0", transform :"translateY(22px)"},
+          '0%' :{"opacity": "0", transform :"translateY(40px)"},
           '40%': {"opacity": "0"},
           '80%': {"opacity": "1"},
           'to': {"opacity": "1", transform : "translateY(0px)"}
