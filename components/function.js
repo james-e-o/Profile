@@ -1,4 +1,4 @@
-
+'use client'
 export default function ret (){
     const popdiv = document.querySelector('#mobile-menu')
     const popbox = document.querySelector('#link-container')
