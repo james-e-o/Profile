@@ -3,35 +3,6 @@ import React from 'react'
 import Link from 'next/link'
 
 const Mobile_menu = () => {
-//   useEffect(()=>{
-//     document.onclick=(e)=>{
-//         const popdiv = document.querySelector('#mobile-menu')
-//         const popbox = document.querySelector('#link-container')
-//         const inner_div = document.querySelector('#inner-link-container')
-//         if (popdiv.classList.contains('popdiv')){
-//             if(e.target == popdiv && e.target != popbox){
-//                 inner_div.classList.remove("inner_div")
-//                 popbox.classList.remove("popbox")
-//                 popdiv.classList.remove('popdiv')
-//             }
-//         }
-//     }
-// },[])
-
-// const [opaqe, setOpaque]=useState(0)
-// function Pop (e){
-//     const popdiv = document.querySelector('#mobile-menu')
-//     const popbox = document.querySelector('#link-container')
-//     const inner_div = document.querySelector('#inner-link-container')
-//     const links = document.querySelectorAll('#inner-link-container div')
-    
-//     popdiv.classList.add("popdiv")
-//     popbox.classList.add("popbox")
-//     inner_div.classList.add("inner_div")
-//     links.forEach(link=>{link.classList.add('links')})
-    
-//     // popbox.classList.toggle('mm_transition')
-// }   
   return (
     <div id="mobile-menu" className="mobile_menu">
             <div id="link-container" className="relative before:content-[''] before:absolute before:h-[1px] before:top-[-1px] before:bg-white before:left-[-1px] after:content-[''] after:absolute after:top-[-1px] after:w-[1px] after:bg-white after:right-[-1px] ">

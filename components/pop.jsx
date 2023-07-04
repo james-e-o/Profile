@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+
 
 const Pop = () => {
   
@@ -12,10 +12,6 @@ const Pop = () => {
     popbox.classList.add("popbox")
     inner_div.classList.add("inner_div")
     links.forEach(link=>{link.classList.add('links')})
-    
-//   return (
-      
-//     )
 }
 
 export default Pop

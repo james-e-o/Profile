@@ -38,7 +38,7 @@ export default function Home() {
 
     const className = "text-yellow-400 fill-yellow-400 font-sans text-5xl m-0 pt-2 pl-1"
 
-    const data = <div id="container" className="relative flex flex-col justify-between h-vh92 lg:h-screen bg-gradient-to-b from-slate-500 to- bg-slate-950"> 
+    const data = <div id="container" className="relative flex flex-col justify-between h-vh92 lg:h-screen bg-gradient-to-b from-gray-600 to- bg-slate-950"> 
     
         <Nav logo={logo} color={className} prop={Pop}/>
         <div id="mobile-menu" className="mobile_menu">

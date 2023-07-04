@@ -40,7 +40,7 @@ module.exports = {
         'bounce-slow2': 'bounce 1s linear 0.2s infinite',
         'bounce-slow3': 'bounce 1s linear 0.4s infinite',
         'bounce-slow4': 'bounce 1s linear 0.6s infinite',
-        'slow_blur':    "slow_blur 300ms ease-out -80ms",
+        'slow_blur':    "slow_blur 300ms ease-out -150ms",
         'border_anime_w': "border_anime_w 500ms ease-out -50ms",
         'border_anime_h': "border_anime_h 500ms ease-out -50ms",
         'link_anime':  "link_anime 500ms ease-in-out -350ms",
