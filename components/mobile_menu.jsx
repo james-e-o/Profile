@@ -16,7 +16,7 @@ const Mobile_menu = () => {
             <div className=" mx-2 mt-14 flex flex-col items-center"><Link href="#" className="text-white no-underline">
                  <span className="text-xs font-thin"><span className="text-sm m-0 p-0 border-spacing-0 border-0 text-gray-400"> →</span>onwuasoanyajames@gmail.com</span>
                 </Link>
-                <span className="text-gray-400 text-xs italic font-thin">All rights reserved &#169;2023 by james onwuasoanya</span>
+                <span className="text-gray-400 text-xs italic font-thin">&#169;2023 by james onwuasoanya. All rights reserved.</span>
             </div>           
         </div>
   )

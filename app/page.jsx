@@ -5,20 +5,20 @@ import { useState,useEffect } from 'react'
 import Preloader from '@components/preloader'
 
 export default function Home() {
-    useEffect(()=>{
-        document.onclick=(e)=>{
-            const popdiv = document.querySelector('#mobile-menu')
-            const popbox = document.querySelector('#link-container')
-            const inner_div = document.querySelector('#inner-link-container')
-            if (popdiv.classList.contains('popdiv')){
-                if(e.target == popdiv && e.target != popbox){
-                    inner_div.classList.remove("inner_div")
-                    popbox.classList.remove("popbox")
-                    popdiv.classList.remove('popdiv')
-                }
-            }
-        }
-    },[])
+    // useEffect(()=>{
+    //     document.onclick=(e)=>{
+    //         const popdiv = document.querySelector('#mobile-menu')
+    //         const popbox = document.querySelector('#link-container')
+    //         const inner_div = document.querySelector('#inner-link-container')
+    //         if (popdiv.classList.contains('popdiv')){
+    //             if(e.target == popdiv && e.target != popbox){
+    //                 inner_div.classList.remove("inner_div")
+    //                 popbox.classList.remove("popbox")
+    //                 popdiv.classList.remove('popdiv')
+    //             }
+    //         }
+    //     }
+    // },[])
     
     // const [opaqe, setOpaque]=useState(0)
     function Pop (e){
@@ -53,7 +53,7 @@ export default function Home() {
             <div className=" mx-2 mt-14 flex flex-col items-center"><Link href="#" className="text-white no-underline">
                  <span className="text-xs font-thin"><span className="text-sm m-0 p-0 border-spacing-0 border-0 text-gray-400"> →</span>onwuasoanyajames@gmail.com</span>
                 </Link>
-                <span className="text-gray-400 text-xs italic font-thin">All rights reserved &#169;2023 by james onwuasoanya</span>
+                <span className="text-gray-400 text-xs italic font-thin">&#169;2023 by james onwuasoanya. All rights reserved.</span>
             </div>           
         </div>
         <main className="m-0 py-2 px-7"> 
