@@ -1,16 +1,17 @@
-
+import { usePathname } from 'next/navigation';
 import React from 'react'
 import Link from 'next/link'
 
 const Mobile_menu = () => {
+  const currentRoute = usePathname()
   return (
     <div id="mobile-menu" className="mobile_menu">
-            <div id="link-container" className="relative before:content-[''] before:absolute before:h-[1px] before:top-[-1px] before:bg-white before:left-[-1px] after:content-[''] after:absolute after:top-[-1px] after:w-[1px] after:bg-white after:right-[-1px] ">
-                <div id="inner-link-container" className="translate-y-5 w-full h-full relative flex flex-col items-center justify-center before:content-[''] before:absolute before:h-[1px]   before:bottom-[-1px]  before:bg-white before:right-[-1px] after:content-[''] after:absolute after:bottom-[-1px] after:w-[1px]  after:bg-white after:left-[-1px]">
-                    <div className=" mx-20"><Link href="/" className="text-yellow-300 font-semibold text-xl no-underline">Home</Link></div>
-                    <div className=" mx-20 mt-5"><Link href="/About" className="font-semibold text-white text-xl no-underline">About</Link></div>
-                    <div className=" mx-20 mt-5"><Link href="/Projects" className="font-semibold text-white text-xl no-underline">Projects</Link></div>
-                    <div className=" mx-20 mt-5 mb-5"><Link href="/Blogs" className="font-semibold text-white text-xl no-underline">Blog</Link></div>
+            <div id="link-container" className="link-container">
+                <div id="inner-link-container" className="inner-link-container">
+                    <div className="links"><Link href="/"  className={currentRoute === "/" ? "m-link active" : "text-white m-link"}>Home</Link></div>
+                    <div className="links mt-5"><Link href="/About" className={currentRoute === "/About" ? "m-link active" : "text-white m-link"}>About</Link></div>
+                    <div className="links mt-5"><Link href="/Projects" className={currentRoute === "/Projects" ? "m-link active" : "text-white m-link"}>Projects</Link></div>
+                    <div className="links mt-5"><Link href="/Blogs" className={currentRoute === "/Blogs" ? "m-link active" : "text-white m-link"}>Blog</Link></div>
                 </div>
             </div> 
             <div className=" mx-2 mt-14 flex flex-col items-center"><Link href="#" className="text-white no-underline">

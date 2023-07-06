@@ -1,6 +1,7 @@
 'use client'
 import Nav from '@components/header.jsx'
 import Link from 'next/link'
+import Mobile_menu from '@components/mobile_menu';
 import { useState,useEffect } from 'react'
 import Preloader from '@components/preloader'
 
@@ -27,13 +28,14 @@ export default function Home() {
         const inner_div = document.querySelector('#inner-link-container')
         const links = document.querySelectorAll('#inner-link-container div')
         
-        popdiv.classList.add("popdiv")
-        popbox.classList.add("popbox")
-        inner_div.classList.add("inner_div")
-        links.forEach(link=>{link.classList.add('links')})
+        popdiv.classList.toggle("popdiv")
+        popbox.classList.toggle("popbox")
+        inner_div.classList.toggle("inner_div")
+        links.forEach(link=>{link.classList.toggle('poplink')})
         
         // popbox.classList.toggle('mm_transition')
     }
+    
     const logo = <svg xmlns="http://www.w3.org/2000/svg" width="36" height="50" viewBox="10 10 30 30" id="letter-j"><path d="M30 10C31.1046 10 32 10.8954 32 12V30C32 34.4183 28.4183 38 24 38C19.5817 38 16 34.4183 16 30C16 28.8954 16.8954 28 18 28C19.1046 28 20 28.8954 20 30C20 32.2092 21.7909 34 24 34C26.2091 34 28 32.2092 28 30V12C28 10.8954 28.8954 10 30 10Z"></path></svg>
 
     const className = "text-yellow-400 fill-yellow-400 font-sans text-5xl m-0 pt-2 pl-1"
@@ -41,21 +43,7 @@ export default function Home() {
     const data = <div id="container" className="relative flex flex-col justify-between h-vh92 lg:h-screen bg-gradient-to-b from-gray-600 to- bg-slate-950"> 
     
         <Nav logo={logo} color={className} prop={Pop}/>
-        <div id="mobile-menu" className="mobile_menu">
-            <div id="link-container" className="relative before:content-[''] before:absolute before:h-[1px] before:top-[-1px] before:bg-white before:left-[-1px] after:content-[''] after:absolute after:top-[-1px] after:w-[1px] after:bg-white after:right-[-1px] ">
-                <div id="inner-link-container" className="translate-y-5 w-full h-full relative flex flex-col items-center justify-center before:content-[''] before:absolute before:h-[1px]   before:bottom-[-1px]  before:bg-white before:right-[-1px] after:content-[''] after:absolute after:bottom-[-1px] after:w-[1px]  after:bg-white after:left-[-1px]">
-                    <div className=" mx-20"><Link href="/" className="text-yellow-300 font-semibold text-xl no-underline">Home</Link></div>
-                    <div className=" mx-20 mt-5"><Link href="/About" className="font-semibold text-white text-xl no-underline">About</Link></div>
-                    <div className=" mx-20 mt-5"><Link href="/Projects" className="font-semibold text-white text-xl no-underline">Projects</Link></div>
-                    <div className=" mx-20 mt-5 mb-5"><Link href="/Blogs" className="font-semibold text-white text-xl no-underline">Blog</Link></div>
-                </div>
-            </div> 
-            <div className=" mx-2 mt-14 flex flex-col items-center"><Link href="#" className="text-white no-underline">
-                 <span className="text-xs font-thin"><span className="text-sm m-0 p-0 border-spacing-0 border-0 text-gray-400"> →</span>onwuasoanyajames@gmail.com</span>
-                </Link>
-                <span className="text-gray-400 text-xs italic font-thin">&#169;2023 by james onwuasoanya. All rights reserved.</span>
-            </div>           
-        </div>
+        <Mobile_menu/>
         <main className="m-0 py-2 px-7"> 
             <div id="main_wrapper" className="opacity-100 translate-y-0 animate-land_anime2">
             

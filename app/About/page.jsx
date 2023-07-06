@@ -1,3 +1,4 @@
+'use client'
 import Nav from '@components/header'
 import Mobile_menu from '@components/mobile_menu'
 import ret from '@components/function'

@@ -14,37 +14,52 @@
     w-5
 }
 
-.mobile_menu {
-    @apply font-normal text-sm absolute h-full left-0 right-0 filter backdrop-blur-0
-     bg-transparent hidden justify-center flex-col items-center
+.link-container {
+    @apply relative before:content-[''] before:absolute before:h-[1px] before:top-[-1px] before:w-[0px]
+     before:bg-white before:left-[-1px] after:content-[''] after:absolute after:top-[-1px] after:w-[1px] 
+     after:h-[0px] after:bg-white after:right-[-1px]
 }
 
-.popdiv {
-   @apply flex backdrop-blur animate-slow_blur z-[1]
-}
-
-.popbox {
-   @apply before:w-[calc(100%+1px)] before:animate-border_anime_w
-   after:h-[calc(100%+1px)] after:animate-border_anime_h
-}
-
-.inner_div {
-    @apply before:w-[calc(100%+1px)] before:animate-border_anime_w
-    after:h-[calc(100%+1px)] after:animate-border_anime_h
+.inner-link-container {
+    @apply translate-y-5 w-full h-full relative flex flex-col items-center justify-center before:content-[''] 
+    before:absolute before:h-[1px] before:w-[0px] before:bottom-[-1px]  before:bg-white before:right-[-1px] 
+    after:content-[''] after:absolute after:bottom-[-1px] after:w-[1px] after:h-[0px] 
+     after:bg-white after:left-[-1px]
 }
 
 .links {
-    @apply  animate-link_anime translate-y-[0]
+    @apply mx-20 
 }
 
-/* #inner-link-container div {
-    @apply translate-y-[30px]
-} */
-/* @keyframes slow-blur {
-    from {
-        backdrop-filter: blur(0);
-    }
-    to {
-        backdrop-filter: blur(8);
-    }
-} */
+.active {
+    @apply text-yellow-400
+}
+
+.links:last-child {
+    @apply mb-5
+}
+
+.m-link {
+    @apply font-semibold text-xl no-underline
+}
+
+.mobile_menu {
+    @apply font-normal text-sm absolute h-full left-0 right-0 filter backdrop-blur
+     bg-transparent flex justify-center flex-col items-center -z-[1]
+}
+
+.popdiv {
+   @apply backdrop-blur animate-slow_blur z-[1]
+}
+
+.popbox {
+   @apply  before:w-[30px] after:h-[30px]
+}
+
+.inner_div {
+    @apply before:w-[30px] after:h-[30px]
+}
+
+.poplink {
+    @apply  animate-link_anime translate-y-[0]
+}
