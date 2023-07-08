@@ -28,7 +28,7 @@
 }
 
 .links {
-    @apply mx-20 
+    @apply mx-20 translate-y-10 opacity-0 
 }
 
 .active {
@@ -53,13 +53,19 @@
 }
 
 .popbox {
-   @apply  before:w-[30px] after:h-[30px]
+   @apply  before:w-[calc(100%+1px)] after:h-[calc(100%+1px)]
+   before:transition-[width] before:duration-500 before:ease-out 
+   after:transition-[height] after:duration-500 after:ease-out 
 }
 
 .inner_div {
-    @apply before:w-[30px] after:h-[30px]
+    @apply before:w-[calc(100%+1px)] after:h-[calc(100%+1px)]
+    before:transition-[width] before:duration-500 before:ease-out 
+   after:transition-[height] after:duration-500 after:ease-out
 }
 
 .poplink {
-    @apply  animate-link_anime translate-y-[0]
+    @apply  translate-y-[0] opacity-100
+    transition-opacity duration-500 ease-in 
+    /* transition-[translateY] duration-500 ease-in  */
 }

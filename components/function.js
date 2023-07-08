@@ -8,7 +8,7 @@ export default function ret (){
     popdiv.classList.add("popdiv")
     popbox.classList.add("popbox")
     inner_div.classList.add("inner_div")
-    links.forEach(link=>{link.classList.add('links')})
+    links.forEach(link=>{link.classList.add('poplink')})
 
     document.onclick=(e)=>{
         const popdiv = document.querySelector('#mobile-menu')

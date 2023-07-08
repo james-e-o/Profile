@@ -3,7 +3,7 @@ import React from 'react'
 import Link from 'next/link'
 
 const Mobile_menu = () => {
-  const currentRoute = usePathname()
+const currentRoute = usePathname()
   return (
     <div id="mobile-menu" className="mobile_menu">
             <div id="link-container" className="link-container">
@@ -14,7 +14,7 @@ const Mobile_menu = () => {
                     <div className="links mt-5"><Link href="/Blogs" className={currentRoute === "/Blogs" ? "m-link active" : "text-white m-link"}>Blog</Link></div>
                 </div>
             </div> 
-            <div className=" mx-2 mt-14 flex flex-col items-center"><Link href="#" className="text-white no-underline">
+            <div className=" mx-2 mt-16 flex flex-col items-center"><Link href="#" className="text-white no-underline">
                  <span className="text-xs font-thin"><span className="text-sm m-0 p-0 border-spacing-0 border-0 text-gray-400"> →</span>onwuasoanyajames@gmail.com</span>
                 </Link>
                 <span className="text-gray-400 text-xs italic font-thin">&#169;2023 by james onwuasoanya. All rights reserved.</span>
