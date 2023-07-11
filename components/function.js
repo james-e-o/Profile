@@ -16,6 +16,7 @@ export default function ret (){
         const inner_div = document.querySelector('#inner-link-container')
         if (popdiv.classList.contains('popdiv')){
             if(e.target == popdiv && e.target != popbox){
+                links.forEach(link=>{link.classList.remove('poplink')})
                 inner_div.classList.remove("inner_div")
                 popbox.classList.remove("popbox")
                 popdiv.classList.remove('popdiv')

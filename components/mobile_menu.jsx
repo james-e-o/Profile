@@ -17,7 +17,7 @@ const currentRoute = usePathname()
             <div className=" mx-2 mt-16 flex flex-col items-center"><Link href="#" className="text-white no-underline">
                  <span className="text-xs font-thin"><span className="text-sm m-0 p-0 border-spacing-0 border-0 text-gray-400"> →</span>onwuasoanyajames@gmail.com</span>
                 </Link>
-                <span className="text-gray-400 text-xs italic font-thin">&#169;2023 by james onwuasoanya. All rights reserved.</span>
+                <span className="text-gray-400 text-xs italic font-thin"><span className="text-blue-300"><Link href="https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt">MIT Licence</Link></span> &#169;2023 James Onwuasoanya. | All rights reserved.</span>
             </div>           
         </div>
   )

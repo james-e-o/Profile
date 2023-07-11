@@ -28,7 +28,7 @@
 }
 
 .links {
-    @apply mx-20 translate-y-10 opacity-0 
+    @apply mx-20 translate-y-6 opacity-0 
 }
 
 .active {
@@ -66,6 +66,7 @@
 
 .poplink {
     @apply  translate-y-[0] opacity-100
-    transition-opacity duration-500 ease-in 
-    /* transition-[translateY] duration-500 ease-in  */
+    transition-[opacity,transform] duration-[200ms] ease-in-out
+    
+    /* transition-[transform] duration-500 ease-in  */
 }
