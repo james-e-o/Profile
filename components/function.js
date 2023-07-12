@@ -5,10 +5,10 @@ export default function ret (){
     const inner_div = document.querySelector('#inner-link-container')
     const links = document.querySelectorAll('#inner-link-container div')
     
-    popdiv.classList.add("popdiv")
-    popbox.classList.add("popbox")
-    inner_div.classList.add("inner_div")
-    links.forEach(link=>{link.classList.add('poplink')})
+    popdiv.classList.toggle("popdiv")
+    links.forEach(link=>{link.classList.toggle('poplink')})
+    popbox.classList.toggle("popbox")
+    inner_div.classList.toggle("inner_div")
 
     document.onclick=(e)=>{
         const popdiv = document.querySelector('#mobile-menu')
@@ -16,10 +16,10 @@ export default function ret (){
         const inner_div = document.querySelector('#inner-link-container')
         if (popdiv.classList.contains('popdiv')){
             if(e.target == popdiv && e.target != popbox){
-                links.forEach(link=>{link.classList.remove('poplink')})
-                inner_div.classList.remove("inner_div")
-                popbox.classList.remove("popbox")
-                popdiv.classList.remove('popdiv')
+                inner_div.classList.toggle("inner_div")
+                popbox.classList.toggle("popbox")
+                links.forEach(link=>{link.classList.toggle('poplink')})
+                popdiv.classList.toggle('popdiv')
             }
         }
     }

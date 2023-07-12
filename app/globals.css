@@ -18,6 +18,9 @@
     @apply relative before:content-[''] before:absolute before:h-[1px] before:top-[-1px] before:w-[0px]
      before:bg-white before:left-[-1px] after:content-[''] after:absolute after:top-[-1px] after:w-[1px] 
      after:h-[0px] after:bg-white after:right-[-1px]
+     /* reverse */
+     before:transition-[width] before:duration-[100ms] before:ease-in  
+     after:transition-[height] after:duration-[100ms] after:ease-in 
 }
 
 .inner-link-container {
@@ -25,10 +28,15 @@
     before:absolute before:h-[1px] before:w-[0px] before:bottom-[-1px]  before:bg-white before:right-[-1px] 
     after:content-[''] after:absolute after:bottom-[-1px] after:w-[1px] after:h-[0px] 
      after:bg-white after:left-[-1px]
+    /* reverse */
+     before:transition-[width] before:duration-[100ms] before:ease-in  
+     after:transition-[height] after:duration-[100ms] after:ease-in 
 }
 
 .links {
     @apply mx-20 translate-y-6 opacity-0 
+    /* reverse  */
+     transition-[opacity,transform] duration-[280ms] ease-in
 }
 
 .active {
@@ -45,28 +53,29 @@
 
 .mobile_menu {
     @apply font-normal text-sm absolute h-full left-0 right-0 filter backdrop-blur
-     bg-transparent flex justify-center flex-col items-center -z-[1]
+    bg-transparent flex justify-center flex-col items-center -z-[1]
+    /* reverse */
+    transition-[z-index] duration-[380ms] ease-in-out
 }
 
 .popdiv {
-   @apply backdrop-blur animate-slow_blur z-[1]
+   @apply backdrop-blur  z-[1]
+   transition-[z-index] duration-[50ms] ease-in-out
 }
 
 .popbox {
    @apply  before:w-[calc(100%+1px)] after:h-[calc(100%+1px)]
-   before:transition-[width] before:duration-500 before:ease-out 
-   after:transition-[height] after:duration-500 after:ease-out 
+   before:transition-[width] before:duration-[250ms] before:ease-out before:delay-100 
+   after:transition-[height] after:duration-[250ms] after:ease-out after:delay-100  
 }
 
 .inner_div {
     @apply before:w-[calc(100%+1px)] after:h-[calc(100%+1px)]
-    before:transition-[width] before:duration-500 before:ease-out 
-   after:transition-[height] after:duration-500 after:ease-out
+    before:transition-[width] before:duration-[250ms] before:ease-out before:delay-100 
+   after:transition-[height] after:duration-[250ms] after:ease-out after:delay-100
 }
 
 .poplink {
     @apply  translate-y-[0] opacity-100
-    transition-[opacity,transform] duration-[200ms] ease-in-out
-    
-    /* transition-[transform] duration-500 ease-in  */
+    transition-[opacity,transform] duration-[200ms] ease-out 
 }
