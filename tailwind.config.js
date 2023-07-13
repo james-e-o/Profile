@@ -11,7 +11,8 @@ module.exports = {
     extend: {
   
       colors :{
-        darkNavy: '#1f1724f5'
+        darkNavy: '#1f1724f5',
+        deepSlate: '#1f1f1f'
       },
 
       width : {
