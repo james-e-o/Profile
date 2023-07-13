@@ -22,7 +22,7 @@ const Blog = () => {
               <p>Veniam pariatur cillum ullamco proident et id Lorem excepteur ad.</p>
               <p id='reactions' className=" font-thin text-xs p-2">
                 <span className="p-1">views:{reactions.views}</span>
-                <span className="p-1"><img src="@components/public/comment-icon.png'" alt="" />:{reactions.comments}</span>
+                <span className="p-1">comment:{reactions.comments}</span>
                 <span className="p-1">likes:{reactions.likes}</span>
               </p>
             </div>
