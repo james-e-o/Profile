@@ -1,5 +1,4 @@
 'use client'
-import comment from '@components/public/comment-icon.png'
 import Nav from '@components/header'
 import Mobile_menu from '@components/mobile_menu'
 import ret from '@components/function'
