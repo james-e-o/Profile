@@ -19,8 +19,8 @@
      before:bg-white before:left-[-1px] after:content-[''] after:absolute after:top-[-1px] after:w-[1px] 
      after:h-[0px] after:bg-white after:right-[-1px]
      /* reverse */
-     before:transition-[width] before:duration-[100ms] before:ease-in  
-     after:transition-[height] after:duration-[100ms] after:ease-in 
+     before:transition-[width] before:duration-[80ms] before:ease-in  
+     after:transition-[height] after:duration-[80ms] after:ease-in 
 }
 
 .inner-link-container {
@@ -29,14 +29,14 @@
     after:content-[''] after:absolute after:bottom-[-1px] after:w-[1px] after:h-[0px] 
      after:bg-white after:left-[-1px]
     /* reverse */
-     before:transition-[width] before:duration-[100ms] before:ease-in  
-     after:transition-[height] after:duration-[100ms] after:ease-in 
+     before:transition-[width] before:duration-[80ms] before:ease-in  
+     after:transition-[height] after:duration-[80ms] after:ease-in 
 }
 
 .links {
     @apply mx-20 translate-y-6 opacity-0 
     /* reverse  */
-     transition-[opacity,transform] duration-[280ms] ease-in
+     transition-[opacity,transform] duration-[260ms] ease-in
 }
 
 .active {
@@ -52,15 +52,19 @@
 }
 
 .mobile_menu {
-    @apply font-normal text-sm absolute h-full left-0 right-0 filter backdrop-blur
-    bg-transparent flex justify-center flex-col items-center -z-[1]
+    @apply font-normal text-sm absolute h-screen left-0 right-0 filter backdrop-blur 
+    bg-transparent flex justify-center flex-col items-center -z-[1] 
     /* reverse */
-    transition-[z-index] duration-[380ms] ease-in-out
+    transition-[z-index] duration-[360ms] ease-in-out
 }
 
 .popdiv {
-   @apply backdrop-blur  z-[1]
-   transition-[z-index] duration-[50ms] ease-in-out
+   @apply backdrop-blur  z-[1] backdrop-brightness-[0.5]
+   transition-[z-index,filter] duration-[50ms] ease-in-out
+}
+
+.test {
+    display: flex;
 }
 
 .popbox {

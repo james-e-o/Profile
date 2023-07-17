@@ -8,7 +8,7 @@ const Preloader = ({data})=>{
     useEffect(()=>{
     const prloaderTimeout = setTimeout(() => {
       setRender(data);
-    }, 1000);
+    },200);
     return () => {
       clearTimeout(prloaderTimeout);
     };
