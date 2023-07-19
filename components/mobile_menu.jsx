@@ -14,7 +14,7 @@ const currentRoute = usePathname()
                     <div className="links mt-5"><Link href="/Blogs" className={currentRoute === "/Blogs" ? "m-link active" : "text-white m-link"}>Blog</Link></div>
                 </div>
             </div> 
-            <div className=" mx-2 mt-16 flex flex-col items-center"><Link href="#" className="text-white no-underline">
+            <div className="links mx-2 mt-16 flex flex-col items-center"><Link href="#" className="text-white no-underline">
                  <span className="text-xs font-thin"><span className="text-sm m-0 p-0 border-spacing-0 border-0 text-blue-300"> → </span>onwuasoanyajames@gmail.com</span>
                 </Link>
                 <span className="text-gray-400 text-xs italic font-thin"><Link href="https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt" className="text-blue-300 no-underline" >MIT Licence & Copyright</Link> &#169;2023 James Onwuasoanya.</span>
