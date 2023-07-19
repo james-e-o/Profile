@@ -21,7 +21,8 @@ export default function ret (){
             }
         }
     }
-    document.onpointerdown = dissolve
+    // document.onpointerdown = dissolve
+    document.onclick = dissolve
     // document.onpointermove = dissolve
 
     

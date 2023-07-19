@@ -12,7 +12,7 @@ const Blog = () => {
       likes: 40
     }
     const className = "text-white font-sans text-3xl m-0 pl-4"
-    const data =  <div className="relative flex flex-col justify-between lg:h-screen bg-gradient-to-b from-slate-600 to- bg-deepSlate">
+    const data =  <div id="blog-main" className="relative flex flex-col justify-between lg:h-screen bg-gradient-to-b from-slate-600 to- bg-deepSlate">
         <Nav logo={logo} color={className} prop={ret}/>
         <Mobile_menu /> 
         <div className="mx-4 mt-6 grid grid-cols-2">

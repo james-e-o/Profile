@@ -52,11 +52,13 @@
 }
 
 .mobile_menu {
-    @apply font-normal text-sm absolute h-screen left-0 right-0 filter backdrop-blur 
-    bg-transparent flex justify-center flex-col items-center -z-[1] 
+    @apply font-normal text-sm flex absolute h-vh92 left-0 right-0 filter backdrop-blur 
+    bg-transparent justify-center flex-col items-center -z-[1] 
     /* reverse */
     transition-[z-index] duration-[360ms] ease-in-out
 }
+
+
 
 .popdiv {
    @apply backdrop-blur  z-[1] backdrop-brightness-[0.5]
