@@ -29,7 +29,7 @@ module.exports = {
         h90 : '90%',
         h85 : '85%',
         h80 : '80%',
-        vh92 : '92vh',
+        vh92 : '93vh',
         vh95 : '95vh',
         variable:'calc(var(--hiet,1vh)*100)',
         over:'650px',

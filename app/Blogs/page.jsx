@@ -1,6 +1,6 @@
 'use client'
 import Nav from '@components/header'
-import Mobile_menu from '@components/mobile_menu'
+// import Mobile_menu from '@components/mobile_menu'
 import ret from '@components/function'
 import Preloader from '@components/preloader'
 
@@ -12,9 +12,9 @@ const Blog = () => {
       likes: 40
     }
     const className = "text-white font-sans text-3xl m-0 pl-4"
-    const data =  <div id="blog-main" className="relative flex flex-col justify-between lg:h-screen bg-gradient-to-b from-slate-600 to- bg-deepSlate">
+    const data =  <div id="container" className="relative flex flex-col justify-between lg:h-screen bg-gradient-to-b from-slate-600 to- bg-deepSlate">
         <Nav logo={logo} color={className} prop={ret}/>
-        <Mobile_menu /> 
+        {/* <Mobile_menu />  */}
         <div className="mx-4 mt-6 grid grid-cols-2">
           <div className="p-3 bg-slate-500 rounded-lg mx-1 mb-1">
             <h3 className="px-2">Basics of React Router Dom 6 </h3>

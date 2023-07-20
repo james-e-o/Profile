@@ -1,4 +1,7 @@
+'use client'
+import { useEffect } from 'react';
 import './globals.css'
+import Mobile_menu from '@components/mobile_menu';
 
 export const metadata = {
   title: 'My profile',
@@ -6,10 +9,16 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+  useEffect(()=>{
+
+  })
   return (
     <html lang="en" className="m-0 p-0">
-      <body className=" bg-gradient-to-b from-slate-600 to- bg-yellow-500 bg-no-repeat m-0 text-white font-sans h-vh92">
-        {children}
+      <body className="z-[1] layout bg-gradient-to-b from-slate-600 to- bg-deepSlate bg-no-repeat m-0 text-white font-sans h-vh92">
+        <div id='z_index' className="z-[1] h-vh92 bg-gradient-to-b from-slate-600 to- bg-deepSlate bg-no-repeat">
+          <Mobile_menu/>
+          {children}
+        </div>
       </body>
     </html>
   )

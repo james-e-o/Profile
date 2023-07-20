@@ -1,7 +1,7 @@
 'use client'
 import Nav from '@components/header.jsx'
 import Link from 'next/link'
-import Mobile_menu from '@components/mobile_menu';
+// import Mobile_menu from '@components/mobile_menu';
 import ret from '@components/function'
 import { useState,useEffect } from 'react'
 import Preloader from '@components/preloader'
@@ -11,10 +11,10 @@ export default function Home() {
 
     const className = "text-yellow-400 fill-yellow-400 font-sans text-5xl m-0 pt-2 pl-1"
 
-    const data = <div id="container" className="relative flex flex-col justify-between h-vh92 lg:h-screen "> 
+    const data = <div id="container" className="relative flex flex-col justify-between bg-gradient-to-b from-gray-600 to- bg-deepSlate bg-no-repeat h-vh92 lg:h-screen "> 
     
         <Nav logo={logo} color={className} prop={ret}/>
-        <Mobile_menu/>
+        {/* <Mobile_menu/> */}
         <main className="m-0 py-2 px-7"> 
             <div id="main_wrapper" className="opacity-100 translate-y-0 animate-land_anime2">
                 <h4 className="m-0 pb-1">
