@@ -15,7 +15,7 @@
 }
 
 .link-container {
-    @apply w-[65%] mx-[auto] mt-[50%] relative before:content-[''] before:absolute before:h-[1px] before:top-[-1px] before:w-[0px]
+    @apply relative before:content-[''] before:absolute before:h-[1px] before:top-[-1px] before:w-[0px]
      before:bg-white before:left-[-1px] after:content-[''] after:absolute after:top-[-1px] after:w-[1px] 
      after:h-[0px] after:bg-white after:right-[-1px]
      /* reverse */
@@ -34,7 +34,7 @@
 }
 
 .links {
-    @apply mx-[90%] translate-y-6 opacity-0 
+    @apply mx-20 translate-y-6 opacity-0 
     /* reverse  */
      transition-[opacity,transform] duration-[150ms] ease-in
 }
@@ -52,7 +52,7 @@
 }
 
 .mobile_menu {
-    @apply font-normal text-sm absolute h-vh92 left-0 right-0 
+    @apply flex font-normal text-sm absolute h-vh92  left-0 right-0 
     backdrop-blur-0 bg-transparent justify-center flex-col items-center -z-[3] 
     /* reverse */
     transition-[z-index,backdrop-filter] duration-[200ms] ease-in-out delay-75
