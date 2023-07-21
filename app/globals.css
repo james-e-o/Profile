@@ -55,19 +55,17 @@
     @apply font-normal text-sm absolute h-vh92 left-0 right-0 
     backdrop-blur-0 bg-transparent justify-center flex-col items-center -z-[3] 
     /* reverse */
-    transition-[z-index] duration-[360ms] ease-in-out
+    transition-[z-index,backdrop-filter] duration-[360ms] ease-in-out
 }
 
 .popdiv {
    @apply   z-[3] 
-   /* backdrop-blur */
-    /* backdrop-brightness-[0.5] */
-   transition-[z-index,filter] duration-[50ms] ease-in-out
+   backdrop-blur
+    backdrop-brightness-[0.5]
+   transition-[z-index,filter,backdrop-filter] duration-[50ms] ease-in-out
 }
 
-.test {
-    @apply filter blur brightness-50
-}
+
 
 .popbox {
    @apply  before:w-[calc(100%+1px)] after:h-[calc(100%+1px)]
