@@ -36,7 +36,7 @@
 .links {
     @apply mx-[90%] translate-y-6 opacity-0 
     /* reverse  */
-     transition-[opacity,transform] duration-[260ms] ease-in
+     transition-[opacity,transform] duration-[200ms] ease-in
 }
 
 .active {
@@ -55,8 +55,8 @@
     @apply font-normal text-sm absolute h-vh92 left-0 right-0 
     backdrop-blur-0 bg-transparent justify-center flex-col items-center -z-[3] 
     /* reverse */
-    transition-[z-index,backdrop-filter] duration-[360ms] ease-in-out
-}
+    transition-[z-index,backdrop-filter] duration-[360ms] ease-in-out delay-75
+ }
 
 .popdiv {
    @apply   z-[3] 
