@@ -15,7 +15,7 @@
 }
 
 .link-container {
-    @apply w-1/2 mx-[auto] mt-[50%] relative before:content-[''] before:absolute before:h-[1px] before:top-[-1px] before:w-[0px]
+    @apply w-[65%] mx-[auto] mt-[50%] relative before:content-[''] before:absolute before:h-[1px] before:top-[-1px] before:w-[0px]
      before:bg-white before:left-[-1px] after:content-[''] after:absolute after:top-[-1px] after:w-[1px] 
      after:h-[0px] after:bg-white after:right-[-1px]
      /* reverse */
@@ -34,7 +34,7 @@
 }
 
 .links {
-    @apply mx-20 translate-y-6 opacity-0 
+    @apply mx-[90%] translate-y-6 opacity-0 
     /* reverse  */
      transition-[opacity,transform] duration-[260ms] ease-in
 }
@@ -62,7 +62,7 @@
    @apply   z-[3] 
    backdrop-blur
     backdrop-brightness-[0.5]
-   transition-[z-index,filter,backdrop-filter] duration-[50ms] ease-in-out
+   transition-[z-index] duration-[50ms] ease-in-out
 }
 
 

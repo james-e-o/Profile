@@ -7,7 +7,7 @@ export default function ret (){
     const popdiv = document.querySelector('#mobile-menu')
     const popbox = document.querySelector('#link-container')
     const inner_div = document.querySelector('#inner-link-container')
-    const links = document.querySelectorAll('#inner-link-container div, #copyright')
+    const links = document.querySelectorAll('#inner-link-container div')
     
     // appdiv.classList.toggle("test")
     popdiv.classList.toggle("popdiv")
