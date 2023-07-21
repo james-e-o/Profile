@@ -19,8 +19,8 @@
      before:bg-white before:left-[-1px] after:content-[''] after:absolute after:top-[-1px] after:w-[1px] 
      after:h-[0px] after:bg-white after:right-[-1px]
      /* reverse */
-     before:transition-[width] before:duration-[80ms] before:ease-in  
-     after:transition-[height] after:duration-[80ms] after:ease-in 
+     before:transition-[width] before:duration-[50ms] before:ease-in  
+     after:transition-[height] after:duration-[50ms] after:ease-in 
 }
 
 .inner-link-container {
@@ -29,14 +29,14 @@
     after:content-[''] after:absolute after:bottom-[-1px] after:w-[1px] after:h-[0px] 
      after:bg-white after:left-[-1px]
     /* reverse */
-     before:transition-[width] before:duration-[80ms] before:ease-in  
-     after:transition-[height] after:duration-[80ms] after:ease-in 
+     before:transition-[width] before:duration-[50ms] before:ease-in  
+     after:transition-[height] after:duration-[50ms] after:ease-in 
 }
 
 .links {
     @apply mx-[90%] translate-y-6 opacity-0 
     /* reverse  */
-     transition-[opacity,transform] duration-[200ms] ease-in
+     transition-[opacity,transform] duration-[150ms] ease-in
 }
 
 .active {
@@ -55,7 +55,7 @@
     @apply font-normal text-sm absolute h-vh92 left-0 right-0 
     backdrop-blur-0 bg-transparent justify-center flex-col items-center -z-[3] 
     /* reverse */
-    transition-[z-index,backdrop-filter] duration-[360ms] ease-in-out delay-75
+    transition-[z-index,backdrop-filter] duration-[200ms] ease-in-out delay-75
  }
 
 .popdiv {
