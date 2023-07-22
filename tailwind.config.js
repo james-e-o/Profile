@@ -108,7 +108,13 @@ module.exports = {
 
       backgroundImage:{
         conicGradient : "conic-gradient(from 0deg at 50% 50%, white, 45deg, green, 350deg, red)"
-      }
+      },
+
+      fontFamily: {
+        'Six_Caps': ['Six_Caps', 'sans-serif'],
+        'Russo_One': ['Russo_One', 'mono'],
+        'Orbitron': ['Orbitron', 'mono']
+      },
       
     },
   },

@@ -1,9 +1,26 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&family=Inter:wght@300;400&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&family=Inter:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Six+Caps&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap"); */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: "Six_Caps";
+    src: url("../public/fonts/Six_Caps/SixCaps-Regular.ttf");
+    
+}
+@font-face {
+    font-family: "Russo_One";
+    src: url("../public/fonts/Russo_One/RussoOne-Regular.ttf");
+    
+}
+@font-face {
+    font-family: "Orbitron";
+    src: url("../public/fonts/Orbitron/Orbitron-VariableFont_wght.ttf");
+    
+}
 
 .menu_logo {
     @apply mt-0
@@ -52,7 +69,7 @@
 }
 
 .mobile_menu {
-    @apply flex font-normal text-sm absolute h-vh92  left-0 right-0 
+    @apply flex font-normal text-sm absolute h-vh92  left-0 right-0 top-0
     backdrop-blur-0 bg-transparent justify-center flex-col items-center -z-[3] 
     /* reverse */
     transition-[z-index,backdrop-filter] duration-[200ms] ease-in-out delay-75

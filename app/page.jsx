@@ -19,12 +19,12 @@ export default function Home() {
             <div id="main_wrapper" className="opacity-100 translate-y-0 animate-land_anime2">
                 <h4 className="m-0 pb-1">
                     <span className="w-3 h-3 p- fill-amber-800">&#128075;&#127998;</span>
-                    <span className="text-gray-300 bg-clip-text text-transparent bg-gradient-to-r from-blue-200 to-yellow-400 ">Hey There, I'm James</span>
+                    <span className="text-gray-300 bg-clip-text text-transparent bg-gradient-to-r from-blue-200 to-yellow-400 ">Hi There, I'm James</span>
                 </h4>
-                <h2 className="m-0 p-0 text-3xl font-[Arial]">I am a frontend web developer</h2>
+                <h2 className="m-0 p-0 text-4xl font-Orbitron font-semibold">I am a frontend web developer</h2>
                 <p id="info" className="text-gray-400 text-sm m-0 p-0">I bring web designs to life by creating impressive user experiences and reactive websites, using HTML, JavaScript, React js, CSS, Tailwind, Node js, and other Javascript based tools, packages and libraries. </p>
                 <p id="CTA" 
-                className="px-2 py-1 bg-blue-300 inline-block text-black text-sm font-thin">
+                className="px-2 py-1 bg-blue-400 inline-block text-black text-sm font-thin">
                 {/* <span className="text-2xl m-0 p-0 border-spacing-0 border-0 text-pink-400"> →</span>  */}
                 View my Resume</p>
             </div> 
