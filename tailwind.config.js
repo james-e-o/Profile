@@ -47,7 +47,9 @@ module.exports = {
         'link_anime':  "link_anime 500ms ease-in-out -350ms",
         'land_anime1':  "land_anime1 600ms ease-in-out -300ms",
         'land_anime2':  "land_anime2 600ms ease-in-out -50ms",
-        'blink_anime':  "blink_anime 1.2s ease-in-out -50ms"
+        'blink_anime':  "blink_anime 1.2s ease-in-out -50ms",
+        'multi_color':  "multi_color 20s ease-in-out -50ms infinite alternate",
+        'anime': "spin 10s linear infinite, multi_color 30s linear infinite alternate;"
       },
 
       keyframes : {
@@ -102,6 +104,19 @@ module.exports = {
           '60%': {"opacity": "1"},
           '88%': {"opacity": "0"},
           'to': {"opacity": "1"}
+        },
+        multi_color : {
+          '0%' :{"fill": "yellow"},
+          
+          '20%': {"fill": "skyblue"},
+
+          '40%': {"fill": "pink"},
+         
+          '60%': {"fill": "skyblue"},
+         
+          '80%': {"fill": "pink"},
+         
+          'to': {"fill": "yellow"}
         }
 
       },
