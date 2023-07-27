@@ -49,7 +49,8 @@ module.exports = {
         'land_anime2':  "land_anime2 600ms ease-in-out -50ms",
         'blink_anime':  "blink_anime 1.2s ease-in-out -50ms",
         'multi_color':  "multi_color 20s ease-in-out -50ms infinite alternate",
-        'anime': "spin 10s linear infinite, multi_color 30s linear infinite alternate;"
+        'anime': "spin 10s linear infinite, multi_color 30s linear infinite alternate;",
+        'jumper':  "jumper 5s linear 0s normal",
       },
 
       keyframes : {
@@ -106,18 +107,29 @@ module.exports = {
           'to': {"opacity": "1"}
         },
         multi_color : {
-          '0%' :{"fill": "yellow"},
-          
-          '20%': {"fill": "skyblue"},
-
-          '40%': {"fill": "pink"},
-         
+          '0%' :{"fill": "gray"},
           '60%': {"fill": "skyblue"},
-         
-          '80%': {"fill": "pink"},
-         
-          'to': {"fill": "yellow"}
-        }
+          'to': {"fill": "white"}
+        },
+        jumper: { 
+          '8% ':{'transform': 'translateY(480px);opacity: 0'},
+          '13%': {opacity: '0','transform': 'translateY(-480px)'},
+          '15%': {opacity: '1'},
+          '22%': {opacity: '1','transform': 'translateY(0px)'},
+          '35%': {opacity: '1','transform': 'translateY(-178px) rotate(-500deg)'},
+          '38%': {opacity: '1','transform': 'translateY(-190px) rotate(-550deg)'},
+          '43%': {opacity: '1','transform': 'translateY(-160px) rotate(-500deg)'},
+          '55%': {opacity: '1','transform': 'translateY(0px)'},
+          '65%': {opacity: '1','transform': 'translateY(-80px) rotate(-300deg)'},
+          '68%': {opacity: '1','transform': 'translateY(-90px) rotate(-360deg)'},
+          '71%': {opacity: '1','transform': 'translateY(-80px)rotate(-300deg)'},
+          '79.5%': {opacity: '1','transform': 'translateY(0px)'},
+          '86%': {opacity: '1','transform': 'translateY(-41px) rotate(50deg)'},
+          '89%': {opacity: '1','transform': 'translateY(-45px) rotate(70deg)'},
+          '95%': {opacity: '1','transform': 'translateY(0px)'},
+          '98%': {opacity: '1','transform': 'translateY(-10px) rotate(-28deg)'},
+          '100%': {opacity: '1','transform': 'translateY(0px)'}
+         }
 
       },
 

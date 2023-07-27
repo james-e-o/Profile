@@ -99,3 +99,7 @@
     @apply  translate-y-[0] opacity-100
     transition-[opacity,transform] duration-[200ms] ease-out 
 }
+
+#svg-container svg {
+    @apply animate-jumper
+}
