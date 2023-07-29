@@ -5,10 +5,6 @@ import ret from '@components/function'
 import Preloader from '@components/preloader'
 import { comment } from 'postcss'
 
-export const metadata = {
-  title: 'About',
-}
-
 
 const About = () => {
     const logo = "About"
