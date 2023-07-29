@@ -45,12 +45,12 @@ module.exports = {
         'border_anime_w': "border_anime_w 500ms ease-out -50ms",
         'border_anime_h': "border_anime_h 500ms ease-out -50ms",
         'link_anime':  "link_anime 500ms ease-in-out -350ms",
-        'land_anime1':  "land_anime1 600ms ease-in-out -300ms",
-        'land_anime2':  "land_anime2 600ms ease-in-out -50ms",
+        'land_anime1':  "land_anime1 600ms ease-in-out 500ms forwards",
+        'land_anime2':  "land_anime2 600ms ease-in-out 800ms forwards",
         'blink_anime':  "blink_anime 1.2s ease-in-out -50ms",
         'multi_color':  "multi_color 20s ease-in-out -50ms infinite alternate",
         'anime': "spin 10s linear infinite, multi_color 30s linear infinite alternate;",
-        'jumper':  "jumper 5s linear 0s normal",
+        'jumper':  "jumper 4.5s linear -500ms normal",
       },
 
       keyframes : {
@@ -86,14 +86,14 @@ module.exports = {
         },
 
         land_anime1 : {
-          '0%' :{"opacity": "0", transform :"translateY(22px)"},
+          '0%' :{"opacity": "0", transform :"translateY(35px)"},
           '40%': {"opacity": "0"},
           '70%': {"opacity": "1"},
           'to': {"opacity": "1", transform : "translateY(0px)"}
         },
 
         land_anime2 : {
-          '0%' :{"opacity": "0", transform :"translateY(22px)"},
+          '0%' :{"opacity": "0", transform :"translateY(35px)"},
           '40%': {"opacity": "0"},
           '70%': {"opacity": "1"},
           'to': {"opacity": "1", transform : "translateY(0px)"}
@@ -116,13 +116,13 @@ module.exports = {
           '13%': {opacity: '0','transform': 'translateY(-480px)'},
           '15%': {opacity: '1'},
           '22%': {opacity: '1','transform': 'translateY(0px)'},
-          '35%': {opacity: '1','transform': 'translateY(-178px) rotate(-500deg)'},
-          '38%': {opacity: '1','transform': 'translateY(-190px) rotate(-550deg)'},
-          '43%': {opacity: '1','transform': 'translateY(-160px) rotate(-500deg)'},
+          '35%': {opacity: '1','transform': 'translateY(-120px) rotate(-500deg)'},
+          '38%': {opacity: '1','transform': 'translateY(-130px) rotate(-550deg)'},
+          '43%': {opacity: '1','transform': 'translateY(-110px) rotate(-500deg)'},
           '55%': {opacity: '1','transform': 'translateY(0px)'},
-          '65%': {opacity: '1','transform': 'translateY(-80px) rotate(-300deg)'},
-          '68%': {opacity: '1','transform': 'translateY(-90px) rotate(-360deg)'},
-          '71%': {opacity: '1','transform': 'translateY(-80px)rotate(-300deg)'},
+          '65%': {opacity: '1','transform': 'translateY(-70px) rotate(-300deg)'},
+          '68%': {opacity: '1','transform': 'translateY(-80px) rotate(-360deg)'},
+          '71%': {opacity: '1','transform': 'translateY(-70px)rotate(-300deg)'},
           '79.5%': {opacity: '1','transform': 'translateY(0px)'},
           '86%': {opacity: '1','transform': 'translateY(-41px) rotate(50deg)'},
           '89%': {opacity: '1','transform': 'translateY(-45px) rotate(70deg)'},

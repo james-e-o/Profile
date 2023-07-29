@@ -16,7 +16,7 @@ export default function Home() {
         <Nav logo={logo} color={className} prop={ret}/>
         <Mobile_menu/>
         <main className="py-2 px-7"> 
-            <div id="main_wrapper" className="opacity-100 relative translate-y-0 animate-land_anime2">
+            <div id="main_wrapper" className="opacity-0 relative translate-y-0 animate-land_anime2">
                 {/* <h4 className="m-0 pb-1">
                     <span className="w-3 h-3 p- fill-amber-800">&#128075;&#127998;</span>
                     <span className="text-gray-300 bg-clip-text text-transparent bg-gradient-to-r from-blue-200 to-yellow-400 ">Hi There, I'm James</span>

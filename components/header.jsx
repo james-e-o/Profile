@@ -10,14 +10,14 @@ export const Nav = ({logo,color,prop}) => {
  
   const [mode, setMode]=useState(light)
   return (
-    <header className="py-4 px-6 flex justify-between animate-land_anime1">
-        <div>
+    <header className="relative opacity-0 py-5 px-7 flex justify-end animate-land_anime1">
+        <div className="pb-24 absolute left-6 z-10">
           <Link href="/About" className="no-underline appearance-none">
             <h1 className={color}>{logo}</h1>
           </Link>
         </div>
         <nav>
-          <div className="md:hidden">
+          <div className="md:hidden pt-1">
             {/* Mobile Navigation */}
             <div id="svg" className="z-20 -mr-5">              
                <svg data-name="Layer 1" id="Layer_1" onClick={prop} viewBox="0 0 64 64" width="30px" height="30px" className="cursor-pointer fill-blue-400 pt-1" xmlns="http://www.w3.org/2000/svg"><path d="M21.86,18.73H9.18a2,2,0,0,1,0-4H21.86a2,2,0,0,1,0,4Z"/><path d="M54.82,18.73H34.88a2,2,0,0,1,0-4H54.82a2,2,0,0,1,0,4Z"/><path d="M54.82,34H9.18a2,2,0,0,1,0-4H54.82a2,2,0,0,1,0,4Z"/><path d="M54.82,49.27H30.07a2,2,0,0,1,0-4H54.82a2,2,0,0,1,0,4Z"/></svg>
