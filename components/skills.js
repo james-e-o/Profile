@@ -2,7 +2,7 @@ import React from 'react'
 
 const Skills = () => {
   return (
-    <div className="container">
+    <div className="container  w-screen  transform-gpu">
         <div className="core1">
             <div className="hexagon-wrap w1">
                 <div className="hextri tr1"></div>

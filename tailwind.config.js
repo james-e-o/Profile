@@ -129,7 +129,13 @@ module.exports = {
           '95%': {opacity: '1','transform': 'translateY(0px)'},
           '98%': {opacity: '1','transform': 'translateY(-10px) rotate(-28deg)'},
           '100%': {opacity: '1','transform': 'translateY(0px)'}
-         }
+         },
+
+        //  rotateY :{
+        //   '0%' :{transform: "gray"},
+          
+        //   'to': {"fill": "white"}
+        //  }
 
       },
 

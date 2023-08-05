@@ -103,3 +103,114 @@
 #svg-container svg {
     @apply animate-jumper
 }
+
+/* SKILLS SECTION */
+.gestures .container {
+    position: relative;
+    /* border: 2px solid blueviolet; */
+    height: 200px;
+    width: 80%;
+    perspective: 1200px;
+    perspective-origin: 50% 50%;
+}
+
+.core1 {
+       transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    /* transform:translate3d(0%, 0%, 800px) rotateX(-15deg) rotateY(-0deg); */
+    animation: rotateY 27s linear infinite forwards;
+}
+
+.hexagon-wrap {
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    transform: rotateX(0deg);
+    display:inline-block;
+}
+.hexsq {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    background-color: rgb(54, 54, 70);
+    border-top: 2px solid skyblue;
+    border-bottom: 2px solid skyblue;
+    color: white;
+    font-size: x-large;
+    line-height: normal;
+    text-align: center;
+    display: inline-block;
+    top: 3px;
+    left: 25px;
+    z-index: 2;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.hextri {
+    position: absolute;
+    height: 29px;
+    width: 30px;
+    background-color:rgb(54, 54, 70);
+    display: inline-block;
+    
+}
+.tr1{ 
+    border-top: 2px solid skyblue;
+    border-left: 2px solid skyblue;
+    transform: rotateZ(-45deg);
+    left: 11px;
+    top: 9px;
+    border-top-right-radius: 2px;
+    border-bottom-left-radius: 3px;
+}  
+.tr2{    
+    border-top: 2px solid skyblue;
+    border-right: 2px solid skyblue;
+    transform: rotateZ(45deg);
+    right: 11px;
+    top: 9px;
+    border-top-left-radius: 3px;
+    border-bottom-right-radius: 2px;
+}
+
+div.w1 {
+    transform: rotateY(-135deg) translate3d(6px, 0, 164px);
+}
+div.w2 {
+    transform: rotateY(-90deg) translate3d(8px, 0, 168px);
+}
+div.w3 {
+    transform: rotateY(-45deg) translate3d(7px, 0, 175px);
+}
+div.w4 {
+    transform: rotateY(-0deg) translate3d(0, 0, 180px);
+}
+div.w5 {
+    transform: rotateY(45deg) translate3d(-7px, 0, 175px);
+}
+div.w6 {
+    transform: rotateY(90deg) translate3d(-7px, 0, 169px);;
+}
+div.w7 {
+    transform: rotateY(135deg) translate3d(-5px, 0, 164px);
+}
+div.w8 {
+    transform: rotateY(180deg) translate3d(0, 0, 160px);
+}
+
+@keyframes rotateY {
+    from {
+        transform:translate3d(0%, 0%, -400px) rotateX(-17deg) rotateY(0deg);
+    }
+    to {
+        transform:translate3d(0%, 0%, -400px) rotateX(-17deg) rotateY(360deg);
+    }
+} 
