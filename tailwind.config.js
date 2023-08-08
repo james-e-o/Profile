@@ -12,7 +12,8 @@ module.exports = {
   
       colors :{
         darkNavy: '#1f1724f5',
-        deepSlate: '#1f1f1f'
+        deepSlate: '#1f1f1f',
+        skyblue: "skyblue"
       },
 
       width : {
@@ -45,8 +46,8 @@ module.exports = {
         'border_anime_w': "border_anime_w 500ms ease-out -50ms",
         'border_anime_h': "border_anime_h 500ms ease-out -50ms",
         'link_anime':  "link_anime 500ms ease-in-out -350ms",
-        'land_anime1':  "land_anime1 600ms ease-in-out 500ms forwards",
-        'land_anime2':  "land_anime2 600ms ease-in-out 800ms forwards",
+        'land_anime1':  "land_anime1 600ms ease-in-out -100ms forwards",
+        'land_anime2':  "land_anime2 800ms ease-in-out 500ms forwards",
         'blink_anime':  "blink_anime 1.2s ease-in-out -50ms",
         'multi_color':  "multi_color 20s ease-in-out -50ms infinite alternate",
         'anime': "spin 10s linear infinite, multi_color 30s linear infinite alternate;",
@@ -86,14 +87,14 @@ module.exports = {
         },
 
         land_anime1 : {
-          '0%' :{"opacity": "0", transform :"translateY(35px)"},
+          '0%' :{"opacity": "0", transform :"translateY(37px)"},
           '40%': {"opacity": "0"},
           '70%': {"opacity": "1"},
           'to': {"opacity": "1", transform : "translateY(0px)"}
         },
 
         land_anime2 : {
-          '0%' :{"opacity": "0", transform :"translateY(35px)"},
+          '0%' :{"opacity": "0", transform :"translateY(37px)"},
           '40%': {"opacity": "0"},
           '70%': {"opacity": "1"},
           'to': {"opacity": "1", transform : "translateY(0px)"}
@@ -146,7 +147,9 @@ module.exports = {
       fontFamily: {
         'Six_Caps': ['Six_Caps', 'sans-serif'],
         'Russo_One': ['Russo_One', 'mono'],
-        'Orbitron': ['Orbitron', 'mono']
+        'Orbitron': ['Orbitron', 'mono'],
+        'PlayBall': ['Playball','sans'],
+        'Righteous': ['Righteous','mono']
       },
       
     },

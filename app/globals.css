@@ -20,13 +20,21 @@
     font-family: "Orbitron";
     src: url("../public/fonts/Orbitron/Orbitron-VariableFont_wght.ttf");
 }
+@font-face {
+    font-family: "Righteous";
+    src: url("../public/fonts/Righteous/Righteous-Regular.ttf");
+}
+@font-face {
+    font-family: "Playball";
+    src: url("../public/fonts/Playball/Playball-Regular.ttf");
+}
 
 .menu_logo {
     @apply mt-0
 }
 
 #svg-container svg {
-    @apply mx-2 mb-3 fill-yellow-400
+    @apply mx-2 mb-3 fill-yellow-500
     w-5
 }
 
@@ -84,7 +92,7 @@
 
 
 .popbox {
-   @apply  before:w-[calc(100%+1px)] after:h-[calc(100%+1px)]
+   @apply  before:w-[calc(100%+1px)] after:h-[calc(100%+1px)] 
    before:transition-[width] before:duration-[250ms] before:ease-out before:delay-100 
    after:transition-[height] after:duration-[250ms] after:ease-out after:delay-100  
 }
@@ -208,9 +216,9 @@ div.w8 {
 
 @keyframes rotateY {
     from {
-        transform:translate3d(0%, 0%, -400px) rotateX(-17deg) rotateY(0deg);
+        transform:translate3d(0%, 0%, -500px) rotateX(-17deg) rotateY(0deg);
     }
     to {
-        transform:translate3d(0%, 0%, -400px) rotateX(-17deg) rotateY(360deg);
+        transform:translate3d(0%, 0%, -500px) rotateX(-17deg) rotateY(360deg);
     }
 } 

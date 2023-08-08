@@ -8,13 +8,12 @@ import { comment } from 'postcss'
 
 const About = () => {
     const logo = "About"
-    
-    const className = "text-blue-300 font-[Tahoma] text-3xl m-0 pl-4"
-    const data =  <div id="container" className="relative w-screen justify-between h-vh92 lg:h-screen bg-gradient-to-b from-gray-600 to- bg-deepSlate">
-          <Nav logo={logo} color={className} prop={ret}/>
-          <Mobile_menu />   
+    const nav_class = "relative opacity-0 py-5 px-7 flex font-Righteous justify-end animate-land_anime1 bg-skyblue"
+    const h1_class = "text-gray-400 text-3xl m-0 pl-4"
+    const data = <div id="container" className="relative w-screen bg-skyblue justify-between h-[2800px] lg:h-screen">
+          <Nav logo= {logo} nav_class={nav_class} color={h1_class} prop={ret}/>
+          <Mobile_menu />
           <div>hello</div>
-          
       </div>
   return (
     <Preloader data = {data}/>

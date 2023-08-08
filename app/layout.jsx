@@ -17,10 +17,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className="m-0 p-0">
     
       <body className="z-[1] layout bg-[#201c2e] bg-no-repeat m-0 text-white font-sans h-vh92">
-       
-         
           {children}
-      
       </body>
     </html>
   )
