@@ -150,8 +150,11 @@
     border-bottom: 2px solid skyblue;
     color: white;
     font-size: x-large;
-    line-height: normal;
-    text-align: center;
+    /* line-height: normal;
+    text-align: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     display: inline-block;
     top: 3px;
     left: 25px;

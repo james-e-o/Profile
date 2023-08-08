@@ -6,7 +6,7 @@ import Link from 'next/link'
 const Mobile_menu = () => {
 const currentRoute = usePathname()
   return (
-    <div id="mobile-menu" className="mobile_menu">
+    <div id="mobile-menu" className="mobile_menu font-Righteous">
            
             <div id="link-container" className="link-container">
                 <div id="inner-link-container" className="inner-link-container">
@@ -19,7 +19,7 @@ const currentRoute = usePathname()
             <div id="copyright" className="copyright mx-2 mt-16 flex flex-col items-center"><Link href="#" className="text-white no-underline">
                  <span className="text-xs font-thin"><span className="text-sm m-0 p-0 border-spacing-0 border-0 text-blue-300"> → </span>onwuasoanyajames@gmail.com</span>
                 </Link>
-                <span className="text-gray-400 text-xs italic font-thin"><Link href="https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt" className="text-blue-300 no-underline" >MIT Licence & Copyright</Link> &#169;2023 James Onwuasoanya.</span>
+                <span className="text-gray-400 text-xs italic font-light"><Link href="https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt" className="text-blue-300 no-underline" >MIT Licence & Copyright</Link> &#169;2023 James Onwuasoanya.</span>
             </div>           
         </div>
   )

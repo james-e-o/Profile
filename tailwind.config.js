@@ -109,7 +109,8 @@ module.exports = {
         },
         multi_color : {
           '0%' :{"fill": "gray"},
-          '60%': {"fill": "skyblue"},
+          '30%': {"fill": "skyblue"},
+          '60%': {"fill": "yellow"},
           'to': {"fill": "white"}
         },
         jumper: { 
