@@ -10,12 +10,13 @@ export default function Home() {
      return (
         <div id="container" className="relative bg-[#202123] h-[900px]">
             <div id='intro' className="flex justify-center h-screen items-center">
-                <div id='intro-content' className="text-white">
+                <div id='intro-content' className="text-white font-PlayBall">
                     <figure></figure>
-                    <p className=""><span>JAMES </span><span>ONWUASOANYA</span></p>
+                    <p className=" text-xl"><span>JAMES </span><span>ONWUASOANYA</span></p>
                 </div>
                 
             </div>
+            div
         </div>
      )
 }

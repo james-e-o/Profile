@@ -13,8 +13,11 @@
 }
 @font-face {
     font-family: "Russo_One";
-    src: url("../public/fonts/Russo_One/RussoOne-Regular.ttf");
-    
+    src: url("../public/fonts/Russo_One/RussoOne-Regular.ttf");  
+}
+@font-face {
+    font-family: "Lato";
+    src: url("../public/fonts/Lato/Lato-Regular.ttf");
 }
 @font-face {
     font-family: "Orbitron";
@@ -27,6 +30,18 @@
 @font-face {
     font-family: "Playball";
     src: url("../public/fonts/Playball/Playball-Regular.ttf");
+}
+@font-face {
+    font-family: "Anton";
+    src: url("../public/fonts/Anton/Anton-Regular.ttf");
+}
+@font-face {
+    font-family: "Acme";
+    src: url("../public/fonts/Acme/Acme-Regular.ttf");
+}
+@font-face {
+    font-family: "Audiowide";
+    src: url("../public/fonts/Audiowide/Audiowide-Regular.ttf");
 }
 
 .menu_logo {

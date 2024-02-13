@@ -150,7 +150,11 @@ module.exports = {
         'Russo_One': ['Russo_One', 'mono'],
         'Orbitron': ['Orbitron', 'mono'],
         'PlayBall': ['Playball','sans'],
-        'Righteous': ['Righteous','mono']
+        'Righteous': ['Righteous','mono'],
+        'Lato': ['Lato','mono'],
+        'Acme': ['Acme','sans'],
+        'Anton': ['Anton','sans'],
+        'Audiowide': ['Audiowide','sans']
       },
       
     },
