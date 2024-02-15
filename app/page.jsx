@@ -8,15 +8,23 @@ export default function Home() {
     const className = "text-yellow-500 fill-yellow-500 font-sans text-5xl m-0 pt-2 pl-1"
 
      return (
-        <div id="container" className="relative bg-[#202123] h-[900px]">
-            <div id='intro' className="flex justify-center h-screen items-center">
-            <div id="art1" className="absolute border border-gray-700 rounded-br-xl rounded-bl-xl h-[300px] w-[600px] before:w-[100%] before:absolute before:h-10 before:left-0 before:-top-12 before:rounded-tr-xl before:rounded-tl-xl before:border before:border-gray-700">
-                <figure className="border relative -top-9 bg-yellow-500 left-10 border-gray-700 rounded-[50%] h-4 w-4 before:border before:absolute before:border-gray-700 before:rounded-[100%] before:h-4 before:w-4 before:-left-[150%] before:bg-yellow-500 before:top-[-1px] after:border after:absolute after:border-gray-700 after:rounded-[100%] after:h-4 after:w-4 after:left-[150%] after:bg-yellow-500 after:top-[-1px]"></figure>
-            </div>
-                <div id='intro-content' className="text-white font-PlayBall">
-                    <p className=" text-xl"><span>JAMES </span><span>ONWUASOANYA</span></p>
+        <div id="container" className="relative bg-[#141516] h-screen overflow-x-scroll">
+            <div id='intro' className="flex justify-center h-screen w-screen items-center">
+                <div id="art1" className="relative border border-gray-700 rounded-br-xl rounded-bl-xl h-[300px] w-[600px] before:w-[100%] before:absolute before:h-10 before:left-0 before:-top-12 before:rounded-tr-xl before:rounded-tl-xl before:border before:border-gray-700">
+                    <figure className="border absolute -top-9 bg-yellow-500 left-10 border-gray-700 rounded-[50%] h-4 w-4 before:border before:absolute before:border-gray-700 before:rounded-[100%] before:h-4 before:w-4 before:-left-[150%] before:bg-yellow-500 before:top-[-1px] after:border after:absolute after:border-gray-700 after:rounded-[100%] after:h-4 after:w-4 after:left-[150%] after:bg-yellow-500 after:top-[-1px]"></figure>
+                    <div id='intro-content' className="text-white h-full items-start font-Kdam flex flex-col justify-center p-3">
+                        <p className=" pl-5 text-gray-400">Hello</p>
+                        <p className=" pl-5 text-xl"><span>JAMES </span><span>ONWUASOANYA</span></p>
+                    </div>
                 </div>
-                
+            </div>
+            <div id='intro' className="flex justify-center h-screen w-screen items-center">
+                <div id="art1" className="relative border border-yellow-700 rounded-br-xl rounded-bl-xl h-[300px] w-[600px] before:w-[100%] before:absolute before:h-10 before:left-0 before:-top-12 before:rounded-tr-xl before:rounded-tl-xl before:border before:border-yellow-700">
+                    <figure className="border relative -top-9 bg-yellow-500 left-10 border-gray-700 rounded-[50%] h-4 w-4 before:border before:absolute before:border-gray-700 before:rounded-[100%] before:h-4 before:w-4 before:-left-[150%] before:bg-yellow-500 before:top-[-1px] after:border after:absolute after:border-gray-700 after:rounded-[100%] after:h-4 after:w-4 after:left-[150%] after:bg-yellow-500 after:top-[-1px]"></figure>
+                    <div id='intro-content' className="text-white font-Kdam flex justify-start">
+                        <p className=" text-xl"><span>JAMES </span><span>ONWUASOANYA</span></p>
+                    </div>
+                </div>
             </div>
         </div>
      )

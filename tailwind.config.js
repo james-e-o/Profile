@@ -154,7 +154,10 @@ module.exports = {
         'Lato': ['Lato','mono'],
         'Acme': ['Acme','sans'],
         'Anton': ['Anton','sans'],
-        'Audiowide': ['Audiowide','sans']
+        'Audiowide': ['Audiowide','sans'],
+        'LilitaOne': ['LilitaOne','sans'],
+        'Kdam': ['Kdam','sans'],
+        'Monoton': ['Monoton','sans']
       },
       
     },

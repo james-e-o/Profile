@@ -12,6 +12,19 @@
     
 }
 @font-face {
+    font-family: "LilitaOne";
+    src: url("../public/fonts/Lilita_One/LilitaOne-Regular.ttf");
+    
+}
+@font-face {
+    font-family: "Kdam";
+    src: url("../public/fonts/Kdam_Thmor_Pro/KdamThmorPro-Regular.ttf");
+}
+@font-face {
+    font-family: "Monoton";
+    src: url("../public/fonts/Monoton/Monoton-Regular.ttf");
+}
+@font-face {
     font-family: "Russo_One";
     src: url("../public/fonts/Russo_One/RussoOne-Regular.ttf");  
 }
