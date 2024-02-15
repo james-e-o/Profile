@@ -8,17 +8,17 @@ export default function Home() {
     const className = "text-yellow-500 fill-yellow-500 font-sans text-5xl m-0 pt-2 pl-1"
 
      return (
-        <div id="container" className="relative bg-[#141516] h-screen overflow-x-scroll">
+        <div id="container" className="relative bg-deepSlate h-screen w-max overflow-x-scroll">
             <div id='intro' className="flex justify-center h-screen w-screen items-center">
-                <div id="art1" className="relative border border-gray-700 rounded-br-xl rounded-bl-xl h-[300px] w-[600px] before:w-[100%] before:absolute before:h-10 before:left-0 before:-top-12 before:rounded-tr-xl before:rounded-tl-xl before:border before:border-gray-700">
+                <div id="art1" className="relative border border-[#333335] rounded-br-xl rounded-bl-xl h-[300px] w-[600px] before:w-[100%] before:absolute before:h-10 before:left-0 before:-top-12 before:rounded-tr-xl before:rounded-tl-xl before:border before:border-[#333335]">
                     <figure className="border absolute -top-9 bg-yellow-500 left-10 border-gray-700 rounded-[50%] h-4 w-4 before:border before:absolute before:border-gray-700 before:rounded-[100%] before:h-4 before:w-4 before:-left-[150%] before:bg-yellow-500 before:top-[-1px] after:border after:absolute after:border-gray-700 after:rounded-[100%] after:h-4 after:w-4 after:left-[150%] after:bg-yellow-500 after:top-[-1px]"></figure>
                     <div id='intro-content' className="text-white h-full items-start font-Kdam flex flex-col justify-center p-3">
                         <p className=" pl-5 text-gray-400">Hello</p>
-                        <p className=" pl-5 text-xl"><span>JAMES </span><span>ONWUASOANYA</span></p>
+                        <p className=" pl-5 text-xl">I'm <span>JAMES </span><span>ONWUASOANYA</span></p>
                     </div>
                 </div>
             </div>
-            <div id='intro' className="flex justify-center h-screen w-screen items-center">
+            <div id='intro' className="flex justify-center h-screen bg-yellow-400 w-screen items-center">
                 <div id="art1" className="relative border border-yellow-700 rounded-br-xl rounded-bl-xl h-[300px] w-[600px] before:w-[100%] before:absolute before:h-10 before:left-0 before:-top-12 before:rounded-tr-xl before:rounded-tl-xl before:border before:border-yellow-700">
                     <figure className="border relative -top-9 bg-yellow-500 left-10 border-gray-700 rounded-[50%] h-4 w-4 before:border before:absolute before:border-gray-700 before:rounded-[100%] before:h-4 before:w-4 before:-left-[150%] before:bg-yellow-500 before:top-[-1px] after:border after:absolute after:border-gray-700 after:rounded-[100%] after:h-4 after:w-4 after:left-[150%] after:bg-yellow-500 after:top-[-1px]"></figure>
                     <div id='intro-content' className="text-white font-Kdam flex justify-start">
@@ -43,5 +43,6 @@ export default function Home() {
                 </div>
             </div> */}
 
+            // bg-gradient-to-b from-deepSlate to- bg-deepSlate
 
             // <svg className="relative animate-anime top-[6px] fill-gray-400" viewBox="250 250 500 500" width="30" height="30" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M512 683.52a171.52 171.52 0 1 1 0-343.04 171.52 171.52 0 0 1 0 343.04z m0-317.44c-79.36 0-145.92 66.56-145.92 145.92s66.56 145.92 145.92 145.92 145.92-66.56 145.92-145.92-66.56-145.92-145.92-145.92z"  /><path d="M512 591.36c-43.52 0-81.92-35.84-81.92-81.92 0-43.52 35.84-81.92 81.92-81.92s81.92 35.84 81.92 81.92c0 46.08-38.4 81.92-81.92 81.92z m0-135.68c-30.72 0-56.32 25.6-56.32 56.32 0 30.72 25.6 56.32 56.32 56.32s56.32-25.6 56.32-56.32c0-30.72-25.6-56.32-56.32-56.32z"  /><path d="M512 455.68c-7.68 0-12.8-5.12-12.8-12.8V307.2c0-7.68 5.12-12.8 12.8-12.8s12.8 5.12 12.8 12.8v135.68c0 7.68-5.12 12.8-12.8 12.8z"  /><path d="M499.2 442.88V307.2c0-7.68 5.12-12.8 12.8-12.8s12.8 5.12 12.8 12.8v135.68h-25.6zM524.8 581.12V716.8c0 7.68-5.12 12.8-12.8 12.8s-12.8-5.12-12.8-12.8v-135.68h25.6zM581.12 499.2H716.8c7.68 0 12.8 5.12 12.8 12.8s-5.12 12.8-12.8 12.8h-135.68v-25.6zM442.88 524.8H307.2c-7.68 0-12.8-5.12-12.8-12.8s5.12-12.8 12.8-12.8h135.68v25.6zM550.4 453.12l97.28-97.28c5.12-5.12 12.8-5.12 17.92 0s5.12 12.8 0 17.92l-97.28 97.28-17.92-17.92zM473.6 570.88L376.32 665.6c-2.56 2.56-5.12 2.56-10.24 2.56s-7.68 0-10.24-2.56c-5.12-5.12-5.12-12.8 0-17.92l97.28-97.28 20.48 20.48zM453.12 473.6L358.4 376.32c-5.12-5.12-5.12-12.8 0-17.92s12.8-5.12 17.92 0l97.28 97.28-20.48 17.92zM570.88 550.4l97.28 97.28c5.12 5.12 5.12 12.8 0 17.92-2.56 2.56-5.12 2.56-10.24 2.56s-7.68 0-10.24-2.56l-97.28-97.28 20.48-17.92z"  /></svg>
