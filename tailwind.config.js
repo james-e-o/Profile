@@ -157,7 +157,9 @@ module.exports = {
         'Audiowide': ['Audiowide','sans'],
         'LilitaOne': ['LilitaOne','sans'],
         'Kdam': ['Kdam','sans'],
-        'Monoton': ['Monoton','sans']
+        'Monoton': ['Monoton','sans'],
+        'Manrope': ['Manrope','sans'],
+        'Mukta': ['Mukta','sans']
       },
       
     },
