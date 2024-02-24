@@ -9,6 +9,7 @@ export default function Home() {
 
      return (
         <div id="container" className="relative bg-deepSlate">
+            <div id="parallax-glare" className="bg-gray-600 w-[20%] top-[30vh] left-[30vh] rounded-full absolute aspect-[1]"></div>
             <header className="flex items-cente justify-between px-14 pt-4 text-white">
                 <div id="logo" className="text-[orange] font-PlayBall text-5xl">jo</div>
                 <nav className="w-fit ">
@@ -22,13 +23,13 @@ export default function Home() {
             <div id='intro' className="flex justify-center h-screen items-center">
                 <div id="art1" className="relative border border-[#333335] rounded-br-xl rounded-bl-xl h-[300px] w-[600px] before:w-[100%] flex justify-center before:absolute before:h-10 before:left-0 before:-top-12 before:rounded-tr-xl before:rounded-tl-xl before:border before:border-[#333335]">
                     <figure className="border absolute -top-9 left-10 border-[#333335] rounded-[50%] h-4 w-4 before:border before:absolute before:border-[#333335] before:rounded-[100%] before:h-4 before:w-4 before:-left-[150%]  before:top-[-1px] after:border after:absolute after:border-[#333335] after:rounded-[100%] after:h-4 after:w-4 after:left-[150%] after:top-[-1px]"></figure>
-                    <CLock/>
                     <div id='intro-content' className="text-white items-center font-Kdam flex flex-col justify-center">
                         <p className=" px-5 pb-1 text-gray-400">Hello</p>
                         <p className=" px-5 text-xl">I'm <span>JAMES </span><span>ONWUASOANYA</span></p>
                     </div>
                 </div>
             </div>
+            <CLock/>
             <div id='intro' className="flex justify-center h-screen items-center">
                 <Wheel/>
             </div>
@@ -60,6 +61,6 @@ export default function Home() {
             }
             const CLock =() =>{
                 return (
-                    <svg className="absolute" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="50px" height="50px"><path d="M 25 2 C 12.309295 2 2 12.309295 2 25 C 2 37.690705 12.309295 48 25 48 C 37.690705 48 48 37.690705 48 25 C 48 12.309295 37.690705 2 25 2 z M 25 4 C 36.609824 4 46 13.390176 46 25 C 46 36.609824 36.609824 46 25 46 C 13.390176 46 4 36.609824 4 25 C 4 13.390176 13.390176 4 25 4 z M 24.984375 6.9863281 A 1.0001 1.0001 0 0 0 24 8 L 24 22.173828 A 3 3 0 0 0 22 25 A 3 3 0 0 0 22.294922 26.291016 L 16.292969 32.292969 A 1.0001 1.0001 0 1 0 17.707031 33.707031 L 23.708984 27.705078 A 3 3 0 0 0 25 28 A 3 3 0 0 0 28 25 A 3 3 0 0 0 26 22.175781 L 26 8 A 1.0001 1.0001 0 0 0 24.984375 6.9863281 z"/></svg>
+                    <svg className="absolute fill-[#333335]" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="50px" height="50px"><path d="M 25 2 C 12.309295 2 2 12.309295 2 25 C 2 37.690705 12.309295 48 25 48 C 37.690705 48 48 37.690705 48 25 C 48 12.309295 37.690705 2 25 2 z M 25 4 C 36.609824 4 46 13.390176 46 25 C 46 36.609824 36.609824 46 25 46 C 13.390176 46 4 36.609824 4 25 C 4 13.390176 13.390176 4 25 4 z M 24.984375 6.9863281 A 1.0001 1.0001 0 0 0 24 8 L 24 22.173828 A 3 3 0 0 0 22 25 A 3 3 0 0 0 22.294922 26.291016 L 16.292969 32.292969 A 1.0001 1.0001 0 1 0 17.707031 33.707031 L 23.708984 27.705078 A 3 3 0 0 0 25 28 A 3 3 0 0 0 28 25 A 3 3 0 0 0 26 22.175781 L 26 8 A 1.0001 1.0001 0 0 0 24.984375 6.9863281 z"/></svg>
                 )
             }
