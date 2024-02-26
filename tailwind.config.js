@@ -16,6 +16,11 @@ module.exports = {
         skyblue: "skyblue"
       },
 
+      backgroundImage:{
+        conicGradient : "conic-gradient(from 0deg at 50% 50%, white, 45deg, green, 350deg, red)",
+        galaxyGradient : " radial-gradient(ellipse at center, #1f1f1f9f 1%, #1f1f1f )"
+      },
+
       width : {
         w2px: '2px',
         w95 : '95%',
@@ -139,10 +144,6 @@ module.exports = {
         //   'to': {"fill": "white"}
         //  }
 
-      },
-
-      backgroundImage:{
-        conicGradient : "conic-gradient(from 0deg at 50% 50%, white, 45deg, green, 350deg, red)"
       },
 
       fontFamily: {
