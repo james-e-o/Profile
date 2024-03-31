@@ -8,15 +8,15 @@ export default function Home() {
     const className = "text-yellow-500 fill-yellow-500 font-sans text-5xl m-0 pt-2 pl-1"
 
      return (
-        <div id="container" className="relative bg-deepSlate overflow-x-hidden overflow-y-auto h-screen perspective preserve3D">
-            <div id="space-parallax" className="absolute h-full 150vh z-[-1] w-full preserve3D transform500">
-                <div id="glare" className=" bg-[url('../public/images/galaxy2.png')] bg-blend-normal bg-contain bg-deepSlate bg-center w-[30%] top-[19vh] left-[12vh] rounded-3xl absolute aspect-[1] before:bg-galaxyGradient before:absolute blur-[2px]  before:left-0 before:bottom-0 overflow-clip before:z-10 before:w-full before:h-full"></div>
+        <div id="container" className="relative bg-deepSlate overflow-x-hidden overflow-y-auto  h-screen perspective preserve3D">
+            <div id="space-parallax" className="absolute bg-[url('../public/images/nebula2.png')] bg-cover h-full z-[-1] w-full preserve3D transformSpace">
+                <div id="glare" className=" bg-[url('../public/images/galaxy.png')] bg-blend-normal bg-contain bg-deepSlate bg-center w-[30%] top-[19vh] left-[12vh] rounded-3xl absolute aspect-[1] before:bg-galaxyGradient before:absolute before:left-0 before:bottom-0 overflow-clip before:z-10 before:w-full before:h-full"></div>
             </div>
             <div id="debris-parallax" className="absolute">
 
             </div>
            
-            <header className="flex items-cente justify-between px-14 pt-4 text-white">
+            <header className="flex items-center justify-between px-14 pt-4 text-white">
                 <div id="logo" className="text-[orange] font-PlayBall text-5xl">jo</div>
                 <nav className="w-fit ">
                     <ul className="flex justify-center gap-8 text-[14px] text-[#bcbcbc] font-Manrope items-center h-full">
@@ -27,12 +27,18 @@ export default function Home() {
                 </nav>
             </header>
             <div id='intro' className="flex justify-center h-screen items-center">
-                <div id="art1" className="relative border border-[#333335] rounded-br-xl rounded-bl-xl h-[300px] w-[600px] before:w-[100%] flex justify-center before:absolute before:h-10 before:left-0 before:-top-12 before:rounded-tr-xl before:rounded-tl-xl before:border before:border-[#333335]">
-                    <figure className="border absolute -top-9 left-10 border-[#333335] rounded-[50%] h-4 w-4 before:border before:absolute before:border-[#333335] before:rounded-[100%] before:h-4 before:w-4 before:-left-[150%]  before:top-[-1px] after:border after:absolute after:border-[#333335] after:rounded-[100%] after:h-4 after:w-4 after:left-[150%] after:top-[-1px]"></figure>
-                    <div id='intro-content' className="text-white items-center font-Kdam flex flex-col justify-center">
-                        <p className=" px-5 pb-1 text-gray-400">Hello</p>
-                        <p className=" px-5 text-xl">I'm <span>JAMES </span><span>ONWUASOANYA</span></p>
+                <div id="intro-wrap" className="preserve3D transform500 relative h-[300px] w-[600px] bg-transparent z-[1] before:w-[100%] flex flex-col justify-between">
+                    <div id="art-head" className="h-10 w-full backdrop-blur rounded-tr-xl rounded-tl-xl flex items-center border-[#333335] border">
+                        <figure className="border absolute left-10 border-[#333335] rounded-[50%] h-4 w-4 before:border before:absolute before:border-[#333335] before:rounded-[100%] before:h-4 before:w-4 before:-left-[150%]  before:top-[-1px] after:border after:absolute after:border-[#333335] after:rounded-[100%] after:h-4 after:w-4 after:left-[150%] after:top-[-1px]"></figure>
                     </div>
+                    <div id="art-body" className="h-[80%] rounded-br-xl rounded-bl-xl border-[#333335] border backdrop-blur flex flex-col justify-center">
+                        <div id='intro-content' className="text-white items-center font-Kdam flex flex-col justify-center">
+                            <p className=" px-5 pb-1 text-gray-400">Hello</p>
+                            <p className=" px-5 text-xl">I'm <span>JAMES </span><span>ONWUASOANYA</span></p>
+                        </div>
+                    </div>
+                   
+                   
                 </div>
             </div>
             <CLock/>
