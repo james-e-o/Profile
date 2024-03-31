@@ -1,28 +1,276 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&family=Inter:wght@300;400&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&family=Inter:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Six+Caps&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap"); */
+/* @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap'); */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: "Mukta";
+    src: url("../public/fonts/Mukta/Mukta-Regular.ttf");
+}
+@font-face {
+    font-family: "Manrope";
+    src: url("../public/fonts/Manrope/Manrope-Regular.ttf");
+}
+@font-face {
+    font-family: "Six_Caps";
+    src: url("../public/fonts/Six_Caps/SixCaps-Regular.ttf");
+    
+}
+@font-face {
+    font-family: "LilitaOne";
+    src: url("../public/fonts/Lilita_One/LilitaOne-Regular.ttf");
+    
+}
+@font-face {
+    font-family: "Kdam";
+    src: url("../public/fonts/Kdam_Thmor_Pro/KdamThmorPro-Regular.ttf");
+}
+@font-face {
+    font-family: "Monoton";
+    src: url("../public/fonts/Monoton/Monoton-Regular.ttf");
+}
+@font-face {
+    font-family: "Russo_One";
+    src: url("../public/fonts/Russo_One/RussoOne-Regular.ttf");  
+}
+@font-face {
+    font-family: "Lato";
+    src: url("../public/fonts/Lato/Lato-Regular.ttf");
+}
+@font-face {
+    font-family: "Orbitron";
+    src: url("../public/fonts/Orbitron/Orbitron-VariableFont_wght.ttf");
+}
+@font-face {
+    font-family: "Righteous";
+    src: url("../public/fonts/Righteous/Righteous-Regular.ttf");
+}
+@font-face {
+    font-family: "Playball";
+    src: url("../public/fonts/Playball/Playball-Regular.ttf");
+}
+@font-face {
+    font-family: "Anton";
+    src: url("../public/fonts/Anton/Anton-Regular.ttf");
+}
+@font-face {
+    font-family: "Acme";
+    src: url("../public/fonts/Acme/Acme-Regular.ttf");
+}
+@font-face {
+    font-family: "Audiowide";
+    src: url("../public/fonts/Audiowide/Audiowide-Regular.ttf");
+}
 
 .menu_logo {
     @apply mt-0
 }
 
-#page-footer svg {
-    @apply mx-2 mb-3 fill-yellow-400
+#svg-container svg {
+    @apply mx-2 mb-3 fill-yellow-500
     w-5
 }
 
-.mobile_menu {
-    @apply font-normal text-sm absolute h-full left-0 right-0 filter backdrop-blur-sm
-     bg-transparent hidden justify-center items-center
+.link-container {
+    @apply relative before:content-[''] before:absolute before:h-[1px] before:top-[-1px] before:w-[0px]
+     before:bg-white before:left-[-1px] after:content-[''] after:absolute after:top-[-1px] after:w-[1px] 
+     after:h-[0px] after:bg-white after:right-[-1px]
+     /* reverse */
+     before:transition-[width] before:duration-[50ms] before:ease-in  
+     after:transition-[height] after:duration-[50ms] after:ease-in 
 }
 
-.show {
+.inner-link-container {
+    @apply translate-y-5 w-full h-full relative flex flex-col items-center justify-center before:content-[''] 
+    before:absolute before:h-[1px] before:w-[0px] before:bottom-[-1px]  before:bg-white before:right-[-1px] 
+    after:content-[''] after:absolute after:bottom-[-1px] after:w-[1px] after:h-[0px] 
+     after:bg-white after:left-[-1px]
+    /* reverse */
+     before:transition-[width] before:duration-[50ms] before:ease-in  
+     after:transition-[height] after:duration-[50ms] after:ease-in 
+}
+
+.links {
+    @apply mx-20 translate-y-6 opacity-0 
+    /* reverse  */
+     transition-[opacity,transform] duration-[150ms] ease-in
+}
+
+.active {
+    @apply text-yellow-400
+}
+
+.links:last-child {
+    @apply mb-5
+}
+
+.m-link {
+    @apply font-semibold text-xl no-underline
+}
+
+.mobile_menu {
+    @apply flex font-normal text-sm absolute h-vh92  left-0 right-0 top-0
+    backdrop-blur-0 bg-transparent justify-center flex-col items-center -z-[3] 
+    /* reverse */
+    transition-[z-index,backdrop-filter] duration-[200ms] ease-in-out delay-75
+ }
+
+.popdiv {
+   @apply   z-[3] 
+   backdrop-blur
+    backdrop-brightness-[0.5]
+   transition-[z-index] duration-[50ms] ease-in-out
+}
+
+
+
+.popbox {
+   @apply  before:w-[calc(100%+1px)] after:h-[calc(100%+1px)] 
+   before:transition-[width] before:duration-[250ms] before:ease-out before:delay-100 
+   after:transition-[height] after:duration-[250ms] after:ease-out after:delay-100  
+}
+
+.inner_div {
+    @apply before:w-[calc(100%+1px)] after:h-[calc(100%+1px)]
+    before:transition-[width] before:duration-[250ms] before:ease-out before:delay-100 
+   after:transition-[height] after:duration-[250ms] after:ease-out after:delay-100
+}
+
+.poplink {
+    @apply  translate-y-[0] opacity-100
+    transition-[opacity,transform] duration-[200ms] ease-out 
+}
+
+#svg-container svg {
+    @apply animate-jumper
+}
+
+.perspective {
+    perspective: 18000px;
+    perspective-origin: 50% 50% ;
+}
+.preserve3D {
+    transform-style: preserve-3d;
+}
+.transformSpace { 
+    transform: translateZ(-17000px) scale(1.94);
+}
+.transform500 { 
+    transform: translateZ(17000px) scale(0.95);
+}
+
+/* SKILLS SECTION */
+.gestures .container {
+    position: relative;
+    /* border: 2px solid blueviolet; */
+    height: 200px;
+    width: 80%;
+    perspective: 1200px;
+    perspective-origin: 50% 50%;
+}
+
+.core1 {
+       transform-style: preserve-3d;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    /* transform:translate3d(0%, 0%, 800px) rotateX(-15deg) rotateY(-0deg); */
+    animation: rotateY 27s linear infinite forwards;
 }
-.brder {
-    border: 1px solid white;
-    @apply relative px-12 py-4 flex flex-col items-center justify-center 
+
+.hexagon-wrap {
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    transform: rotateX(0deg);
+    display:inline-block;
 }
+.hexsq {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    background-color: rgb(54, 54, 70);
+    border-top: 2px solid skyblue;
+    border-bottom: 2px solid skyblue;
+    color: white;
+    font-size: x-large;
+    line-height: normal;
+    text-align: center;
+    display: inline-block;
+    top: 3px;
+    left: 25px;
+    z-index: 2;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.hextri {
+    position: absolute;
+    height: 29px;
+    width: 30px;
+    background-color:rgb(54, 54, 70);
+    background-color:#1f1f1fee;
+    display: inline-block;
+    
+}
+.tr1{ 
+    border-top: 2px solid skyblue;
+    border-left: 2px solid skyblue;
+    transform: rotateZ(-45deg);
+    left: 11px;
+    top: 9px;
+    border-top-right-radius: 2px;
+    border-bottom-left-radius: 3px;
+}  
+.tr2{    
+    border-top: 2px solid skyblue;
+    border-right: 2px solid skyblue;
+    transform: rotateZ(45deg);
+    right: 11px;
+    top: 9px;
+    border-top-left-radius: 3px;
+    border-bottom-right-radius: 2px;
+}
+
+div.w1 {
+    transform: rotateY(-135deg) translate3d(6px, 0, 164px);
+}
+div.w2 {
+    transform: rotateY(-90deg) translate3d(8px, 0, 168px);
+}
+div.w3 {
+    transform: rotateY(-45deg) translate3d(7px, 0, 175px);
+}
+div.w4 {
+    transform: rotateY(-0deg) translate3d(0, 0, 180px);
+}
+div.w5 {
+    transform: rotateY(45deg) translate3d(-7px, 0, 175px);
+}
+div.w6 {
+    transform: rotateY(90deg) translate3d(-7px, 0, 169px);;
+}
+div.w7 {
+    transform: rotateY(135deg) translate3d(-5px, 0, 164px);
+}
+div.w8 {
+    transform: rotateY(180deg) translate3d(0, 0, 160px);
+}
+
+@keyframes rotateY {
+    from {
+        transform:translate3d(0%, 0%, -500px) rotateX(-17deg) rotateY(0deg);
+    }
+    to {
+        transform:translate3d(0%, 0%, -500px) rotateX(-17deg) rotateY(360deg);
+    }
+} 
