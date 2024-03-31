@@ -9,8 +9,7 @@ export default function Home() {
 
      return (
         <div id="container" className="relative bg-deepSlate overflow-x-hidden overflow-y-auto  h-screen perspective preserve3D">
-            <div id="space-parallax" className="absolute bg-[url('../public/images/nebula2.png')] bg-cover h-full z-[-1] w-full preserve3D transformSpace">
-                <div id="glare" className=" bg-[url('../public/images/galaxy.png')] bg-blend-normal bg-contain bg-deepSlate bg-center w-[30%] top-[19vh] left-[12vh] rounded-3xl absolute aspect-[1] before:bg-galaxyGradient before:absolute before:left-0 before:bottom-0 overflow-clip before:z-10 before:w-full before:h-full"></div>
+            <div id="space-parallax" className="absolute bg-[url('../public/images/nebula3.png')] bg-cover h-full z-[-1] w-full preserve3D transformSpace">
             </div>
             <div id="debris-parallax" className="absolute">
 
