@@ -18,7 +18,7 @@ module.exports = {
 
       backgroundImage:{
         conicGradient : "conic-gradient(from 0deg at 50% 50%, white, 45deg, green, 350deg, red)",
-        galaxyGradient : " radial-gradient(ellipse at center, #1f1f1f9f 1%, #1f1f1f )"
+        galaxyGradient : " radial-gradient(ellipse at center, #1f1f1faa 1%, #1f1f1f )"
       },
 
       width : {
