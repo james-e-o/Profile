@@ -15,6 +15,9 @@ export default function Home() {
             <div id="debris-parallax" className="absolute">
 
             </div>
+            <div id="asteroid-parallax" className="absolute">
+
+            </div>
            
             <header className="flex items-center justify-between px-14 pt-4 text-white">
                 <div id="logo" className="text-[orange] font-PlayBall text-5xl">jo</div>
@@ -26,7 +29,7 @@ export default function Home() {
                     </ul>
                 </nav>
             </header>
-            <div id='intro' className="flex justify-center h-screen items-center">
+            <div id='console' className="flex justify-center h-screen items-center">
                 <div id="intro-wrap" className="preserve3D transform500 relative h-[300px] w-[600px] bg-transparent z-[1] before:w-[100%] flex flex-col justify-between">
                     <div id="art-head" className="h-10 w-full backdrop-blur rounded-tr-xl rounded-tl-xl flex items-center border-[#333335] border">
                         <figure className="border absolute left-10 border-[#333335] rounded-[50%] h-4 w-4 before:border before:absolute before:border-[#333335] before:rounded-[100%] before:h-4 before:w-4 before:-left-[150%]  before:top-[-1px] after:border after:absolute after:border-[#333335] after:rounded-[100%] after:h-4 after:w-4 after:left-[150%] after:top-[-1px]"></figure>
@@ -40,6 +43,9 @@ export default function Home() {
                    
                    
                 </div>
+                <canvas id="intro">
+                    
+                </canvas>
             </div>
             <CLock/>
             <div id='intro' className="flex justify-center h-screen items-center">
