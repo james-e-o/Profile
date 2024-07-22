@@ -9,9 +9,13 @@ export default function Home() {
 
      return (
         <div id="container" className="relative bg-deepSlate overflow-x-hidden overflow-y-auto  h-screen perspective preserve3D">
-            <div id="space-parallax" className="absolute bg-[url('../public/images/nebula3.png')] bg-cover h-full z-[-1] w-full preserve3D transformSpace">
+            <div id="space-parallax" className="absolute bg-deepSlate bg-cover h-full z-[-1] w-full preserve3D transformSpace">
+                <div id="glare" className=" bg-[url('../public/images/nebula5.png')] bg-blend-lighten bg-contain bg-deepSlate bg-center w-[30%] top-[19vh] left-[70.2%] rounded-3xl absolute aspect-[1]  bg-no-repeat before:absolute before:left-0 before:bottom-0 before:bg-galaxyGradient overflow-clip before:z-10 before:w-full before:h-full"></div>
             </div>
             <div id="debris-parallax" className="absolute">
+
+            </div>
+            <div id="asteroid-parallax" className="absolute">
 
             </div>
            
@@ -25,7 +29,7 @@ export default function Home() {
                     </ul>
                 </nav>
             </header>
-            <div id='intro' className="flex justify-center h-screen items-center">
+            <div id='console' className="flex justify-center h-screen items-center">
                 <div id="intro-wrap" className="preserve3D transform500 relative h-[300px] w-[600px] bg-transparent z-[1] before:w-[100%] flex flex-col justify-between">
                     <div id="art-head" className="h-10 w-full backdrop-blur rounded-tr-xl rounded-tl-xl flex items-center border-[#333335] border">
                         <figure className="border absolute left-10 border-[#333335] rounded-[50%] h-4 w-4 before:border before:absolute before:border-[#333335] before:rounded-[100%] before:h-4 before:w-4 before:-left-[150%]  before:top-[-1px] after:border after:absolute after:border-[#333335] after:rounded-[100%] after:h-4 after:w-4 after:left-[150%] after:top-[-1px]"></figure>
@@ -39,6 +43,9 @@ export default function Home() {
                    
                    
                 </div>
+                <canvas id="intro">
+                    
+                </canvas>
             </div>
             <CLock/>
             <div id='intro' className="flex justify-center h-screen items-center">
