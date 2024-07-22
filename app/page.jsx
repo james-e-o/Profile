@@ -3,53 +3,39 @@ import Link from 'next/link'
 import { useState,useEffect } from 'react'
 
 export default function Home() {
-    const logo = <svg xmlns="http://www.w3.org/2000/svg" width="36" height="50" viewBox="10 10 30 30" id="letter-j"><path d="M30 10C31.1046 10 32 10.8954 32 12V30C32 34.4183 28.4183 38 24 38C19.5817 38 16 34.4183 16 30C16 28.8954 16.8954 28 18 28C19.1046 28 20 28.8954 20 30C20 32.2092 21.7909 34 24 34C26.2091 34 28 32.2092 28 30V12C28 10.8954 28.8954 10 30 10Z"></path></svg>
-    const nav_class = "relative opacity-0 py-5 px-7 flex justify-end animate-land_anime1"
-    const className = "text-yellow-500 fill-yellow-500 font-sans text-5xl m-0 pt-2 pl-1"
 
-     return (
-        <div id="container" className="relative bg-deepSlate overflow-x-hidden overflow-y-auto  h-screen perspective preserve3D">
-            <div id="space-parallax" className="absolute bg-deepSlate bg-cover h-full z-[-1] w-full preserve3D transformSpace">
-                <div id="glare" className=" bg-[url('../public/images/nebula5.png')] bg-blend-lighten bg-contain bg-deepSlate bg-center w-[30%] top-[19vh] left-[70.2%] rounded-3xl absolute aspect-[1]  bg-no-repeat before:absolute before:left-0 before:bottom-0 before:bg-galaxyGradient overflow-clip before:z-10 before:w-full before:h-full"></div>
-            </div>
-            <div id="debris-parallax" className="absolute">
-
-            </div>
-            <div id="asteroid-parallax" className="absolute">
-
-            </div>
-           
-            <header className="flex items-center justify-between px-14 pt-4 text-white">
-                <div id="logo" className="text-[orange] font-PlayBall text-5xl">jo</div>
-                <nav className="w-fit ">
-                    <ul className="flex justify-center gap-8 text-[14px] text-[#bcbcbc] font-Manrope items-center h-full">
-                        <li className="border w-fit border-[#333335] rounded-3xl px-4 py-[5px] text-[#ababab] relative overflow-clip before:absolute before:bg-[orange] before:left-0 before:w-full before:h-0 before:z-[-1] z-10 before:transition-[height_500ms_ease-in] bg-transparent hover:text-black before:hover:h-full before:bottom-0 ">About</li>
-                        <li className="border w-fit border-[#333335] rounded-3xl px-4 py-[5px] text-[#ababab] relative overflow-clip before:absolute before:bg-[orange] before:left-0 before:w-full before:h-0 before:z-[-1] z-10 before:transition-[height_500ms_ease-in] bg-transparent hover:text-black before:hover:h-full before:bottom-0 ">Work</li>
-                        <li className="border w-fit border-[#333335] rounded-3xl px-4 py-[5px] text-[#ababab] relative overflow-clip before:absolute before:bg-[orange] before:left-0 before:w-full before:h-0 before:z-[-1] z-10 before:transition-[height_500ms_ease-in] bg-transparent hover:text-black before:hover:h-full before:bottom-0 ">Blogs</li>
-                    </ul>
-                </nav>
+    return (
+        <div id="container" className="relative bg-[#f5f5f5] w-screen -z-10">
+            <header  className=" z-[-1] h-[10vh] flex items-center justify-center bg-white relative">
+                <p className="absolute top-[300%]  text-[#fdfdfd] left-14 font-[100] text-9xl scale-y-[5]  scale-x-[1.8] -z-[1]">{"<>"}</p>
+                <p className="absolute top-[300%]  text-[#fdfdfd] right-14 font-[100] text-9xl scale-y-[5]  scale-x-[1.8] -z-[1]">{"</>"}</p>
+                <div className="flex gap-14 m-auto" >
+                    <p className="fill-orange-400 w-5 h-5" >{github}</p>
+                    <p className="fill-orange-400 w-5 h-5" >{linkedin}</p>
+                    <p className="fill-orange-400 w-5 h-5" >{linkedin}</p>
+                </div>
             </header>
-            <div id='console' className="flex justify-center h-screen items-center">
-                <div id="intro-wrap" className="preserve3D transform500 relative h-[300px] w-[600px] bg-transparent z-[1] before:w-[100%] flex flex-col justify-between">
-                    <div id="art-head" className="h-10 w-full backdrop-blur rounded-tr-xl rounded-tl-xl flex items-center border-[#333335] border">
-                        <figure className="border absolute left-10 border-[#333335] rounded-[50%] h-4 w-4 before:border before:absolute before:border-[#333335] before:rounded-[100%] before:h-4 before:w-4 before:-left-[150%]  before:top-[-1px] after:border after:absolute after:border-[#333335] after:rounded-[100%] after:h-4 after:w-4 after:left-[150%] after:top-[-1px]"></figure>
-                    </div>
-                    <div id="art-body" className="h-[80%] rounded-br-xl rounded-bl-xl border-[#333335] border backdrop-blur flex flex-col justify-center">
-                        <div id='intro-content' className="text-white items-center font-Kdam flex flex-col justify-center">
-                            <p className=" px-5 pb-1 text-gray-400">Hello</p>
-                            <p className=" px-5 text-xl">I'm <span>JAMES </span><span>ONWUASOANYA</span></p>
-                        </div>
-                    </div>
-                   
+            <div id="hero" className=" flex justify-center items-center mt-9 pt-16 flex-col z-10" >
+                <p className=" font-light text-3xl font-Manrope"><span className="text-3xl">👋🏽</span>Hello there, I'm<span className=" text-yellow-900 font-normal"> James Onwuasoanya</span></p>
+                <div className="mt-16 flex items-end gap-3">
+                    <p className="font-light text-6xl text-[gray] font-Manrope">I am a</p>
+                    <h1 className="font-bold font-sans text-6xl text-violet-800">Frontend Web Developer<span className="text-orange-400">.</span></h1>
                    
                 </div>
-                <canvas id="intro">
-                    
-                </canvas>
-            </div>
-            <CLock/>
-            <div id='intro' className="flex justify-center h-screen items-center">
-                <Wheel/>
+                <p className=" text-center font-Manrope text-slate-700 mb-5 w-[50vw] mt-20 font-extralight text-2xl"><span className="text-yellow-900 " >.</span>Bringing web designs to life <span className=" text-yellow-900" >.</span>Creating functionality for unique user expirience <span className=" text-yellow-900" >.</span>Api endpoints consumation. </p>
+                <div className=" mt-10  w-[49em]">
+                    <p className="px-4 py-2 bg-white shadow-md rounded-md m-5 text-orange-400 inline-block font-Righteous"><span>CSS3</span></p>
+                    <p className="px-4 py-2 bg-white shadow-md rounded-md m-5 text-orange-400 inline-block font-Righteous"><span>JavaScript</span></p>
+                    <p className="px-4 py-2 bg-white shadow-md rounded-md m-5 text-orange-400 inline-block font-Righteous"><span>React</span></p>
+                    <p className="px-4 py-2 bg-white shadow-md rounded-md m-5 text-orange-400 inline-block font-Righteous"><span>Node</span></p>
+                    <p className="px-4 py-2 bg-white shadow-md rounded-md m-5 text-orange-400 inline-block font-Righteous"><span>Next.js</span></p>
+                    <p className="px-4 py-2 bg-white shadow-md rounded-md m-5 text-orange-400 inline-block font-Righteous"><span>Tailwind CSS</span></p>
+                    <p className="px-4 py-2 bg-white shadow-md rounded-md m-5 text-orange-400 inline-block font-Righteous"><span>Git</span></p>
+                    <p className="px-4 py-2 bg-white shadow-md rounded-md m-5 text-orange-400 inline-block font-Righteous"><span>MongoDb</span></p>
+                    <p className="px-4 py-2 bg-white shadow-md rounded-md m-5 text-orange-400 inline-block font-Righteous"><span>PostgreSql</span></p>
+                    <p className="px-4 py-2 bg-white shadow-md rounded-md m-5 text-orange-400 inline-block font-Righteous"><span>GitHub</span></p>
+                    <p className="px-4 py-2 bg-white shadow-md rounded-md m-5 text-orange-400 inline-block font-Righteous"><span>Firebase</span></p>
+                </div>
             </div>
         </div>
      )
@@ -58,6 +44,13 @@ export default function Home() {
 
 
 
+
+
+
+
+const github = <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="-3 -3 30 30"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+
+const linkedin = <svg id="linkedin" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="35px" height="35px">    <path d="M15,3C8.373,3,3,8.373,3,15c0,6.627,5.373,12,12,12s12-5.373,12-12C27,8.373,21.627,3,15,3z M10.496,8.403 c0.842,0,1.403,0.561,1.403,1.309c0,0.748-0.561,1.309-1.496,1.309C9.561,11.022,9,10.46,9,9.712C9,8.964,9.561,8.403,10.496,8.403z M12,20H9v-8h3V20z M22,20h-2.824v-4.372c0-1.209-0.753-1.488-1.035-1.488s-1.224,0.186-1.224,1.488c0,0.186,0,4.372,0,4.372H14v-8 h2.918v1.116C17.294,12.465,18.047,12,19.459,12C20.871,12,22,13.116,22,15.628V20z"/></svg>
 
 {/* <div id='lower-main' className="flex mt-2">
                 <div id='svg-container' className="py-2 pr-3 -mt-2">            
