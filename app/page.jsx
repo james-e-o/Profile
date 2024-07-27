@@ -8,7 +8,7 @@ export default function Home() {
         <div id="container" className="relative w-screen overflow-x-hidden ">
                 
                 <header  className=" h-14 w-screen lg:h-[14vh] z-[1] bg-white ">     
-                    <div className='max-w-[83rem] mx-auto flex items-center justify-between px-3 sm:px-6 md:px-10 py-4 bg-white relative'>
+                    <div className='max-w-[83rem] h-full mx-auto flex items-center justify-between px-3 sm:px-6 md:px-10 py-4 bg-white relative'>
                         <figure className='rounded-full mx-4 bg-slate-600 h-9 w-9 border-2 flex items-center justify-center'> 
                         
                         </figure>
@@ -31,7 +31,7 @@ export default function Home() {
                     </div>
                 </header>
                 
-                <div className='bg-skillGradient relative -z-[1] snap-y w-screen overflow-y-scroll sm:overflow-hidden overflow-x-hidden '>
+                <div className='bg-skillGradient relative -z-[1] sm:z-0 snap-y w-screen overflow-y-scroll sm:overflow-hidden overflow-x-hidden '>
                     <div id="hero" className="mt-3 sm:mt-0 gap-1 justify-between items-start sm:items-center max-w-[83rem] sm:h-fit mx-auto px-3 sm:px-5 md:px-10 py-12 sm:flex-row flex-col flex" >
         
                         {/* <div className="flex gap-14 m-auto" >
