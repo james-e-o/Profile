@@ -8,6 +8,18 @@
 @tailwind utilities;
 
 @font-face {
+    font-family: "Inter";
+    src: url("../public/fonts/Inter/Inter-Regular.ttf");
+}
+@font-face {
+    font-family: "RobotoC";
+    src: url("../public/fonts/Roboto_Condensed/RobotoCondensed-Regular.ttf");
+}
+@font-face {
+    font-family: "Alatsi";
+    src: url("../public/fonts/Alatsi/Alatsi-Regular.ttf");
+}
+@font-face {
     font-family: "Mukta";
     src: url("../public/fonts/Mukta/Mukta-Regular.ttf");
 }
@@ -64,6 +76,13 @@
 @font-face {
     font-family: "Audiowide";
     src: url("../public/fonts/Audiowide/Audiowide-Regular.ttf");
+}
+
+*{
+    padding: none;
+    margin: none;
+    text-decoration: none;
+    list-style: none;
 }
 
 .menu_logo {
@@ -147,6 +166,12 @@
 
 #svg-container svg {
     @apply animate-jumper
+}
+
+
+span.project svg{
+    width: 1.2rem;
+    height: 1.2rem;
 }
 
 .perspective {

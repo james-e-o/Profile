@@ -13,12 +13,17 @@ module.exports = {
       colors :{
         darkNavy: '#1f1724f5',
         deepSlate: '#1f1f1f',
-        skyblue: "skyblue"
+        skyblue: "skyblue",
+        next1: "rgb(239, 245, 249)",
+        next2: "rgb(228, 232, 233)",
       },
 
       backgroundImage:{
-        conicGradient : "conic-gradient(from 0deg at 50% 50%, white, 45deg, green, 350deg, red)",
-        galaxyGradient : " radial-gradient(ellipse at center, #1f1f1faa 1%, #1f1f1f )"
+        conicGradient : "conic-gradient( from 180deg at 50% 50%, #16abff33 0deg, #0885ff33 55deg, #54d6ff33 120deg, #0071ff33 160deg, transparent 360deg )",
+        galaxyGradient : "radial-gradient( rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) )radial-gradient( rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) )",
+        skillGradient : "linear-gradient(to left top,rgb(239, 245, 249),rgb(228, 232, 233),white)",
+        skillGradient2 : "linear-gradient(to right bottom,rgb(239, 245, 249),rgb(228, 232, 233))",
+        matrix: "url('/public/images/matrix.png')"
       },
 
       width : {
@@ -153,6 +158,7 @@ module.exports = {
         'PlayBall': ['Playball','sans'],
         'Righteous': ['Righteous','mono'],
         'Lato': ['Lato','mono'],
+        'Inter': ['Inter','mono'],
         'Acme': ['Acme','sans'],
         'Anton': ['Anton','sans'],
         'Audiowide': ['Audiowide','sans'],
@@ -160,7 +166,9 @@ module.exports = {
         'Kdam': ['Kdam','sans'],
         'Monoton': ['Monoton','sans'],
         'Manrope': ['Manrope','sans'],
-        'Mukta': ['Mukta','sans']
+        'Mukta': ['Mukta','sans'],
+        'Alatsi': ['Alatsi','sans'],
+        'RobotoC': ['RobotoC','sans']
       },
       
     },
