@@ -56,7 +56,7 @@ module.exports = {
         'border_anime_w': "border_anime_w 500ms ease-out -50ms",
         'border_anime_h': "border_anime_h 500ms ease-out -50ms",
         'link_anime':  "link_anime 500ms ease-in-out -350ms",
-        'land_anime1':  "land_anime1 600ms ease-in-out -100ms forwards",
+        'land_anime1':  "land_anime1 650ms ease-in-out -100ms forwards",
         'land_anime2':  "land_anime2 800ms ease-in-out 500ms forwards",
         'blink_anime':  "blink_anime 1.2s ease-in-out -50ms",
         'multi_color':  "multi_color 20s ease-in-out -50ms infinite alternate",

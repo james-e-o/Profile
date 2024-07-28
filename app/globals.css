@@ -170,8 +170,8 @@
 
 
 span.project svg{
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 1.35rem;
+    height: 1.35rem;
 }
 
 .perspective {
@@ -299,3 +299,14 @@ div.w8 {
         transform:translate3d(0%, 0%, -500px) rotateX(-17deg) rotateY(360deg);
     }
 } 
+
+@media screen and (max-width:640px) {
+    html {
+        font-size: 107%;
+    }
+}
+/* @media screen and (min-height:600px) {
+    html {
+        font-size: 100%;
+    }
+} */

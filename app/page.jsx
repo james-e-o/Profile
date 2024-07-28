@@ -1,21 +1,46 @@
 'use client'
 import Link from 'next/link'
 import { useState,useEffect } from 'react'
+import Image from 'next/image'
 
 export default function Home() {
     const [dropState, setDropState] = useState(false)
+    // const [isClient, setIsClient] = useState(false)
+    useEffect(()=>{
+
+        const sections = document.querySelectorAll(".section")
+        sections.forEach(section => {
+            let sectionTop = section.getBoundingClientRect().top
+            let windowHeight = window.innerHeight
+            console.log('fine boy')
+            if (sectionTop + 100 <= windowHeight )
+            {   
+                section.classList.add("animate-land_anime1")
+            }
+        })
+        window.onscroll =() => {
+            sections.forEach(section => {
+                let sectionTop = section.getBoundingClientRect().top
+                let windowHeight = window.innerHeight
+                if (!section.classList.contains("animate-land_anime1") && sectionTop + 60 < windowHeight )
+                {   
+                    section.classList.add("animate-land_anime1")
+                }
+            })
+        }        
+    })
     return (
-        <div id="container" className="relative w-screen overflow-x-hidden ">
+        <div id="container" className=" relative w-screen overflow-x-hidden ">
                 
-                <header  className=" h-14 w-screen lg:h-[14vh] z-[1] bg-white ">     
+                <header  className=" h-16 pt-2 w-screen lg:h-[14vh] z-[0] bg-white ">     
                     <div className='max-w-[83rem] h-full mx-auto flex items-center justify-between px-3 sm:px-6 md:px-10 py-4 bg-white relative'>
                         <figure className='rounded-full mx-4 bg-slate-600 h-9 w-9 border-2 flex items-center justify-center'> 
                         
                         </figure>
-                        <nav className=''>
+                        <nav className='z-10'>
                         <div onClick={()=>setDropState(!dropState)} className='inline-block sm:hidden border-none mr-2 relative -top-1 py-1 px-3 '>
                             <button className='scale-105'>{menu}</button>
-                            <ul className={!dropState? "flex-col justify-center flex gap-4 items-center font-semibold text-[#7a7a7a] font-Inter p-2 w-28 h-fit text-sm top-[100%] border border-[#b1b1b1] pointer-events-none opacity-0 bg-white absolute right-0 rounded-lg":"flex-col justify-center flex gap-4 items-center font-semibold text-[#7a7a7a] font-Inter p-2 w-28 text-sm h-fit top-14 border border-[#ff9463] bg-white absolute right-0 rounded-lg"}>   
+                            <ul className={!dropState? "flex-col justify-center  flex gap-4 items-center font-semibold text-[#7a7a7a] font-Inter p-2 w-28 h-fit text-sm top-[100%] border border-[#b1b1b1] pointer-events-none opacity-0 bg-white absolute right-0 rounded-lg transition-[_top_150ms_ease-in-out]":"flex-col justify-center flex gap-4 items-center font-semibold text-[#7a7a7a] font-Inter p-2 w-[40vw] text-sm h-fit top-14 border border-gray-400 backdrop-blur-md shadow-lg transition-[_top_150ms_ease-in-out] bg-white absolute right-0 rounded-lg"}>   
                                     <Link href={"/"}><li className='hover:text-black py-1 border-b border-slate-400 px-1'>Home</li></Link>
                                     <Link href={"/about"}><li className='hover:text-black py-1 border-b border-slate-400 px-1'>About</li></Link>
                                     <Link href={"#"}><li className='hover:text-black py-1 border-b border-slate-400 px-1'>My Substack</li></Link>
@@ -31,8 +56,8 @@ export default function Home() {
                     </div>
                 </header>
                 
-                <div className='bg-skillGradient relative -z-[1] sm:z-0 snap-y w-screen overflow-y-scroll sm:overflow-hidden overflow-x-hidden '>
-                    <div id="hero" className="mt-3 sm:mt-0 gap-1 justify-between items-start sm:items-center max-w-[83rem] sm:h-fit mx-auto px-3 sm:px-5 md:px-10 py-12 sm:flex-row flex-col flex" >
+                <div className='bg-skillGradient relative -z-[0] sm:z-0 snap-y w-screen sm:overflow-hidden overflow-x-hidden '>
+                    <div id="hero" className="mt-3 sm:mt-0 gap-1 justify-between items-start sm:items-center max-w-[83rem] sm:h-fit mx-auto px-2 sm:px-5 md:px-10 pb-12 sm:py-9 sm:flex-row flex-col flex" >
         
                         {/* <div className="flex gap-14 m-auto" >
                                 <p className="fill-orange-400 w-5 h-5" >{github}</p>
@@ -40,35 +65,35 @@ export default function Home() {
                                 <p className="fill-orange-400 w-5 h-5" >{linkedin}</p>
                             </div> */}
                             
-                            <div className=" gap-1 min-w-[60%]  pb-2 justify-center snap-start sm:pb-20 px-2 h-[80vh] sm:h-fit md:px-5 flex flex-col ">
+                            <div className=" gap-1 min-w-[60%] section top-[2.21rem] opacity-0 animate-land_anime1 pb-2 justify-center snap-start sm:pb-20 px-3 h-[80vh] sm:h-fit md:px-5 flex flex-col ">
                                 <p className=" inline-block sm:mb-3 sm:text-lg">{wave}</p>
-                                <p className="px-[2px] w-fit font-light text-[0.81rem] lg:text-[1.13rem] font-Righteous ">Hello, I'm <span className=" text-yellow-800 font-normal"> James Onwuasoanya.</span></p>
+                                <p className=" px-[2px] w-fit font-light text-sm lg:text-[1.13rem] font-Righteous ">Hello, I'm <span className=" text-yellow-800 font-normal"> James Onwuasoanya.</span></p>
                             
-                                <h1 className=" pt-4 pb-2 font-bold inline-block font-Manrope text-[2.2rem] lg:text-5xl text-violet-800 leading-[1.1]"> <span className="font-light text-[gray] font-Manrope">I'm a <br className='sm:hidden'></br> </span> full-stack <br className='hidden sm:block'></br>Web Developer<span className="text-orange-400">.</span></h1>
+                                <h1 className=" pt-4 pb-2 font-bold inline-block font-Manrope text-[2.35rem] lg:text-5xl text-violet-800 leading-[1.1]"> <span className="font-light text-[gray] font-Manrope">I'm a <br className='sm:hidden'></br> </span> full-stack <br className='hidden sm:block'></br>Web Developer<span className="text-orange-400">.</span></h1>
                             
 
-                                <div className="text-[0.7rem] lg:text-[0.94rem] font-Manrope text-gray- inline-block mb-3 max-w-[85%] sm:max-w-[80%] mt-4 font-extralight"><Sqdot/> I Bring web designs and to life, building user-friendly applications for unique user expirience. <Sqdot/> I work on both sides of the web development spectrum, creating structured components for seamless api integeration.</div>
+                                <div className="text-[0.784rem] lg:text-[0.94rem] font-Manrope text-gray- inline-block mb-3 max-w-[92%] sm:max-w-[80%] mt-4 font-extralight"><Sqdot/> I Bring web designs and to life, building user-friendly applications for unique user expirience. <Sqdot/> I work on both sides of the web development spectrum, creating structured components for seamless api integeration.</div>
 
 
                                 <p className='flex justify-start gap-5 mt-4 items-center'>
-                                    <Link href={"/contact"}><button className="px-3 lg:px-5 py-1 lg:py-2 w-fit text-xs border-orange-400 border-[3px] hover:bg-white font-semibold hover:text-gray-600 hover:border-orange-400  bg-orange-400 text-white font-Lato" >Contact me</button></Link>
-                                    <Link href={"#projects"}><button className="px-3 lg:px-5 py-1 lg:py-2 w-fit text-xs border-orange-400 border-[3px] hover:bg-orange-400 font-semibold hover:text-white hover:border-white bg-white text-gray-600 font-Lato" >-- View my Projects</button></Link>
+                                    <Link href={"/contact"}><button className="px-3 lg:px-5 py-1 lg:py-2 w-fit text-[0.81rem] border-orange-400 border-[3px] hover:bg-white font-semibold hover:text-gray-600 hover:border-orange-400  bg-orange-400 text-white font-Lato" >Contact me</button></Link>
+                                    <Link href={"#projects"}><button className="px-3 lg:px-5 py-1 lg:py-2 w-fit text-[0.81rem] border-orange-400 border-[3px] hover:bg-orange-400 font-semibold hover:text-white hover:border-white bg-white text-gray-600 font-Lato" >-- View my Projects</button></Link>
                                 </p>
 
                                 
                             </div>
 
-                            <div className=" pb-7 pt-1 sm:py-12  px-2 md:px-4 gap-16 snap-center justify-center h-[60vh] sm:h-fit flex-col items-center mt-16 rounded-3xl sm:mt-2 flex-grow">
-                            <p className='font-extralight sm:hidden max-w-[83rem] mx-auto font-Orbitron text-gray-400 text-center mt-1 pb-7 text-3xl'>Skills</p>
+                            <div className="opacity-0 top-[2.21rem] testamo section pb-7 pt-1 sm:py-12  px-2 md:px-4 gap-16 snap-center justify-center h-[5 0vh] sm:h-fit flex-col items-center mt-16 rounded-3xl sm:mt-2 flex-grow">
+                            <p className='font-extralight sm:hidden max-w-[83rem] mx-auto font-Orbitron text-gray-400 text-center items-center mt-1 pb-7 text-3xl'>Skills</p>
                                 <div className='grid grid-cols-3 text-center sm:block'>
-                                    <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.71rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-3 lg:m-4 text-orange-400 inline-block font-Righteous"><span>CSS3</span></p>
-                                    <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.71rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-3 lg:m-4 text-orange-400 inline-block font-Righteous"><span>JavaScript</span></p>
-                                    <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.71rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-3 lg:m-4 text-orange-400 inline-block font-Righteous"><span>React</span></p>
-                                    <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.71rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-3 lg:m-4 text-orange-400 inline-block font-Righteous"><span>Node</span></p>
-                                    <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.71rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-3 lg:m-4 text-orange-400 inline-block font-Righteous"><span>Next.js</span></p>
-                                    <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.71rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-3 lg:m-4 text-orange-400 inline-block font-Righteous"><span>Tailwind</span></p>
-                                    <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.71rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-3 lg:m-4 text-orange-400 inline-block font-Righteous"><span>Git</span></p>
-                                    <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.71rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-3 lg:m-4 text-orange-400 inline-block font-Righteous"><span>MongoDb</span></p>
+                                    <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.71rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-2 lg:m-4 text-orange-400 inline-block font-Righteous"><span>CSS3</span></p>
+                                    <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.71rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-2 lg:m-4 text-orange-400 inline-block font-Righteous text-start"><span>JavaScript</span></p>
+                                    <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.71rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-2 lg:m-4 text-orange-400 inline-block font-Righteous"><span>React</span></p>
+                                    <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.71rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-2 lg:m-4 text-orange-400 inline-block font-Righteous"><span>Node</span></p>
+                                    <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.71rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-2 lg:m-4 text-orange-400 inline-block font-Righteous"><span>Next.js</span></p>
+                                    <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.71rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-2 lg:m-4 text-orange-400 inline-block font-Righteous"><span>Tailwind</span></p>
+                                    <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.71rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-2 lg:m-4 text-orange-400 inline-block font-Righteous"><span>Git</span></p>
+                                    <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.71rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-2 lg:m-4 text-orange-400 inline-block font-Righteous"><span>MongoDb</span></p>
                                     {/* <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.71rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-3 lg:m-4 text-orange-400 inline-block font-Righteous"><span>PostgreSql</span></p> */}
                                     <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.71rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-3 lg:m-4 text-orange-400 inline-block font-Righteous"><span>GitHub</span></p>
                                     <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.71rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-3 lg:m-4 text-orange-400 inline-block font-Righteous"><span>Firebase</span></p>
@@ -82,14 +107,21 @@ export default function Home() {
             
             <div id="projects" className="before:absolute before:opacity-50 bg-white before:w-52 snap-start before:-z-10 before:h-64 before:rounded-full before:bg-violet-400 before:blur-2xl overflow-hidden border-t border-gray-300 z-10 before:top-4 before:left-5 backdropState-blur-md  relative">
             <p className='font-extralight max-w-[83rem] mx-auto font-Orbitron text-gray-400 text-center box-border px-8 pt-8 text-3xl'>Projects</p>
-                        <div className="grid sm:gap-x-24 justify-items-center gap-y-10 sm:gap-y-24 sm:grid-cols-2 my-5 max-w-[83rem] mx-auto py-1 px-10 ">
+                        <div className="opacity-0 top-[2.1rem] section grid sm:gap-x-24 justify-items-center gap-y-10 sm:gap-y-24 sm:grid-cols-2 my-5 max-w-[83rem] mx-auto py-1 px-10 ">
 
                             <div id="project" className='inline-flex flex-col justify-center gap-0 h-fit my-10'>
-                                <div className=' rounded-ss-3xl border-gray-700 bg-slate-600 border h-40 flex justify-center items-center max-h-80' ></div>
+                                <div className=' rounded-ss-3xl border-gray-700 bg-slate-600 border h-40 flex justify-center items-center max-h-80' >
+                                    {/* <Image className='rounded-2xl'
+                                        src="/jameswebb1.jpg"
+                                        width={80}
+                                        height={80}
+                                        alt="Picture of the author"
+                                     /> */}
+                                </div>
                                 <div className='flex font-Manrope flex-col justify-between p-3 border rounded-ee-2xl h-fit border-gray-700 w-fit backdropState-blur-sm bg-next1'>
                                     <p className='p-1 font-bold font-Inter text-base'>Shopify setup clone.</p>
-                                    <p className='p-1 text-xs'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat ullam dolorum impedit non earum? Placeat sit, sed commodi est odio aperiam eaque expedita? Veniam omnis sint maxime, ipsum facere quis.</p>
-                                    <p className='p-1 mt-1 flex justify-start gap-3 items-center'>
+                                    <p className='p-1 text-sm'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat ullam dolorum impedit non earum? Placeat sit, sed commodi est odio aperiam eaque expedita? Veniam omnis sint maxime, ipsum facere quis.</p>
+                                    <p className='p-1 mt-1 ml-1 flex justify-start gap-4 items-center'>
                                         <span className='project'>{github}</span>
                                         <span className='project'>{newlink}</span>
                                     </p>
@@ -100,7 +132,7 @@ export default function Home() {
             
             <div id="footer" className=" bg-orange-400 fill-white backdropState-blur-md  relative  gap-10 justify-between items-start px-5 py-4 flex">
                         <div className="mt-5 max-w-[83rem] mx-auto pb-5 px-5">
-                                <div className='flex justify-center flex-col sm:flex-row'>
+                                <div className='opacity-0 top-[2.1rem] section flex justify-center flex-col sm:flex-row'>
                                     <p className='p-3 flex justify-center gap-6 items-center '>
                                         <span>{github}</span>
                                         <span>{linkedin}</span>
@@ -119,7 +151,7 @@ export default function Home() {
 
 
 
-
+const twitter = <svg name="twitter" id="twitter" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px"> <path d="M22,3.999c-0.78,0.463-2.345,1.094-3.265,1.276c-0.027,0.007-0.049,0.016-0.075,0.023c-0.813-0.802-1.927-1.299-3.16-1.299 c-2.485,0-4.5,2.015-4.5,4.5c0,0.131-0.011,0.372,0,0.5c-3.353,0-5.905-1.756-7.735-4c-0.199,0.5-0.286,1.29-0.286,2.032 c0,1.401,1.095,2.777,2.8,3.63c-0.314,0.081-0.66,0.139-1.02,0.139c-0.581,0-1.196-0.153-1.759-0.617c0,0.017,0,0.033,0,0.051 c0,1.958,2.078,3.291,3.926,3.662c-0.375,0.221-1.131,0.243-1.5,0.243c-0.26,0-1.18-0.119-1.426-0.165 c0.514,1.605,2.368,2.507,4.135,2.539c-1.382,1.084-2.341,1.486-5.171,1.486H2C3.788,19.145,6.065,20,8.347,20 C15.777,20,20,14.337,20,8.999c0-0.086-0.002-0.266-0.005-0.447C19.995,8.534,20,8.517,20,8.499c0-0.027-0.008-0.053-0.008-0.08 c-0.003-0.136-0.006-0.263-0.009-0.329c0.79-0.57,1.475-1.281,2.017-2.091c-0.725,0.322-1.503,0.538-2.32,0.636 C20.514,6.135,21.699,4.943,22,3.999z"/></svg>
 
 const github = <svg xmlns="http://www.w3.org/2000/svg" width="31px" height="31px" viewBox="-2 -2 29 29"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
 const newlink = <svg id="newlink" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg>
@@ -137,10 +169,9 @@ export const Sqdot = () =>{
 }
 {/* <div id='lower-main' className="flex mt-2">
                 <div id='svg-container' className="py-2 pr-3 -mt-2">            
-                    <Link href="http://www.github.com/james-e-o"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></Link>
-                    <Link href="http://www.x.com/james__e__o"><svg name="twitter" id="twitter" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px">    <path d="M22,3.999c-0.78,0.463-2.345,1.094-3.265,1.276c-0.027,0.007-0.049,0.016-0.075,0.023c-0.813-0.802-1.927-1.299-3.16-1.299 c-2.485,0-4.5,2.015-4.5,4.5c0,0.131-0.011,0.372,0,0.5c-3.353,0-5.905-1.756-7.735-4c-0.199,0.5-0.286,1.29-0.286,2.032 c0,1.401,1.095,2.777,2.8,3.63c-0.314,0.081-0.66,0.139-1.02,0.139c-0.581,0-1.196-0.153-1.759-0.617c0,0.017,0,0.033,0,0.051 c0,1.958,2.078,3.291,3.926,3.662c-0.375,0.221-1.131,0.243-1.5,0.243c-0.26,0-1.18-0.119-1.426-0.165 c0.514,1.605,2.368,2.507,4.135,2.539c-1.382,1.084-2.341,1.486-5.171,1.486H2C3.788,19.145,6.065,20,8.347,20 C15.777,20,20,14.337,20,8.999c0-0.086-0.002-0.266-0.005-0.447C19.995,8.534,20,8.517,20,8.499c0-0.027-0.008-0.053-0.008-0.08 c-0.003-0.136-0.006-0.263-0.009-0.329c0.79-0.57,1.475-1.281,2.017-2.091c-0.725,0.322-1.503,0.538-2.32,0.636 C20.514,6.135,21.699,4.943,22,3.999z"/></svg></Link>
-                    <svg id="linkedin" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="24px" height="24px">    <path d="M15,3C8.373,3,3,8.373,3,15c0,6.627,5.373,12,12,12s12-5.373,12-12C27,8.373,21.627,3,15,3z M10.496,8.403 c0.842,0,1.403,0.561,1.403,1.309c0,0.748-0.561,1.309-1.496,1.309C9.561,11.022,9,10.46,9,9.712C9,8.964,9.561,8.403,10.496,8.403z M12,20H9v-8h3V20z M22,20h-2.824v-4.372c0-1.209-0.753-1.488-1.035-1.488s-1.224,0.186-1.224,1.488c0,0.186,0,4.372,0,4.372H14v-8 h2.918v1.116C17.294,12.465,18.047,12,19.459,12C20.871,12,22,13.116,22,15.628V20z"/></svg>
-                    <svg id="youtube" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px">    <path d="M21.582,6.186c-0.23-0.86-0.908-1.538-1.768-1.768C18.254,4,12,4,12,4S5.746,4,4.186,4.418 c-0.86,0.23-1.538,0.908-1.768,1.768C2,7.746,2,12,2,12s0,4.254,0.418,5.814c0.23,0.86,0.908,1.538,1.768,1.768 C5.746,20,12,20,12,20s6.254,0,7.814-0.418c0.861-0.23,1.538-0.908,1.768-1.768C22,16.254,22,12,22,12S22,7.746,21.582,6.186z M10,14.598V9.402c0-0.385,0.417-0.625,0.75-0.433l4.5,2.598c0.333,0.192,0.333,0.674,0,0.866l-4.5,2.598 C10.417,15.224,10,14.983,10,14.598z"/></svg>
+                   
+           
+                  
                 </div>
             </div> */}
 
