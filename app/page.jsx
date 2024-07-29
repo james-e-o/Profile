@@ -36,6 +36,12 @@ export default function Home() {
                     section.classList.add("animate-land_anime1")
                 }
             })
+            let stackTop = stack.getBoundingClientRect().top
+            let windowHeight = window.innerHeight
+            if (!stack.classList.contains("animate-drop_anime") && stackTop + 60 < windowHeight )
+            {   
+                stack.classList.add("animate-drop_anime")
+            }
         }        
     })
     return (
@@ -137,10 +143,11 @@ export default function Home() {
                                 </div>
                                 <div className='flex font-Manrope flex-col justify-between p-3 border rounded-ee-2xl h-fit border-gray-700 w-fit backdropState-blur-sm bg-next1'>
                                     <p className='p-1 font-bold font-Inter text-base'>Shopify setup clone.</p>
-                                    <p className='p-1 text-sm'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat ullam dolorum impedit non earum? Placeat sit, sed commodi est odio aperiam eaque expedita? Veniam omnis sint maxime, ipsum facere quis.</p>
-                                    <p className='p-1 mt-1 ml-1 flex justify-start gap-4 items-center'>
+                                    <p className='p-1 text-sm'>Hackathon to clone a shopify store setup page with vanilla css & javascript only from a figma design. required were, pixel perfect and responsive page.</p>
+                                    <p className='p-1 mt-1 ml-1 flex justify-start gap-6 items-center'>
                                         <Link href={'https://github.com/james-e-o/Level-Upfront-Hackathon'}><span className='project'>{github}</span></Link>
                                         <Link href={'https://level-upfront-hackathon-nine.vercel.app/'} ><span className='project'>{newlink}</span></Link>
+                                        <Link href={'https://www.figma.com/community/file/1307708563350137813/level-up-front-hackathon'} ><span className='project'>{figma}</span></Link>
                                     </p>
                                 </div>
                             </div>                                
@@ -169,6 +176,10 @@ export default function Home() {
 
 
 const twitter = <svg name="twitter" id="twitter" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px"> <path d="M22,3.999c-0.78,0.463-2.345,1.094-3.265,1.276c-0.027,0.007-0.049,0.016-0.075,0.023c-0.813-0.802-1.927-1.299-3.16-1.299 c-2.485,0-4.5,2.015-4.5,4.5c0,0.131-0.011,0.372,0,0.5c-3.353,0-5.905-1.756-7.735-4c-0.199,0.5-0.286,1.29-0.286,2.032 c0,1.401,1.095,2.777,2.8,3.63c-0.314,0.081-0.66,0.139-1.02,0.139c-0.581,0-1.196-0.153-1.759-0.617c0,0.017,0,0.033,0,0.051 c0,1.958,2.078,3.291,3.926,3.662c-0.375,0.221-1.131,0.243-1.5,0.243c-0.26,0-1.18-0.119-1.426-0.165 c0.514,1.605,2.368,2.507,4.135,2.539c-1.382,1.084-2.341,1.486-5.171,1.486H2C3.788,19.145,6.065,20,8.347,20 C15.777,20,20,14.337,20,8.999c0-0.086-0.002-0.266-0.005-0.447C19.995,8.534,20,8.517,20,8.499c0-0.027-0.008-0.053-0.008-0.08 c-0.003-0.136-0.006-0.263-0.009-0.329c0.79-0.57,1.475-1.281,2.017-2.091c-0.725,0.322-1.503,0.538-2.32,0.636 C20.514,6.135,21.699,4.943,22,3.999z"/></svg>
+
+const figma = <svg xmlns="http://www.w3.org/2000/svg" width="10px" height="10px" viewBox="0 0 48 48">
+<path d="M17.026 46L17.026 46c-3.866 0-7-3.134-7-7l0 0c0-3.866 3.134-7 7-7h5c1.105 0 2 .895 2 2v5C24.026 42.866 20.892 46 17.026 46zM32.5 17A6.5 6.5 0 1032.5 30 6.5 6.5 0 1032.5 17zM33.5 15c3.656 0 6.607-3.019 6.497-6.7C39.89 4.743 36.787 2 33.227 2L28 2c-1.105 0-2 .895-2 2v9c0 1.105.895 2 2 2H33.5zM16.5 2c-3.656 0-6.607 3.019-6.497 6.7.107 3.557 3.21 6.3 6.77 6.3L22 15c1.105 0 2-.895 2-2V4c0-1.105-.895-2-2-2H16.5zM16.5 17c-3.656 0-6.607 3.019-6.497 6.7.107 3.557 3.21 6.3 6.77 6.3L22 30c1.105 0 2-.895 2-2v-9c0-1.105-.895-2-2-2H16.5z"></path>
+</svg>
 
 const github = <svg xmlns="http://www.w3.org/2000/svg" width="31px" height="31px" viewBox="-2 -2 29 29"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
 const newlink = <svg id="newlink" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg>
