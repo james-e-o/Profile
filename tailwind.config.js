@@ -1,8 +1,12 @@
 /** @type {import('tailwindcss').Config} */
+let stack = ""
+let stack2 = 2
+
 module.exports = {
   corePlugins: {
     // preflight: false,
   },
+  stack,stack2,
   content: [
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
@@ -57,7 +61,9 @@ module.exports = {
         'border_anime_h': "border_anime_h 500ms ease-out -50ms",
         'link_anime':  "link_anime 500ms ease-in-out -350ms",
         'land_anime1':  "land_anime1 650ms ease-in-out -100ms forwards",
-        'land_anime2':  "land_anime2 800ms ease-in-out 500ms forwards",
+        'wave_anime':  `wave_anime 1.5s ease-in-out 500ms forwards`,
+        'drop_anime':  `drop_anime 500ms ease-in-out forwards`,
+        'drop_animeT':  `drop_anime 500ms ease-in-out ${stack + "00ms"} forwards`,
         'blink_anime':  "blink_anime 1.2s ease-in-out -50ms",
         'multi_color':  "multi_color 20s ease-in-out -50ms infinite alternate",
         'anime': "spin 10s linear infinite, multi_color 30s linear infinite alternate;",
@@ -103,11 +109,18 @@ module.exports = {
           'to': {"opacity": "1", transform : "translateY(0px)"}
         },
 
-        land_anime2 : {
-          '0%' :{"opacity": "0", transform :"translateY(37px)"},
+        drop_anime : {
+          '0%' :{"opacity": "0", transform :"translateY(-37px)"},
           '40%': {"opacity": "0"},
           '70%': {"opacity": "1"},
           'to': {"opacity": "1", transform : "translateY(0px)"}
+        },
+        wave_anime : {
+          '0%' :{transform :"rotate(0deg)"},
+          '20%' :{transform :"rotate(25deg)"},
+          '50%' :{transform :"rotate(-5deg)"},
+          '80%' :{transform :"rotate(25deg)"},
+          'to': { transform : "rotate(0deg)"}
         },
 
         blink_anime : {

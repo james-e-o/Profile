@@ -2,13 +2,22 @@
 import Link from 'next/link'
 import { useState,useEffect } from 'react'
 import Image from 'next/image'
+import profilepix from "../public/images/profilepix1.jpg"
+import levelup from "../public/images/level-upfront-hackathon.png"
 
 export default function Home() {
     const [dropState, setDropState] = useState(false)
     // const [isClient, setIsClient] = useState(false)
     useEffect(()=>{
 
+        const stack = document.querySelector(".stack")
         const sections = document.querySelectorAll(".section")
+        let stackTop = stack.getBoundingClientRect().top
+                let windowHeight = window.innerHeight
+                if (!stack.classList.contains("animate-drop_anime") && stackTop + 60 < windowHeight )
+                {   
+                    stack.classList.add("animate-drop_anime")
+                }
         sections.forEach(section => {
             let sectionTop = section.getBoundingClientRect().top
             let windowHeight = window.innerHeight
@@ -34,8 +43,13 @@ export default function Home() {
                 
                 <header  className=" h-16 pt-2 w-screen lg:h-[14vh] z-[0] bg-white ">     
                     <div className='max-w-[83rem] h-full mx-auto flex items-center justify-between px-3 sm:px-6 md:px-10 py-4 bg-white relative'>
-                        <figure className='rounded-full mx-4 bg-slate-600 h-9 w-9 border-2 flex items-center justify-center'> 
-                        
+                        <figure className='rounded-full overflow-hidden mx-4 bg-slate-600 h-9 w-9 border-2 flex items-center justify-center'> 
+                            <Image
+                                src={profilepix}
+                                width='100%'
+                                height='100%'
+                                alt="profile"
+                            />
                         </figure>
                         <nav className='z-10'>
                         <div onClick={()=>setDropState(!dropState)} className='inline-block sm:hidden border-none mr-2 relative -top-1 py-1 px-3 '>
@@ -66,7 +80,7 @@ export default function Home() {
                             </div> */}
                             
                             <div className=" gap-1 min-w-[60%] section top-[2.21rem] opacity-0 animate-land_anime1 pb-2 justify-center snap-start sm:pb-20 px-3 h-[80vh] sm:h-fit md:px-5 flex flex-col ">
-                                <p className=" inline-block sm:mb-3 sm:text-lg">{wave}</p>
+                                <p className=" inline-block w-fit sm:mb-3 sm:text-lg origin-[50%90%] animate-wave_anime">{wave}</p>
                                 <p className=" px-[2px] w-fit font-light text-sm lg:text-[1.13rem] font-Righteous ">Hello, I'm <span className=" text-yellow-800 font-normal"> James Onwuasoanya.</span></p>
                             
                                 <h1 className=" pt-4 pb-2 font-bold inline-block font-Manrope text-[2.35rem] lg:text-5xl text-violet-800 leading-[1.1]"> <span className="font-light text-[gray] font-Manrope">I'm a <br className='sm:hidden'></br> </span> full-stack <br className='hidden sm:block'></br>Web Developer<span className="text-orange-400">.</span></h1>
@@ -76,14 +90,14 @@ export default function Home() {
 
 
                                 <p className='flex justify-start gap-5 mt-4 items-center'>
-                                    <Link href={"/contact"}><button className="px-3 lg:px-5 py-1 lg:py-2 w-fit text-[0.81rem] border-orange-400 border-[3px] hover:bg-white font-semibold hover:text-gray-600 hover:border-orange-400  bg-orange-400 text-white font-Lato" >Contact me</button></Link>
-                                    <Link href={"#projects"}><button className="px-3 lg:px-5 py-1 lg:py-2 w-fit text-[0.81rem] border-orange-400 border-[3px] hover:bg-orange-400 font-semibold hover:text-white hover:border-white bg-white text-gray-600 font-Lato" >-- View my Projects</button></Link>
+                                    <Link href={"/contact"}><button className="relative before:h-full before:right-0 before:top-0 before:left-0 z-0 before:bg-orange-400 before:-z-10 before:absolute px-3 lg:px-5 py-1 lg:py-2 w-fit text-[0.81rem] border-orange-400 border-[3px] hover:before:right-full font-semibold hover:text-gray-600 bg-white text-white font-Lato transition-[_right_250ms_ease-out_]" ><span className='z-20'>Contact me</span></button></Link>
+                                    <Link href={"#projects"}><button className="relative before:h-full before:right-full before:top-0 before:left-0 z-0 before:bg-orange-400 before:-z-10 before:absolute px-3 lg:px-5 py-1 lg:py-2 w-fit text-[0.81rem] border-orange-400 border-[3px] hover:before:right-0 font-semibold hover:text-white bg-white text-gray-600 font-Lato transition-[_right_250ms_ease-out_]" ><span className='z-20'>-- View my Projects</span></button></Link>
                                 </p>
 
                                 
                             </div>
 
-                            <div className="opacity-0 top-[2.21rem] testamo section pb-7 pt-1 sm:py-12  px-2 md:px-4 gap-16 snap-center justify-center h-[5 0vh] sm:h-fit flex-col items-center mt-16 rounded-3xl sm:mt-2 flex-grow">
+                            <div className="opacity-0 top-[2.21rem] stack pb-7 pt-1 sm:py-12  px-2 md:px-4 gap-16 snap-center justify-center h-[5 0vh] sm:h-fit flex-col items-center mt-16 rounded-3xl sm:mt-2 flex-grow">
                             <p className='font-extralight sm:hidden max-w-[83rem] mx-auto font-Orbitron text-gray-400 text-center items-center mt-1 pb-7 text-3xl'>Skills</p>
                                 <div className='grid grid-cols-3 text-center sm:block'>
                                     <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.71rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-2 lg:m-4 text-orange-400 inline-block font-Righteous"><span>CSS3</span></p>
@@ -110,20 +124,23 @@ export default function Home() {
                         <div className="opacity-0 top-[2.1rem] section grid sm:gap-x-24 justify-items-center gap-y-10 sm:gap-y-24 sm:grid-cols-2 my-5 max-w-[83rem] mx-auto py-1 px-10 ">
 
                             <div id="project" className='inline-flex flex-col justify-center gap-0 h-fit my-10'>
-                                <div className=' rounded-ss-3xl border-gray-700 bg-slate-600 border h-40 flex justify-center items-center max-h-80' >
-                                    {/* <Image className='rounded-2xl'
-                                        src="/jameswebb1.jpg"
-                                        width={80}
-                                        height={80}
-                                        alt="Picture of the author"
-                                     /> */}
+                                <div className=' rounded-ss-3xl border-gray-700 py-3 box-border bg-slate-600 border h-fit flex 
+                                justify-center items-center max-h-80' >
+                                    <figure className='w-4/5 h-3/5'>
+                                        <Image className='rounded-2xl'
+                                            src={levelup}
+                                            width='100%'
+                                            height='100%'
+                                            alt="Picture of the author"
+                                        />
+                                    </figure>
                                 </div>
                                 <div className='flex font-Manrope flex-col justify-between p-3 border rounded-ee-2xl h-fit border-gray-700 w-fit backdropState-blur-sm bg-next1'>
                                     <p className='p-1 font-bold font-Inter text-base'>Shopify setup clone.</p>
                                     <p className='p-1 text-sm'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat ullam dolorum impedit non earum? Placeat sit, sed commodi est odio aperiam eaque expedita? Veniam omnis sint maxime, ipsum facere quis.</p>
                                     <p className='p-1 mt-1 ml-1 flex justify-start gap-4 items-center'>
-                                        <span className='project'>{github}</span>
-                                        <span className='project'>{newlink}</span>
+                                        <Link href={'https://github.com/james-e-o/Level-Upfront-Hackathon'}><span className='project'>{github}</span></Link>
+                                        <Link href={'https://level-upfront-hackathon-nine.vercel.app/'} ><span className='project'>{newlink}</span></Link>
                                     </p>
                                 </div>
                             </div>                                

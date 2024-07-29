@@ -147,11 +147,9 @@
 
 
 
-.popbox {
-   @apply  before:w-[calc(100%+1px)] after:h-[calc(100%+1px)] 
-   before:transition-[width] before:duration-[250ms] before:ease-out before:delay-100 
-   after:transition-[height] after:duration-[250ms] after:ease-out after:delay-100  
-}
+/* .trans-button {
+   @apply  
+} */
 
 .inner_div {
     @apply before:w-[calc(100%+1px)] after:h-[calc(100%+1px)]
