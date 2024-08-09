@@ -114,7 +114,7 @@ export default function Home() {
                                         <p className='font-[monospace] text-[0.63rem] inline-block px-[0.25rem] py-[0.063rem] rounded-md bg-gray-300  mr-4 border-gray-400 border'>css</p>
                                         <p className='font-[monospace] text-[0.63rem] inline-block px-[0.25rem] py-[0.063rem] rounded-md bg-gray-300  mr-4 border-gray-400 border'>javascript</p>
                                     </div>
-                                    <p className='p-1 mt-1 ml-1 flex justify-start gap- sm:gap-4 items-center'>
+                                    <p className='p-1 mt-1 ml-1 flex justify-start gap-3 sm:gap-4 items-center'>
                                         <Link href={'https://github.com/james-e-o/Level-Upfront-Hackathon'}><span className='project'>{github}</span></Link>
                                         <Link href={'https://level-upfront-hackathon-nine.vercel.app/'} ><span className='project'>{newlink}</span></Link>
                                         <Link href={'https://www.figma.com/community/file/1307708563350137813/level-up-front-hackathon'} ><span className='project'>{figma}</span></Link>
@@ -142,7 +142,7 @@ export default function Home() {
                                         <p className='font-[monospace] text-[0.63rem] inline-block px-[0.25rem] py-[0.063rem] rounded-md bg-gray-300  mr-4 border-gray-400 border'>tailwind</p>
                                        
                                     </div>
-                                    <p className='p-1 mt-1 ml-1 flex justify-start gap- sm:gap-4 items-center'>
+                                    <p className='p-1 mt-1 ml-1 flex justify-start gap-3 sm:gap-4 items-center'>
                                         <Link href={'https://github.com/james-e-o/getLinked.aiHackathon'}><span className='project'>{github}</span></Link>
                                         <Link href={'https://get-linked-ai-hackathon-james-e-o.vercel.app/'} ><span className='project'>{newlink}</span></Link>
                                         <Link href={'https://www.figma.com/file/5WXTnOu1Yy7vjCDCGKSnib/Getlinked?type=design&node-id=0-1&mode=design&t=YfB0JBrgpquQFDwm-0'} ><span className='project'>{figma}</span></Link>
@@ -172,7 +172,7 @@ export default function Home() {
                                         <p className='font-[monospace] text-[0.63rem] inline-block px-[0.25rem] py-[0.063rem] rounded-md bg-gray-300  mr-4 border-gray-400 border'>mongodb</p>
                                        
                                     </div>
-                                    <p className='p-1 mt-1 ml-1 flex justify-start gap- sm:gap-4 items-center'>
+                                    <p className='p-1 mt-1 ml-1 flex justify-start gap-3 sm:gap-4 items-center'>
                                         <Link href={'https://github.com/james-e-o/Blog-Manager'}><span className='project'>{github}</span></Link>
                                         <Link href={'https://skriptn.netlify.app/'} ><span className='project'>{newlink}</span></Link>
                                        
@@ -192,7 +192,7 @@ export default function Home() {
                                         />
                                     </figure>
                                 </div>
-                                <div className='flex font-Manrope flex-col w-full justify-between p-3 border rounded-ee-2xl h-fit border-gray-700 w-fit backdropState-blur-sm bg-next1'>
+                                <div className='flex font-Manrope flex-col w-full justify-between p-3 border rounded-ee-2xl h-fit border-gray-700  backdropState-blur-sm bg-next1'>
                                     <p className='p-1 font-bold font-Inter text-base'>Countdown Timer.</p>
                                     <p className='p-1 text-xs md:text-sm'>A countdown timer as part of my javascript beginner projects</p>
                                     <div className='ml-1 mb-2'>
@@ -200,7 +200,7 @@ export default function Home() {
                                         <p className='font-[monospace] text-[0.63rem] inline-block px-[0.25rem] py-[0.063rem] rounded-md bg-gray-300  mr-4 border-gray-400 border'>css</p>
                                         <p className='font-[monospace] text-[0.63rem] inline-block px-[0.25rem] py-[0.063rem] rounded-md bg-gray-300  mr-4 border-gray-400 border'>javascript</p>
                                     </div>
-                                    <p className='p-1 mt-1 ml-1 flex justify-start gap- sm:gap-4 items-center'>
+                                    <p className='p-1 mt-1 ml-1 flex justify-start gap-3 sm:gap-4 items-center'>
                                         <Link href={'https://github.com/james-e-o/Countdown-Timer'}><span className='project'>{github}</span></Link>
                                         <Link href={'https://qingtech.netlify.app/'} ><span className='project'>{newlink}</span></Link>
                                        
@@ -213,10 +213,10 @@ export default function Home() {
             <div id="footer" className=" bg-orange-400 fill-white backdropState-blur-md  relative  gap-10 justify-between items-start px-5 py-4 flex">
                         <div className="mt-5 max-w-[83rem] mx-auto pb-5 px-5">
                                 <div className='opacity-0 top-[2.1rem] section flex justify-center flex-col sm:flex-row'>
-                                    <p className='p-3 flex justify-center gap-6 items-center '>
-                                        <Link href={'https://github.com/james-e-o'}><span>{github}</span></Link>
-                                        <Link href={'https://www.linkedin.com/in/james-onwuasoanya-96272b200/'}><span>{linkedin}</span></Link>
-                                        <Link href={'https://theastutedev.substack.com/'}><span>{substack}</span></Link>
+                                    <p className='p-3 flex fill-white justify-center gap-6 items-center '>
+                                        <Link href={'https://github.com/james-e-o'}><span className='fill-white' >{github}</span></Link>
+                                        <Link href={'https://www.linkedin.com/in/james-onwuasoanya-96272b200/'}><span className='fill-white' >{linkedin}</span></Link>
+                                        <Link href={'https://theastutedev.substack.com/'}><span className='fill-white' >{substack}</span></Link>
                                     </p>
                                 </div>
                             </div>
