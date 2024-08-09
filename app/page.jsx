@@ -2,12 +2,14 @@
 import Link from 'next/link'
 import { useState,useEffect } from 'react'
 import Image from 'next/image'
-import profilepix from "../public/images/profilepix1.jpg"
+// import profilepix from "../public/images/profilepix1.jpg"
 import levelup from "../public/images/level-upfront-hackathon.png"
+import getlink from "../public/images/getlinkedai-shot.png"
+import skriptn from "../public/images/skr.png"
+import counter from "../public/images/counterdown.png"
 
 export default function Home() {
-    const [dropState, setDropState] = useState(false)
-    // const [isClient, setIsClient] = useState(false)
+  
     useEffect(()=>{
 
         const stack = document.querySelector(".stack")
@@ -47,46 +49,10 @@ export default function Home() {
     return (
         <div id="container" className=" relative w-screen overflow-x-hidden ">
                 
-                <header  className=" h-16 pt-2 w-screen lg:h-[14vh] z-[0] bg-white ">     
-                    <div className='max-w-[83rem] h-full mx-auto flex items-center justify-between px-3 sm:px-6 md:px-10 py-4 bg-white relative'>
-                        <figure className='rounded-full overflow-hidden mx-4 bg-slate-600 h-9 w-9 border-2 flex items-center justify-center'> 
-                            <Image
-                                src={profilepix}
-                                width='100%'
-                                height='100%'
-                                alt="profile"
-                            />
-                        </figure>
-                        <nav className='z-10'>
-                        <div onClick={()=>setDropState(!dropState)} className='inline-block sm:hidden border-none mr-2 relative -top-1 py-1 px-3 '>
-                            <button className='scale-105'>{menu}</button>
-                            <ul className={!dropState? "flex-col justify-center  flex gap-4 items-center font-semibold text-[#7a7a7a] font-Inter p-2 w-28 h-fit text-sm top-[100%] border border-[#b1b1b1] pointer-events-none opacity-0 bg-white absolute right-0 rounded-lg transition-[_top_150ms_ease-in-out]":"flex-col justify-center flex gap-4 items-center font-semibold text-[#7a7a7a] font-Inter p-2 w-[40vw] text-sm h-fit top-14 border border-gray-400 backdrop-blur-md shadow-lg transition-[_top_150ms_ease-in-out] bg-white absolute right-0 rounded-lg"}>   
-                                    <Link href={"/"}><li className='hover:text-black py-1 border-b border-slate-400 px-1'>Home</li></Link>
-                                    <Link href={"/about"}><li className='hover:text-black py-1 border-b border-slate-400 px-1'>About</li></Link>
-                                    <Link href={"#"}><li className='hover:text-black py-1 border-b border-slate-400 px-1'>My Substack</li></Link>
-                            </ul>
-                        </div>
-                        
-                        <ul className='hidden mr-5 sm:flex gap-10 font-light text-sm text-[#8a8a8a] font-Inter'>
-                            <Link href={"/"}><li className='hover:text-black'>Home</li></Link>
-                            <Link href={"/about"}><li className='hover:text-black'>About</li></Link>
-                            <Link href={"#"}><li className='hover:text-black'>My Substack</li></Link>
-                        </ul>
-                        </nav>
-                    </div>
-                </header>
-                
                 <div className='bg-skillGradient relative -z-[0] sm:z-0 snap-y w-screen sm:overflow-hidden overflow-x-hidden '>
-                    <div id="hero" className="mt-3 sm:mt-0 gap-1 justify-between items-start sm:items-center max-w-[83rem] sm:h-fit mx-auto px-2 sm:px-5 md:px-10 pb-12 sm:py-9 sm:flex-row flex-col flex" >
-        
-                        {/* <div className="flex gap-14 m-auto" >
-                                <p className="fill-orange-400 w-5 h-5" >{github}</p>
-                                <p className="fill-orange-400 w-5 h-5" >{linkedin}</p>
-                                <p className="fill-orange-400 w-5 h-5" >{linkedin}</p>
-                            </div> */}
-                            
+                    <div id="hero" className="mt-3 sm:mt-0 gap-1 justify-between items-center max-w-[83rem] sm:h-fit mx-auto px-2 sm:px-5 md:px-10 pb-12 sm:py-9 sm:flex-row flex-col flex" >
                             <div className=" gap-1 min-w-[60%] section top-[2.21rem] opacity-0 animate-land_anime1 pb-2 justify-center snap-start sm:pb-20 px-3 h-[80vh] sm:h-fit md:px-5 flex flex-col ">
-                                <p className=" inline-block w-fit sm:mb-3 sm:text-lg origin-[50%90%] animate-wave_anime">{wave}</p>
+                                <p className=" inline-block w-fit sm:mb-3 sm:text-lg origin-[70%_90%] animate-wave_anime">{wave}</p>
                                 <p className=" px-[2px] w-fit font-light text-sm lg:text-[1.13rem] font-Righteous ">Hello, I'm <span className=" text-yellow-800 font-normal"> James Onwuasoanya.</span></p>
                             
                                 <h1 className=" pt-4 pb-2 font-bold inline-block font-Manrope text-[2.35rem] lg:text-5xl text-violet-800 leading-[1.1]"> <span className="font-light text-[gray] font-Manrope">I'm a <br className='sm:hidden'></br> </span> full-stack <br className='hidden sm:block'></br>Web Developer<span className="text-orange-400">.</span></h1>
@@ -106,18 +72,18 @@ export default function Home() {
                             <div className="opacity-0 top-[2.21rem] stack pb-7 pt-1 sm:py-12  px-2 md:px-4 gap-16 snap-center justify-center h-[5 0vh] sm:h-fit flex-col items-center mt-16 rounded-3xl sm:mt-2 flex-grow">
                             <p className='font-extralight sm:hidden max-w-[83rem] mx-auto font-Orbitron text-gray-400 text-center items-center mt-1 pb-7 text-3xl'>Skills</p>
                                 <div className='grid grid-cols-3 text-center sm:block'>
-                                    <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.71rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-2 lg:m-4 text-orange-400 inline-block font-Righteous"><span>CSS3</span></p>
-                                    <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.71rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-2 lg:m-4 text-orange-400 inline-block font-Righteous text-start"><span>JavaScript</span></p>
-                                    <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.71rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-2 lg:m-4 text-orange-400 inline-block font-Righteous"><span>React</span></p>
-                                    <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.71rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-2 lg:m-4 text-orange-400 inline-block font-Righteous"><span>Node</span></p>
-                                    <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.71rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-2 lg:m-4 text-orange-400 inline-block font-Righteous"><span>Next.js</span></p>
-                                    <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.71rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-2 lg:m-4 text-orange-400 inline-block font-Righteous"><span>Tailwind</span></p>
-                                    <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.71rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-2 lg:m-4 text-orange-400 inline-block font-Righteous"><span>Git</span></p>
-                                    <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.71rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-2 lg:m-4 text-orange-400 inline-block font-Righteous"><span>MongoDb</span></p>
+                                    <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.8rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-2 lg:m-4 text-orange-400 inline-block font-Righteous"><span>CSS3</span></p>
+                                    <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.8rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-2 lg:m-4 text-orange-400 inline-block font-Righteous text-start"><span>JavaScript</span></p>
+                                    <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.8rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-2 lg:m-4 text-orange-400 inline-block font-Righteous"><span>React</span></p>
+                                    <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.8rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-2 lg:m-4 text-orange-400 inline-block font-Righteous"><span>Node</span></p>
+                                    <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.8rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-2 lg:m-4 text-orange-400 inline-block font-Righteous"><span>Next.js</span></p>
+                                    <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.8rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-2 lg:m-4 text-orange-400 inline-block font-Righteous"><span>Tailwind</span></p>
+                                    <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.8rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-2 lg:m-4 text-orange-400 inline-block font-Righteous"><span>MongoDb</span></p>
                                     {/* <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.71rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-3 lg:m-4 text-orange-400 inline-block font-Righteous"><span>PostgreSql</span></p> */}
-                                    <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.71rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-3 lg:m-4 text-orange-400 inline-block font-Righteous"><span>GitHub</span></p>
-                                    <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.71rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-3 lg:m-4 text-orange-400 inline-block font-Righteous"><span>Firebase</span></p>
-                                    <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.71rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-3 lg:m-4 text-orange-400 inline-block font-Righteous"><span>Bubble.io</span></p>
+                                    <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.8rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-3 lg:m-4 text-orange-400 inline-block font-Righteous"><span>GitHub</span></p>
+                                    <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.8rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-2 lg:m-4 text-orange-400 inline-block font-Righteous"><span>Git</span></p>
+                                    <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.8rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-3 lg:m-4 text-orange-400 inline-block font-Righteous"><span>Firebase</span></p>
+                                    <p className="px-2 py-1 lg:px-4 lg:py-2 text-[0.8rem] lg:text-[1.13rem] bg-white shadow-md rounded-md m-3 lg:m-4 text-orange-400 inline-block font-Righteous"><span>Bubble.io</span></p>
                                 </div>
                             </div>
 
@@ -130,9 +96,8 @@ export default function Home() {
                         <div className="opacity-0 top-[2.1rem] section grid sm:gap-x-24 justify-items-center gap-y-10 sm:gap-y-24 sm:grid-cols-2 my-5 max-w-[83rem] mx-auto py-1 px-10 ">
 
                             <div id="project" className='inline-flex flex-col justify-center gap-0 h-fit my-10'>
-                                <div className=' rounded-ss-3xl border-gray-700 py-3 box-border bg-slate-600 border h-fit flex 
-                                justify-center items-center max-h-80' >
-                                    <figure className='w-4/5 h-3/5'>
+                                <div className=' rounded-ss-3xl border-gray-700 before:z-0 before:bg-[url("../public/images/level-upfront-hackathon.png")] overflow-clip relative before:absolute before:inset-0 before:bg-transparent before:blur-sm py-3 box-border before:bg-cover bg-no-repeat bg-slate-600 border h-fit flex justify-center items-center max-h-80' >
+                                    <figure className='w-4/5 z-10 h-3/5'>
                                         <Image className='rounded-2xl'
                                             src={levelup}
                                             width='100%'
@@ -143,24 +108,115 @@ export default function Home() {
                                 </div>
                                 <div className='flex font-Manrope flex-col justify-between p-3 border rounded-ee-2xl h-fit border-gray-700 w-fit backdropState-blur-sm bg-next1'>
                                     <p className='p-1 font-bold font-Inter text-base'>Shopify setup clone.</p>
-                                    <p className='p-1 text-sm'>Hackathon to clone a shopify store setup page with vanilla css & javascript only from a figma design. required were, pixel perfect and responsive page.</p>
-                                    <p className='p-1 mt-1 ml-1 flex justify-start gap-6 items-center'>
+                                    <p className='p-1 text-xs md:text-sm'>A pixel perfect and responsive clone of shopify store setup page using vanilla css & javascript from a figma design</p>
+                                    <div className='ml-1 mb-2'>
+                                        <p className='font-[monospace] text-[0.63rem] inline-block px-[0.25rem] py-[0.063rem] rounded-md bg-gray-300  mr-4 border-gray-400 border'>html</p>
+                                        <p className='font-[monospace] text-[0.63rem] inline-block px-[0.25rem] py-[0.063rem] rounded-md bg-gray-300  mr-4 border-gray-400 border'>css</p>
+                                        <p className='font-[monospace] text-[0.63rem] inline-block px-[0.25rem] py-[0.063rem] rounded-md bg-gray-300  mr-4 border-gray-400 border'>javascript</p>
+                                    </div>
+                                    <p className='p-1 mt-1 ml-1 flex justify-start gap- sm:gap-4 items-center'>
                                         <Link href={'https://github.com/james-e-o/Level-Upfront-Hackathon'}><span className='project'>{github}</span></Link>
                                         <Link href={'https://level-upfront-hackathon-nine.vercel.app/'} ><span className='project'>{newlink}</span></Link>
                                         <Link href={'https://www.figma.com/community/file/1307708563350137813/level-up-front-hackathon'} ><span className='project'>{figma}</span></Link>
                                     </p>
                                 </div>
+                            </div>
+                            
+                            <div id="project" className='inline-flex flex-col justify-center gap-0 h-fit my-10'>
+                                <div className=' rounded-ss-3xl border-gray-700 before:z-0 before:bg-[url("../public/images/getlinkedai-shot.png")] overflow-clip relative before:absolute before:inset-0 before:bg-transparent before:blur-sm py-3 box-border before:bg-cover bg-no-repeat bg-slate-600 border h-fit flex 
+                                justify-center items-center max-h-80' >
+                                    <figure className='w-4/5 z-10 h-3/5'>
+                                        <Image className='rounded-2xl'
+                                            src={getlink}
+                                            width='100%'
+                                            height='100%'
+                                            alt="Picture of the author"
+                                        />
+                                    </figure>
+                                </div>
+                                <div className='flex font-Manrope flex-col justify-between p-3 border rounded-ee-2xl h-fit border-gray-700 w-fit backdropState-blur-sm bg-next1'>
+                                    <p className='p-1 font-bold font-Inter text-base'>GetLinked AI.</p>
+                                    <p className='p-1 text-xs md:text-sm'>Hackathon to build a fully responsive website from a design and connect the page forms to a backend rest api to signify onboarding.</p>
+                                    <div className='ml-1 mb-2'>
+                                        <p className='font-[monospace] text-[0.63rem] inline-block px-[0.25rem] py-[0.063rem] rounded-md bg-gray-300  mr-4 border-gray-400 border'>reactjs</p>
+                                        <p className='font-[monospace] text-[0.63rem] inline-block px-[0.25rem] py-[0.063rem] rounded-md bg-gray-300  mr-4 border-gray-400 border'>tailwind</p>
+                                       
+                                    </div>
+                                    <p className='p-1 mt-1 ml-1 flex justify-start gap- sm:gap-4 items-center'>
+                                        <Link href={'https://github.com/james-e-o/getLinked.aiHackathon'}><span className='project'>{github}</span></Link>
+                                        <Link href={'https://get-linked-ai-hackathon-james-e-o.vercel.app/'} ><span className='project'>{newlink}</span></Link>
+                                        <Link href={'https://www.figma.com/file/5WXTnOu1Yy7vjCDCGKSnib/Getlinked?type=design&node-id=0-1&mode=design&t=YfB0JBrgpquQFDwm-0'} ><span className='project'>{figma}</span></Link>
+                                    </p>
+                               </div>
+                            </div>
+
+                            <div id="project" className='inline-flex flex-col justify-center gap-0 h-fit my-10'>
+                                <div className=' rounded-ss-3xl border-gray-700 before:z-0 before:bg-[url("../public/images/skr.png")] overflow-clip relative before:absolute before:inset-0 before:bg-transparent before:blur-sm py-3 box-border before:bg-cover bg-no-repeat bg-slate-600 border h-fit flex 
+                                justify-center items-center max-h-80' >
+                                    <figure className='w-4/5 z-10 h-3/5'>
+                                        <Image className='rounded-2xl'
+                                            src={skriptn}
+                                            width='100%'
+                                            height='100%'
+                                            alt="Picture of the author"
+                                        />
+                                    </figure>
+                                </div>
+                                <div className='flex font-Manrope flex-col justify-between p-3 border rounded-ee-2xl h-fit border-gray-700 w-fit backdropState-blur-sm bg-next1'>
+                                    <p className='p-1 font-bold font-Inter text-base'>Blog/Newsletter Application.</p>
+                                    <p className='p-1 text-xs md:text-sm'>Ongoing project to build a blog/newsletter application, enabling features similar to related platforms like medium, hashnode and substack.</p>
+                                    <div className='ml-1 mb-2'>
+                                        <p className='font-[monospace] text-[0.63rem] inline-block px-[0.25rem] py-[0.063rem] rounded-md bg-gray-300  mr-4 border-gray-400 border'>reactjs</p>
+                                        <p className='font-[monospace] text-[0.63rem] inline-block px-[0.25rem] py-[0.063rem] rounded-md bg-gray-300  mr-4 border-gray-400 border'>css</p>
+                                        <p className='font-[monospace] text-[0.63rem] inline-block px-[0.25rem] py-[0.063rem] rounded-md bg-gray-300  mr-4 border-gray-400 border'>expressjs</p>
+                                        <p className='font-[monospace] text-[0.63rem] inline-block px-[0.25rem] py-[0.063rem] rounded-md bg-gray-300  mr-4 border-gray-400 border'>mongodb</p>
+                                       
+                                    </div>
+                                    <p className='p-1 mt-1 ml-1 flex justify-start gap- sm:gap-4 items-center'>
+                                        <Link href={'https://github.com/james-e-o/Blog-Manager'}><span className='project'>{github}</span></Link>
+                                        <Link href={'https://skriptn.netlify.app/'} ><span className='project'>{newlink}</span></Link>
+                                       
+                                    </p>
+                               </div>
+                            </div>  
+
+
+                            <div id="project" className='inline-flex flex-col justify-center gap-0 h-fit my-10'>
+                                <div className=' rounded-ss-3xl border-gray-700 before:z-0 before:bg-[url("../public/images/counterdown.png")] overflow-clip relative before:absolute before:inset-0 before:bg-transparent before:blur-sm py-3 box-border before:bg-cover bg-no-repeat bg-slate-600 border h-fit flex 
+                                justify-center items-center max-h-80' >
+                                    <figure className='w-4/5 z-10 h-3/5'>
+                                        <Image className='rounded-2xl'
+                                            src={counter}
+                                            width='100%'
+                                            height='100%'
+                                        />
+                                    </figure>
+                                </div>
+                                <div className='flex font-Manrope flex-col w-full justify-between p-3 border rounded-ee-2xl h-fit border-gray-700 w-fit backdropState-blur-sm bg-next1'>
+                                    <p className='p-1 font-bold font-Inter text-base'>Countdown Timer.</p>
+                                    <p className='p-1 text-xs md:text-sm'>A countdown timer as part of my javascript beginner projects</p>
+                                    <div className='ml-1 mb-2'>
+                                        <p className='font-[monospace] text-[0.63rem] inline-block px-[0.25rem] py-[0.063rem] rounded-md bg-gray-300  mr-4 border-gray-400 border'>html5</p>
+                                        <p className='font-[monospace] text-[0.63rem] inline-block px-[0.25rem] py-[0.063rem] rounded-md bg-gray-300  mr-4 border-gray-400 border'>css</p>
+                                        <p className='font-[monospace] text-[0.63rem] inline-block px-[0.25rem] py-[0.063rem] rounded-md bg-gray-300  mr-4 border-gray-400 border'>javascript</p>
+                                    </div>
+                                    <p className='p-1 mt-1 ml-1 flex justify-start gap- sm:gap-4 items-center'>
+                                        <Link href={'https://github.com/james-e-o/Countdown-Timer'}><span className='project'>{github}</span></Link>
+                                        <Link href={'https://qingtech.netlify.app/'} ><span className='project'>{newlink}</span></Link>
+                                       
+                                    </p>
+                               </div>
                             </div>                                
-                        </div>
+                        </div> 
             </div>
             
             <div id="footer" className=" bg-orange-400 fill-white backdropState-blur-md  relative  gap-10 justify-between items-start px-5 py-4 flex">
                         <div className="mt-5 max-w-[83rem] mx-auto pb-5 px-5">
                                 <div className='opacity-0 top-[2.1rem] section flex justify-center flex-col sm:flex-row'>
                                     <p className='p-3 flex justify-center gap-6 items-center '>
-                                        <span>{github}</span>
-                                        <span>{linkedin}</span>
-                                        <span>{substack}</span>
+                                        <Link href={'https://github.com/james-e-o'}><span>{github}</span></Link>
+                                        <Link href={'https://www.linkedin.com/in/james-onwuasoanya-96272b200/'}><span>{linkedin}</span></Link>
+                                        <Link href={'https://theastutedev.substack.com/'}><span>{substack}</span></Link>
                                     </p>
                                 </div>
                             </div>

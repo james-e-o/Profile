@@ -172,6 +172,13 @@ span.project svg{
     height: 1.30rem;
 }
 
+.drop-down {
+    opacity: 1;
+    top: calc(100% );
+    width: 38vw;
+    pointer-events: auto;
+}
+
 .perspective {
     perspective: 18000px;
     perspective-origin: 50% 50% ;

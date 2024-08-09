@@ -4,47 +4,36 @@ import { useState,useEffect } from 'react'
 export default function Contact() {
     const [dropState, setDropState] = useState(false)
     return (
-        <div>
-            <header  className=" h-14 w-screen lg:h-[14vh] z-[1] bg-white ">     
-                    <div className='max-w-[83rem] h-full mx-auto flex items-center justify-between px-3 sm:px-6 md:px-10 py-4 bg-white relative'>
-                        <figure className='rounded-full mx-4 bg-slate-600 h-9 w-9 border-2 flex items-center justify-center'> 
-                        
-                        </figure>
-                        <nav className=''>
-                        <div onClick={()=>setDropState(!dropState)} className='inline-block sm:hidden border-none mr-2 relative -top-1 py-1 px-3 '>
-                            <button className='scale-105'>{menu}</button>
-                            <ul className={!dropState? "flex-col justify-center flex gap-4 items-center font-semibold text-[#7a7a7a] font-Inter p-2 w-28 h-fit text-sm top-[100%] border border-[#b1b1b1] pointer-events-none opacity-0 bg-white absolute right-0 rounded-lg":"flex-col justify-center flex gap-4 items-center font-semibold text-[#7a7a7a] font-Inter p-2 w-28 text-sm h-fit top-14 border border-[#ff9463] bg-white absolute right-0 rounded-lg"}>   
-                                    <Link href={"/"}><li className='hover:text-black py-1 border-b border-slate-400 px-1'>Home</li></Link>
-                                    <Link href={"/about"}><li className='hover:text-black py-1 border-b border-slate-400 px-1'>About</li></Link>
-                                    <Link href={"#"}><li className='hover:text-black py-1 border-b border-slate-400 px-1'>My Substack</li></Link>
-                            </ul>
-                        </div>
-                        
-                        <ul className='hidden mr-5 sm:flex gap-10 font-light text-sm text-[#8a8a8a] font-Inter'>
-                            <Link href={"/"}><li className='hover:text-black'>Home</li></Link>
-                            <Link href={"/about"}><li className='hover:text-black'>About</li></Link>
-                            <Link href={"#"}><li className='hover:text-black'>My Substack</li></Link>
-                        </ul>
-                        </nav>
+        <div className='bg-skillGradient2 relative -z-[0] sm:z-0 snap-y w-screen  overflow-x-hidden '>
+            <div id="hero" className="mt-3 sm:mt-0 gap-1 justify-start h-fit items-center max-w-[83rem] mx-auto px-2 sm:px-5 md:px-10 pb-12 sm:py-9 sm:flex-row flex-col flex" >
+
+
+                    <div className=" gap-1 min-w-[60%] section top-[2.21rem] opacity-0 animate-land_anime1 pb-2 justify-center snap-start sm:pb-20 px-3 h-[80vh] sm:h-fit md:px-5 flex flex-col ">
+
+                    <h1 className=" px-10 py-5 font-bold text-center sm:text-start w-full font-Manrope text-[2.35rem] lg:text-5xl text-violet-800 leading-[1.1]" >Contact<span className="text-orange-400">.</span></h1>
+                        <form className='font-Inter' action="">
+                            <div className='px-3 py-1 h-9 border mb-7 rounded-md text-sm border-gray-400'>
+                                <label htmlFor="" className='text-gray-400 text-sm' >Name:</label>
+                                <input type="text" className='ml-4 bg-transparent outline-none h-4/5 w-5/6' />
+                                <p className="error"></p>
+                            </div>
+                            <div className='py-1 px-3 h-9 border mb-7 rounded-md text-sm border-gray-400'>
+                                <label htmlFor="" className='text-gray-400 text-sm box-border' >Email:</label>
+                                <input type="text" className='ml-4 bg-transparent outline-none h-4/5 w-5/6' />
+                                <p className="error"></p>
+                            </div>
+                            <div className='p-3  border mb-7 rounded-md border-gray-400 text-sm flex items-start gap-3'>
+                                <label htmlFor="message" className='text-gray-400 text-sm'>Message:</label>
+                                <textarea name="message" id="" className="bg-transparent h-4/5 w-5/6 outline-none" rows={5}></textarea>
+                                <p className="error"></p>
+                            </div>
+                            <button type="submit" className='py-1 ml-2 px-5 rounded bg-orange-400 font-semibold text-violet-800'>Send</button>
+                        </form>
                     </div>
-                </header>
-            <form action="">
-                <div>
-                    <label htmlFor="">Name:</label>
-                    <input type="text" />
-                    <p className="error"></p>
-                </div>
-                <div>
-                    <label htmlFor="">Email:</label>
-                    <input type="text" />
-                    <p className="error"></p>
-                </div>
-                <div>
-                    <label htmlFor="message">Message:</label>
-                    <textarea name="message" id=""></textarea>
-                    <p className="error"></p>
-                </div>
-            </form>
+                
+                
+                
+            </div>
         </div>
     );
 }

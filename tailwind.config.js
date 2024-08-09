@@ -26,7 +26,7 @@ module.exports = {
         conicGradient : "conic-gradient( from 180deg at 50% 50%, #16abff33 0deg, #0885ff33 55deg, #54d6ff33 120deg, #0071ff33 160deg, transparent 360deg )",
         galaxyGradient : "radial-gradient( rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) )radial-gradient( rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) )",
         skillGradient : "linear-gradient(to left top,rgb(239, 245, 249),rgb(228, 232, 233),white)",
-        skillGradient2 : "linear-gradient(to right bottom,rgb(239, 245, 249),rgb(228, 232, 233))",
+        skillGradient2 : "linear-gradient(to right bottom, white,rgb(239, 245, 249),rgb(228, 232, 233), skyblue)",
         matrix: "url('/public/images/matrix.png')"
       },
 
@@ -61,7 +61,7 @@ module.exports = {
         'border_anime_h': "border_anime_h 500ms ease-out -50ms",
         'link_anime':  "link_anime 500ms ease-in-out -350ms",
         'land_anime1':  "land_anime1 650ms ease-in-out -100ms forwards",
-        'wave_anime':  `wave_anime 1.5s ease-in-out 500ms forwards`,
+        'wave_anime':  `wave_anime 2s ease-in-out 900ms forwards`,
         'drop_anime':  `drop_anime 500ms ease-in-out forwards`,
         'drop_animeT':  `drop_anime 500ms ease-in-out ${stack + "00ms"} forwards`,
         'blink_anime':  "blink_anime 1.2s ease-in-out -50ms",
@@ -117,10 +117,11 @@ module.exports = {
         },
         wave_anime : {
           '0%' :{transform :"rotate(0deg)"},
-          '20%' :{transform :"rotate(25deg)"},
-          '50%' :{transform :"rotate(-5deg)"},
-          '80%' :{transform :"rotate(25deg)"},
-          'to': { transform : "rotate(0deg)"}
+          '20%' :{transform :"rotate(30deg)"},
+          '40%' :{transform :"rotate(-5deg)"},
+          '60%' :{transform :"rotate(25deg)"},
+          '80%' :{transform :"rotate(-4deg)"},
+          'to': { transform : "rotate(20deg)"}
         },
 
         blink_anime : {
